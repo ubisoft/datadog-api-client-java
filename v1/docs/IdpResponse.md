@@ -1,12 +1,12 @@
 
 
-# Error400
+# IdpResponse
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**errors** | **List&lt;String&gt;** |  | 
+**message** | **String** |  | 
 
 
 

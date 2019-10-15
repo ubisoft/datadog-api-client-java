@@ -1,12 +1,12 @@
 
 
-# Error400
+# InlineResponse2003
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**errors** | **List&lt;String&gt;** |  | 
+**applicationKey** | [**ApplicationKey**](ApplicationKey.md) |  |  [optional]
 
 
 

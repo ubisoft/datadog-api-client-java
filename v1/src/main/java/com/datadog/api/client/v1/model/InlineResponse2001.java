@@ -13,51 +13,46 @@ package com.datadog.api.client.v1.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.datadog.api.client.v1.model.ApiKey;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
- * Error400
+ * InlineResponse2001
  */
 
-public class Error400 {
-  public static final String JSON_PROPERTY_ERRORS = "errors";
-  private List<String> errors = new ArrayList<String>();
+public class InlineResponse2001 {
+  public static final String JSON_PROPERTY_API_KEY = "api_key";
+  private ApiKey apiKey;
 
 
-  public Error400 errors(List<String> errors) {
+  public InlineResponse2001 apiKey(ApiKey apiKey) {
     
-    this.errors = errors;
-    return this;
-  }
-
-  public Error400 addErrorsItem(String errorsItem) {
-    this.errors.add(errorsItem);
+    this.apiKey = apiKey;
     return this;
   }
 
    /**
-   * Get errors
-   * @return errors
+   * Get apiKey
+   * @return apiKey
   **/
-  @ApiModelProperty(required = true, value = "")
-  @JsonProperty(JSON_PROPERTY_ERRORS)
-  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_API_KEY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public List<String> getErrors() {
-    return errors;
+  public ApiKey getApiKey() {
+    return apiKey;
   }
 
 
 
-  public void setErrors(List<String> errors) {
-    this.errors = errors;
+  public void setApiKey(ApiKey apiKey) {
+    this.apiKey = apiKey;
   }
 
 
@@ -69,21 +64,21 @@ public class Error400 {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Error400 error400 = (Error400) o;
-    return Objects.equals(this.errors, error400.errors);
+    InlineResponse2001 inlineResponse2001 = (InlineResponse2001) o;
+    return Objects.equals(this.apiKey, inlineResponse2001.apiKey);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(errors);
+    return Objects.hash(apiKey);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Error400 {\n");
-    sb.append("    errors: ").append(toIndentedString(errors)).append("\n");
+    sb.append("class InlineResponse2001 {\n");
+    sb.append("    apiKey: ").append(toIndentedString(apiKey)).append("\n");
     sb.append("}");
     return sb.toString();
   }
