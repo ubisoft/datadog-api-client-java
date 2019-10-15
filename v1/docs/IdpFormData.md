@@ -1,12 +1,12 @@
 
 
-# Error400
+# IdpFormData
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**errors** | **List&lt;String&gt;** |  | 
+**idpFile** | **String** | The path to the XML metadata file you wish to upload. | 
 
 
 
