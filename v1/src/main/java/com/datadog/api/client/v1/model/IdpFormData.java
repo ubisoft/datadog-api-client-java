@@ -19,45 +19,38 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
- * Error400
+ * IdpFormData
  */
 
-public class Error400 {
-  public static final String JSON_PROPERTY_ERRORS = "errors";
-  private List<String> errors = new ArrayList<String>();
+public class IdpFormData {
+  public static final String JSON_PROPERTY_IDP_FILE = "idp_file";
+  private String idpFile;
 
 
-  public Error400 errors(List<String> errors) {
+  public IdpFormData idpFile(String idpFile) {
     
-    this.errors = errors;
-    return this;
-  }
-
-  public Error400 addErrorsItem(String errorsItem) {
-    this.errors.add(errorsItem);
+    this.idpFile = idpFile;
     return this;
   }
 
    /**
-   * Get errors
-   * @return errors
+   * The path to the XML metadata file you wish to upload.
+   * @return idpFile
   **/
-  @ApiModelProperty(required = true, value = "")
-  @JsonProperty(JSON_PROPERTY_ERRORS)
+  @ApiModelProperty(required = true, value = "The path to the XML metadata file you wish to upload.")
+  @JsonProperty(JSON_PROPERTY_IDP_FILE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
-  public List<String> getErrors() {
-    return errors;
+  public String getIdpFile() {
+    return idpFile;
   }
 
 
 
-  public void setErrors(List<String> errors) {
-    this.errors = errors;
+  public void setIdpFile(String idpFile) {
+    this.idpFile = idpFile;
   }
 
 
@@ -69,21 +62,21 @@ public class Error400 {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Error400 error400 = (Error400) o;
-    return Objects.equals(this.errors, error400.errors);
+    IdpFormData idpFormData = (IdpFormData) o;
+    return Objects.equals(this.idpFile, idpFormData.idpFile);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(errors);
+    return Objects.hash(idpFile);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Error400 {\n");
-    sb.append("    errors: ").append(toIndentedString(errors)).append("\n");
+    sb.append("class IdpFormData {\n");
+    sb.append("    idpFile: ").append(toIndentedString(idpFile)).append("\n");
     sb.append("}");
     return sb.toString();
   }
