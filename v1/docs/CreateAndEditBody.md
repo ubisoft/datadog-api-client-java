@@ -1,12 +1,12 @@
 
 
-# Error400
+# CreateAndEditBody
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**errors** | **List&lt;String&gt;** |  | 
+**name** | **String** |  |  [optional]
 
 
 

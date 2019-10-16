@@ -13,51 +13,46 @@ package com.datadog.api.client.v1.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.datadog.api.client.v1.model.ApplicationKey;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
- * Error400
+ * InlineResponse2003
  */
 
-public class Error400 {
-  public static final String JSON_PROPERTY_ERRORS = "errors";
-  private List<String> errors = new ArrayList<String>();
+public class InlineResponse2003 {
+  public static final String JSON_PROPERTY_APPLICATION_KEY = "application_key";
+  private ApplicationKey applicationKey;
 
 
-  public Error400 errors(List<String> errors) {
+  public InlineResponse2003 applicationKey(ApplicationKey applicationKey) {
     
-    this.errors = errors;
-    return this;
-  }
-
-  public Error400 addErrorsItem(String errorsItem) {
-    this.errors.add(errorsItem);
+    this.applicationKey = applicationKey;
     return this;
   }
 
    /**
-   * Get errors
-   * @return errors
+   * Get applicationKey
+   * @return applicationKey
   **/
-  @ApiModelProperty(required = true, value = "")
-  @JsonProperty(JSON_PROPERTY_ERRORS)
-  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_APPLICATION_KEY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public List<String> getErrors() {
-    return errors;
+  public ApplicationKey getApplicationKey() {
+    return applicationKey;
   }
 
 
 
-  public void setErrors(List<String> errors) {
-    this.errors = errors;
+  public void setApplicationKey(ApplicationKey applicationKey) {
+    this.applicationKey = applicationKey;
   }
 
 
@@ -69,21 +64,21 @@ public class Error400 {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Error400 error400 = (Error400) o;
-    return Objects.equals(this.errors, error400.errors);
+    InlineResponse2003 inlineResponse2003 = (InlineResponse2003) o;
+    return Objects.equals(this.applicationKey, inlineResponse2003.applicationKey);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(errors);
+    return Objects.hash(applicationKey);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Error400 {\n");
-    sb.append("    errors: ").append(toIndentedString(errors)).append("\n");
+    sb.append("class InlineResponse2003 {\n");
+    sb.append("    applicationKey: ").append(toIndentedString(applicationKey)).append("\n");
     sb.append("}");
     return sb.toString();
   }

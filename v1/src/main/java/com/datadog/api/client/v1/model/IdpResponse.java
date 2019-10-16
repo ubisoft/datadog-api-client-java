@@ -19,45 +19,38 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
- * Error400
+ * IdpResponse
  */
 
-public class Error400 {
-  public static final String JSON_PROPERTY_ERRORS = "errors";
-  private List<String> errors = new ArrayList<String>();
+public class IdpResponse {
+  public static final String JSON_PROPERTY_MESSAGE = "message";
+  private String message;
 
 
-  public Error400 errors(List<String> errors) {
+  public IdpResponse message(String message) {
     
-    this.errors = errors;
-    return this;
-  }
-
-  public Error400 addErrorsItem(String errorsItem) {
-    this.errors.add(errorsItem);
+    this.message = message;
     return this;
   }
 
    /**
-   * Get errors
-   * @return errors
+   * Get message
+   * @return message
   **/
-  @ApiModelProperty(required = true, value = "")
-  @JsonProperty(JSON_PROPERTY_ERRORS)
+  @ApiModelProperty(example = "IdP metadata successfully uploaded for example org", required = true, value = "")
+  @JsonProperty(JSON_PROPERTY_MESSAGE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
-  public List<String> getErrors() {
-    return errors;
+  public String getMessage() {
+    return message;
   }
 
 
 
-  public void setErrors(List<String> errors) {
-    this.errors = errors;
+  public void setMessage(String message) {
+    this.message = message;
   }
 
 
@@ -69,21 +62,21 @@ public class Error400 {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Error400 error400 = (Error400) o;
-    return Objects.equals(this.errors, error400.errors);
+    IdpResponse idpResponse = (IdpResponse) o;
+    return Objects.equals(this.message, idpResponse.message);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(errors);
+    return Objects.hash(message);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Error400 {\n");
-    sb.append("    errors: ").append(toIndentedString(errors)).append("\n");
+    sb.append("class IdpResponse {\n");
+    sb.append("    message: ").append(toIndentedString(message)).append("\n");
     sb.append("}");
     return sb.toString();
   }
