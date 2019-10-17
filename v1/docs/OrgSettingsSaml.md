@@ -1,12 +1,12 @@
 
 
-# Error400
+# OrgSettingsSaml
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**errors** | **List&lt;String&gt;** |  | 
+**enabled** | **Boolean** |  |  [optional]
 
 
 

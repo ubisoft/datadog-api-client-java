@@ -1,12 +1,12 @@
 
 
-# Error400
+# InlineResponse2001
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**errors** | **List&lt;String&gt;** |  | 
+**apiKey** | [**ApiKey**](ApiKey.md) |  |  [optional]
 
 
 

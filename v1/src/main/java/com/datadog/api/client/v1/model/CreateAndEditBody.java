@@ -19,45 +19,39 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
- * Error400
+ * CreateAndEditBody
  */
 
-public class Error400 {
-  public static final String JSON_PROPERTY_ERRORS = "errors";
-  private List<String> errors = new ArrayList<String>();
+public class CreateAndEditBody {
+  public static final String JSON_PROPERTY_NAME = "name";
+  private String name;
 
 
-  public Error400 errors(List<String> errors) {
+  public CreateAndEditBody name(String name) {
     
-    this.errors = errors;
-    return this;
-  }
-
-  public Error400 addErrorsItem(String errorsItem) {
-    this.errors.add(errorsItem);
+    this.name = name;
     return this;
   }
 
    /**
-   * Get errors
-   * @return errors
+   * Get name
+   * @return name
   **/
-  @ApiModelProperty(required = true, value = "")
-  @JsonProperty(JSON_PROPERTY_ERRORS)
-  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "key name", value = "")
+  @JsonProperty(JSON_PROPERTY_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public List<String> getErrors() {
-    return errors;
+  public String getName() {
+    return name;
   }
 
 
 
-  public void setErrors(List<String> errors) {
-    this.errors = errors;
+  public void setName(String name) {
+    this.name = name;
   }
 
 
@@ -69,21 +63,21 @@ public class Error400 {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Error400 error400 = (Error400) o;
-    return Objects.equals(this.errors, error400.errors);
+    CreateAndEditBody createAndEditBody = (CreateAndEditBody) o;
+    return Objects.equals(this.name, createAndEditBody.name);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(errors);
+    return Objects.hash(name);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Error400 {\n");
-    sb.append("    errors: ").append(toIndentedString(errors)).append("\n");
+    sb.append("class CreateAndEditBody {\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");
     return sb.toString();
   }
