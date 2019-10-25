@@ -26,10 +26,27 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import org.threeten.bp.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 /**
  * Monitor
  */
+@JsonPropertyOrder({
+  Monitor.JSON_PROPERTY_CREATED,
+  Monitor.JSON_PROPERTY_CREATOR,
+  Monitor.JSON_PROPERTY_DELETED,
+  Monitor.JSON_PROPERTY_ID,
+  Monitor.JSON_PROPERTY_MESSAGE,
+  Monitor.JSON_PROPERTY_MODIFIED,
+  Monitor.JSON_PROPERTY_MULTI,
+  Monitor.JSON_PROPERTY_NAME,
+  Monitor.JSON_PROPERTY_OPTIONS,
+  Monitor.JSON_PROPERTY_OVERALL_STATE,
+  Monitor.JSON_PROPERTY_QUERY,
+  Monitor.JSON_PROPERTY_STATE,
+  Monitor.JSON_PROPERTY_TAGS,
+  Monitor.JSON_PROPERTY_TYPE
+})
 
 public class Monitor {
   public static final String JSON_PROPERTY_CREATED = "created";
