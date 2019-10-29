@@ -19,10 +19,18 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 /**
  * MonitorThresholds
  */
+@JsonPropertyOrder({
+  MonitorThresholds.JSON_PROPERTY_CRITICAL,
+  MonitorThresholds.JSON_PROPERTY_CRITICAL_RECOVERY,
+  MonitorThresholds.JSON_PROPERTY_OK,
+  MonitorThresholds.JSON_PROPERTY_WARNING,
+  MonitorThresholds.JSON_PROPERTY_WARNING_RECOVERY
+})
 
 public class MonitorThresholds {
   public static final String JSON_PROPERTY_CRITICAL = "critical";
