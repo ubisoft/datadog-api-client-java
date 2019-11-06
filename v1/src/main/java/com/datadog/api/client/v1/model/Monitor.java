@@ -161,7 +161,6 @@ public class Monitor {
   }
 
 
-
   public void setCreated(OffsetDateTime created) {
     this.created = created;
   }
@@ -185,7 +184,6 @@ public class Monitor {
   public Creator getCreator() {
     return creator;
   }
-
 
 
   public void setCreator(Creator creator) {
@@ -213,7 +211,6 @@ public class Monitor {
   }
 
 
-
   public void setDeleted(OffsetDateTime deleted) {
     this.deleted = deleted;
   }
@@ -237,7 +234,6 @@ public class Monitor {
   public Long getId() {
     return id;
   }
-
 
 
   public void setId(Long id) {
@@ -265,7 +261,6 @@ public class Monitor {
   }
 
 
-
   public void setMessage(String message) {
     this.message = message;
   }
@@ -289,7 +284,6 @@ public class Monitor {
   public OffsetDateTime getModified() {
     return modified;
   }
-
 
 
   public void setModified(OffsetDateTime modified) {
@@ -317,7 +311,6 @@ public class Monitor {
   }
 
 
-
   public void setMulti(Boolean multi) {
     this.multi = multi;
   }
@@ -341,7 +334,6 @@ public class Monitor {
   public String getName() {
     return name;
   }
-
 
 
   public void setName(String name) {
@@ -369,7 +361,6 @@ public class Monitor {
   }
 
 
-
   public void setOptions(MonitorOptions options) {
     this.options = options;
   }
@@ -393,7 +384,6 @@ public class Monitor {
   public MonitorOverallStates getOverallState() {
     return overallState;
   }
-
 
 
   public void setOverallState(MonitorOverallStates overallState) {
@@ -421,7 +411,6 @@ public class Monitor {
   }
 
 
-
   public void setQuery(String query) {
     this.query = query;
   }
@@ -445,7 +434,6 @@ public class Monitor {
   public MonitorState getState() {
     return state;
   }
-
 
 
   public void setState(MonitorState state) {
@@ -481,7 +469,6 @@ public class Monitor {
   }
 
 
-
   public void setTags(List<String> tags) {
     this.tags = tags;
   }
@@ -505,7 +492,6 @@ public class Monitor {
   public TypeEnum getType() {
     return type;
   }
-
 
 
   public void setType(TypeEnum type) {

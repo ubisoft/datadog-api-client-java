@@ -57,7 +57,6 @@ public class ApplicationKey {
 
 
 
-
   public ApplicationKey name(String name) {
     
     this.name = name;
@@ -78,7 +77,6 @@ public class ApplicationKey {
   }
 
 
-
   public void setName(String name) {
     this.name = name;
   }
@@ -96,7 +94,6 @@ public class ApplicationKey {
   public String getOwner() {
     return owner;
   }
-
 
 
 

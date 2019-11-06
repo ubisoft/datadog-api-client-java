@@ -57,7 +57,6 @@ public class MonitorThresholdWindowOptions {
   }
 
 
-
   public void setRecoveryWindow(String recoveryWindow) {
     this.recoveryWindow = recoveryWindow;
   }
@@ -81,7 +80,6 @@ public class MonitorThresholdWindowOptions {
   public String getTriggerWindow() {
     return triggerWindow;
   }
-
 
 
   public void setTriggerWindow(String triggerWindow) {

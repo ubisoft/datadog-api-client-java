@@ -63,7 +63,6 @@ public class CanceledDowntimesIds {
   }
 
 
-
   public void setCancelledIds(List<Integer> cancelledIds) {
     this.cancelledIds = cancelledIds;
   }

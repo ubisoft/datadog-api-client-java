@@ -80,7 +80,6 @@ public class HistoryServiceLevelObjectiveResponseData {
   }
 
 
-
   public void setFromTs(Long fromTs) {
     this.fromTs = fromTs;
   }
@@ -104,7 +103,6 @@ public class HistoryServiceLevelObjectiveResponseData {
   public HistoryServiceLevelObjectiveGroups getGroups() {
     return groups;
   }
-
 
 
   public void setGroups(HistoryServiceLevelObjectiveGroups groups) {
@@ -132,7 +130,6 @@ public class HistoryServiceLevelObjectiveResponseData {
   }
 
 
-
   public void setOverall(HistoryServiceLevelObjectiveOverall overall) {
     this.overall = overall;
   }
@@ -156,7 +153,6 @@ public class HistoryServiceLevelObjectiveResponseData {
   public HistoryServiceLevelObjectiveMetrics getSeries() {
     return series;
   }
-
 
 
   public void setSeries(HistoryServiceLevelObjectiveMetrics series) {
@@ -192,7 +188,6 @@ public class HistoryServiceLevelObjectiveResponseData {
   }
 
 
-
   public void setThresholds(Map<String, SloThreshold> thresholds) {
     this.thresholds = thresholds;
   }
@@ -216,7 +211,6 @@ public class HistoryServiceLevelObjectiveResponseData {
   public Long getToTs() {
     return toTs;
   }
-
 
 
   public void setToTs(Long toTs) {

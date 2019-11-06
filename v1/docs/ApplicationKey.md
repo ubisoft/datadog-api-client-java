@@ -6,9 +6,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**hash** | **String** |  |  [optional]
+**hash** | **String** |  |  [optional] [readonly]
 **name** | **String** |  |  [optional]
-**owner** | **String** |  |  [optional]
+**owner** | **String** |  |  [optional] [readonly]
 
 
 

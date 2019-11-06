@@ -22,6 +22,7 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.openapitools.jackson.nullable.JsonNullable;
 import java.util.NoSuchElementException;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -114,14 +115,13 @@ public class Downtime {
 
 
 
-
    /**
    * Get canceled
    * @return canceled
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(example = "1412799983", value = "")
-  @com.fasterxml.jackson.annotation.JsonIgnore
+  @JsonIgnore
 
   public Long getCanceled() {
     
@@ -137,7 +137,7 @@ public class Downtime {
   public JsonNullable<Long> getCanceled_JsonNullable() {
     return canceled;
   }
-
+  
   @JsonProperty(JSON_PROPERTY_CANCELED)
   private void setCanceled_JsonNullable(JsonNullable<Long> canceled) {
     this.canceled = canceled;
@@ -157,7 +157,6 @@ public class Downtime {
   public Integer getCreatorId() {
     return creatorId;
   }
-
 
 
 
@@ -182,7 +181,6 @@ public class Downtime {
   }
 
 
-
   public void setDisabled(Boolean disabled) {
     this.disabled = disabled;
   }
@@ -204,7 +202,6 @@ public class Downtime {
 
 
 
-
   public Downtime end(Long end) {
     this.end = JsonNullable.<Long>of(end);
     
@@ -217,7 +214,7 @@ public class Downtime {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(example = "1412793983", value = "")
-  @com.fasterxml.jackson.annotation.JsonIgnore
+  @JsonIgnore
 
   public Long getEnd() {
         return end.orElse(null);
@@ -229,7 +226,7 @@ public class Downtime {
   public JsonNullable<Long> getEnd_JsonNullable() {
     return end;
   }
-
+  
   @JsonProperty(JSON_PROPERTY_END)
   public void setEnd_JsonNullable(JsonNullable<Long> end) {
     this.end = end;
@@ -256,7 +253,6 @@ public class Downtime {
 
 
 
-
   public Downtime message(String message) {
     
     this.message = message;
@@ -277,7 +273,6 @@ public class Downtime {
   }
 
 
-
   public void setMessage(String message) {
     this.message = message;
   }
@@ -295,7 +290,7 @@ public class Downtime {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(example = "123456", value = "")
-  @com.fasterxml.jackson.annotation.JsonIgnore
+  @JsonIgnore
 
   public Long getMonitorId() {
         return monitorId.orElse(null);
@@ -307,7 +302,7 @@ public class Downtime {
   public JsonNullable<Long> getMonitorId_JsonNullable() {
     return monitorId;
   }
-
+  
   @JsonProperty(JSON_PROPERTY_MONITOR_ID)
   public void setMonitorId_JsonNullable(JsonNullable<Long> monitorId) {
     this.monitorId = monitorId;
@@ -346,7 +341,6 @@ public class Downtime {
   }
 
 
-
   public void setMonitorTags(List<String> monitorTags) {
     this.monitorTags = monitorTags;
   }
@@ -364,7 +358,7 @@ public class Downtime {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(example = "123", value = "")
-  @com.fasterxml.jackson.annotation.JsonIgnore
+  @JsonIgnore
 
   public Integer getParentId() {
         return parentId.orElse(null);
@@ -376,7 +370,7 @@ public class Downtime {
   public JsonNullable<Integer> getParentId_JsonNullable() {
     return parentId;
   }
-
+  
   @JsonProperty(JSON_PROPERTY_PARENT_ID)
   public void setParentId_JsonNullable(JsonNullable<Integer> parentId) {
     this.parentId = parentId;
@@ -399,7 +393,7 @@ public class Downtime {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
-  @com.fasterxml.jackson.annotation.JsonIgnore
+  @JsonIgnore
 
   public DowntimeRecurrence getRecurrence() {
         return recurrence.orElse(null);
@@ -411,7 +405,7 @@ public class Downtime {
   public JsonNullable<DowntimeRecurrence> getRecurrence_JsonNullable() {
     return recurrence;
   }
-
+  
   @JsonProperty(JSON_PROPERTY_RECURRENCE)
   public void setRecurrence_JsonNullable(JsonNullable<DowntimeRecurrence> recurrence) {
     this.recurrence = recurrence;
@@ -450,7 +444,6 @@ public class Downtime {
   }
 
 
-
   public void setScope(List<String> scope) {
     this.scope = scope;
   }
@@ -474,7 +467,6 @@ public class Downtime {
   public Long getStart() {
     return start;
   }
-
 
 
   public void setStart(Long start) {
@@ -502,7 +494,6 @@ public class Downtime {
   }
 
 
-
   public void setTimezone(String timezone) {
     this.timezone = timezone;
   }
@@ -520,7 +511,6 @@ public class Downtime {
   public Integer getUpdaterId() {
     return updaterId;
   }
-
 
 
 

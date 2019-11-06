@@ -74,7 +74,6 @@ public class MonitorState {
   }
 
 
-
   public void setGroups(Map<String, MonitorStateGroup> groups) {
     this.groups = groups;
   }
@@ -100,7 +99,6 @@ public class MonitorState {
   }
 
 
-
   public void setMonitorId(Long monitorId) {
     this.monitorId = monitorId;
   }
@@ -124,7 +122,6 @@ public class MonitorState {
   public MonitorOverallStates getOverallState() {
     return overallState;
   }
-
 
 
   public void setOverallState(MonitorOverallStates overallState) {

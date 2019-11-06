@@ -61,7 +61,6 @@ public class ApiKey {
 
 
 
-
    /**
    * Get createdBy
    * @return createdBy
@@ -78,7 +77,6 @@ public class ApiKey {
 
 
 
-
    /**
    * Get key
    * @return key
@@ -91,7 +89,6 @@ public class ApiKey {
   public String getKey() {
     return key;
   }
-
 
 
 
@@ -114,7 +111,6 @@ public class ApiKey {
   public String getName() {
     return name;
   }
-
 
 
   public void setName(String name) {

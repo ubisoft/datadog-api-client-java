@@ -67,7 +67,6 @@ public class ServiceLevelObjectivesBulkDeletedData {
   }
 
 
-
   public void setDeleted(List<String> deleted) {
     this.deleted = deleted;
   }
@@ -99,7 +98,6 @@ public class ServiceLevelObjectivesBulkDeletedData {
   public List<String> getUpdated() {
     return updated;
   }
-
 
 
   public void setUpdated(List<String> updated) {

@@ -60,7 +60,6 @@ public class CheckCanDeleteServiceLevelObjectiveResponse {
   }
 
 
-
   public void setData(CheckCanDeleteServiceLevelObjectiveResponseData data) {
     this.data = data;
   }
@@ -92,7 +91,6 @@ public class CheckCanDeleteServiceLevelObjectiveResponse {
   public Map<String, String> getErrors() {
     return errors;
   }
-
 
 
   public void setErrors(Map<String, String> errors) {

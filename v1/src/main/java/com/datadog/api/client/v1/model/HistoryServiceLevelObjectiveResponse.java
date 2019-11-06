@@ -60,7 +60,6 @@ public class HistoryServiceLevelObjectiveResponse {
   }
 
 
-
   public void setData(HistoryServiceLevelObjectiveResponseData data) {
     this.data = data;
   }
@@ -92,7 +91,6 @@ public class HistoryServiceLevelObjectiveResponse {
   public List<HistoryServiceLevelObjectiveResponseError> getErrors() {
     return errors;
   }
-
 
 
   public void setErrors(List<HistoryServiceLevelObjectiveResponseError> errors) {
