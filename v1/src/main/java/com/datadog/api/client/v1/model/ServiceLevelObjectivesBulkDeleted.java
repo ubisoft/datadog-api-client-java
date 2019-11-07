@@ -61,7 +61,6 @@ public class ServiceLevelObjectivesBulkDeleted {
   }
 
 
-
   public void setData(ServiceLevelObjectivesBulkDeletedData data) {
     this.data = data;
   }
@@ -89,7 +88,6 @@ public class ServiceLevelObjectivesBulkDeleted {
   public List<ServiceLevelObjectivesBulkDeletedErrors> getErrors() {
     return errors;
   }
-
 
 
   public void setErrors(List<ServiceLevelObjectivesBulkDeletedErrors> errors) {

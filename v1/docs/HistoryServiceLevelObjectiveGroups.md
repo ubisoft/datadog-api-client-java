@@ -2,6 +2,7 @@
 
 # HistoryServiceLevelObjectiveGroups
 
+A `monitor` based SLO history for either `groups` or `monitors` depending on the type of `monitor` SLO. Ex. `single-monitor` these represent `groups`     vs `multi-monitor` which represents individual monitor's overall history
 ## Properties
 
 Name | Type | Description | Notes

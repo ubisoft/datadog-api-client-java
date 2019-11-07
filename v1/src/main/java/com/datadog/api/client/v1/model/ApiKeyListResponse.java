@@ -64,7 +64,6 @@ public class ApiKeyListResponse {
   }
 
 
-
   public void setApiKeys(List<ApiKey> apiKeys) {
     this.apiKeys = apiKeys;
   }

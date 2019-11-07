@@ -10,9 +10,9 @@ Name | Type | Description | Notes
 **disabled** | **Boolean** |  |  [optional]
 **email** | **String** |  |  [optional]
 **handle** | **String** |  |  [optional]
-**icon** | **String** |  |  [optional]
+**icon** | **String** |  |  [optional] [readonly]
 **name** | **String** |  |  [optional]
-**verified** | **Boolean** |  |  [optional]
+**verified** | **Boolean** |  |  [optional] [readonly]
 
 
 

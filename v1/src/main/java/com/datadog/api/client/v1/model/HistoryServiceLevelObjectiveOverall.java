@@ -86,7 +86,6 @@ public class HistoryServiceLevelObjectiveOverall {
   }
 
 
-
   public void setHistory(List<List<BigDecimal>> history) {
     this.history = history;
   }
@@ -110,7 +109,6 @@ public class HistoryServiceLevelObjectiveOverall {
   public String getName() {
     return name;
   }
-
 
 
   public void setName(String name) {
@@ -146,7 +144,6 @@ public class HistoryServiceLevelObjectiveOverall {
   }
 
 
-
   public void setPrecision(Map<String, BigDecimal> precision) {
     this.precision = precision;
   }
@@ -170,7 +167,6 @@ public class HistoryServiceLevelObjectiveOverall {
   public Boolean getPreview() {
     return preview;
   }
-
 
 
   public void setPreview(Boolean preview) {
@@ -198,7 +194,6 @@ public class HistoryServiceLevelObjectiveOverall {
   }
 
 
-
   public void setSpanPrecision(BigDecimal spanPrecision) {
     this.spanPrecision = spanPrecision;
   }
@@ -222,7 +217,6 @@ public class HistoryServiceLevelObjectiveOverall {
   public Float getUptime() {
     return uptime;
   }
-
 
 
   public void setUptime(Float uptime) {

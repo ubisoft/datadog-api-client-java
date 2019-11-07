@@ -77,7 +77,6 @@ public class AWSAccount {
   }
 
 
-
   public void setAccessKeyId(String accessKeyId) {
     this.accessKeyId = accessKeyId;
   }
@@ -101,7 +100,6 @@ public class AWSAccount {
   public String getAccountId() {
     return accountId;
   }
-
 
 
   public void setAccountId(String accountId) {
@@ -137,7 +135,6 @@ public class AWSAccount {
   }
 
 
-
   public void setAccountSpecificNamespaceRules(Map<String, Boolean> accountSpecificNamespaceRules) {
     this.accountSpecificNamespaceRules = accountSpecificNamespaceRules;
   }
@@ -169,7 +166,6 @@ public class AWSAccount {
   public List<String> getFilterTags() {
     return filterTags;
   }
-
 
 
   public void setFilterTags(List<String> filterTags) {
@@ -205,7 +201,6 @@ public class AWSAccount {
   }
 
 
-
   public void setHostTags(List<String> hostTags) {
     this.hostTags = hostTags;
   }
@@ -229,7 +224,6 @@ public class AWSAccount {
   public String getRoleName() {
     return roleName;
   }
-
 
 
   public void setRoleName(String roleName) {

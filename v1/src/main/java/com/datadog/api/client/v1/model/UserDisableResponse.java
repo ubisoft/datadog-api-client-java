@@ -53,7 +53,6 @@ public class UserDisableResponse {
   }
 
 
-
   public void setMessage(String message) {
     this.message = message;
   }

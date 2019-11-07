@@ -57,7 +57,6 @@ public class ServiceLevelObjectiveQuery {
   }
 
 
-
   public void setDenominator(String denominator) {
     this.denominator = denominator;
   }
@@ -80,7 +79,6 @@ public class ServiceLevelObjectiveQuery {
   public String getNumerator() {
     return numerator;
   }
-
 
 
   public void setNumerator(String numerator) {

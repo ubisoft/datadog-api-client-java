@@ -172,7 +172,6 @@ public class MonitorOptions {
   }
 
 
-
   public void setAggregation(String aggregation) {
     this.aggregation = aggregation;
   }
@@ -206,7 +205,6 @@ public class MonitorOptions {
   }
 
 
-
   public void setDeviceIds(List<DeviceIdsEnum> deviceIds) {
     this.deviceIds = deviceIds;
   }
@@ -230,7 +228,6 @@ public class MonitorOptions {
   public Boolean getEnableLogsSample() {
     return enableLogsSample;
   }
-
 
 
   public void setEnableLogsSample(Boolean enableLogsSample) {
@@ -258,7 +255,6 @@ public class MonitorOptions {
   }
 
 
-
   public void setEscalationMessage(String escalationMessage) {
     this.escalationMessage = escalationMessage;
   }
@@ -282,7 +278,6 @@ public class MonitorOptions {
   public Long getEvaluationDelay() {
     return evaluationDelay;
   }
-
 
 
   public void setEvaluationDelay(Long evaluationDelay) {
@@ -310,7 +305,6 @@ public class MonitorOptions {
   }
 
 
-
   public void setIncludeTags(Boolean includeTags) {
     this.includeTags = includeTags;
   }
@@ -334,7 +328,6 @@ public class MonitorOptions {
   public Boolean getLocked() {
     return locked;
   }
-
 
 
   public void setLocked(Boolean locked) {
@@ -364,7 +357,6 @@ public class MonitorOptions {
   }
 
 
-
   public void setMinFailureDuration(Long minFailureDuration) {
     this.minFailureDuration = minFailureDuration;
   }
@@ -388,7 +380,6 @@ public class MonitorOptions {
   public Long getMinLocationFailed() {
     return minLocationFailed;
   }
-
 
 
   public void setMinLocationFailed(Long minLocationFailed) {
@@ -416,7 +407,6 @@ public class MonitorOptions {
   }
 
 
-
   public void setNewHostDelay(Long newHostDelay) {
     this.newHostDelay = newHostDelay;
   }
@@ -440,7 +430,6 @@ public class MonitorOptions {
   public Long getNoDataTimeframe() {
     return noDataTimeframe;
   }
-
 
 
   public void setNoDataTimeframe(Long noDataTimeframe) {
@@ -468,7 +457,6 @@ public class MonitorOptions {
   }
 
 
-
   public void setNotifyAudit(Boolean notifyAudit) {
     this.notifyAudit = notifyAudit;
   }
@@ -492,7 +480,6 @@ public class MonitorOptions {
   public Boolean getNotifyNoData() {
     return notifyNoData;
   }
-
 
 
   public void setNotifyNoData(Boolean notifyNoData) {
@@ -520,7 +507,6 @@ public class MonitorOptions {
   }
 
 
-
   public void setRenotifyInterval(Long renotifyInterval) {
     this.renotifyInterval = renotifyInterval;
   }
@@ -544,7 +530,6 @@ public class MonitorOptions {
   public Boolean getRequireFullWindow() {
     return requireFullWindow;
   }
-
 
 
   public void setRequireFullWindow(Boolean requireFullWindow) {
@@ -580,7 +565,6 @@ public class MonitorOptions {
   }
 
 
-
   public void setSilenced(Map<String, Long> silenced) {
     this.silenced = silenced;
   }
@@ -604,7 +588,6 @@ public class MonitorOptions {
   public Long getSyntheticsCheckId() {
     return syntheticsCheckId;
   }
-
 
 
   public void setSyntheticsCheckId(Long syntheticsCheckId) {
@@ -632,7 +615,6 @@ public class MonitorOptions {
   }
 
 
-
   public void setThresholdWindows(MonitorThresholdWindowOptions thresholdWindows) {
     this.thresholdWindows = thresholdWindows;
   }
@@ -658,7 +640,6 @@ public class MonitorOptions {
   }
 
 
-
   public void setThresholds(MonitorThresholds thresholds) {
     this.thresholds = thresholds;
   }
@@ -682,7 +663,6 @@ public class MonitorOptions {
   public Integer getTimeoutH() {
     return timeoutH;
   }
-
 
 
   public void setTimeoutH(Integer timeoutH) {

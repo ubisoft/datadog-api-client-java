@@ -59,7 +59,6 @@ public class ServiceLevelObjectiveDeleted {
   }
 
 
-
   public void setData(List<String> data) {
     this.data = data;
   }

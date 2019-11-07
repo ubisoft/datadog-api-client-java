@@ -6,9 +6,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**created** | **String** |  |  [optional]
-**createdBy** | **String** |  |  [optional]
-**key** | **String** |  |  [optional]
+**created** | **String** |  |  [optional] [readonly]
+**createdBy** | **String** |  |  [optional] [readonly]
+**key** | **String** |  |  [optional] [readonly]
 **name** | **String** |  |  [optional]
 
 

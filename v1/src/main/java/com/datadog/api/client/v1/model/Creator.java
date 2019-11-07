@@ -61,7 +61,6 @@ public class Creator {
   }
 
 
-
   public void setEmail(String email) {
     this.email = email;
   }
@@ -87,7 +86,6 @@ public class Creator {
   }
 
 
-
   public void setHandle(String handle) {
     this.handle = handle;
   }
@@ -111,7 +109,6 @@ public class Creator {
   public String getName() {
     return name;
   }
-
 
 
   public void setName(String name) {

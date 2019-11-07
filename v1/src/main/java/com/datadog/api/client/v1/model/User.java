@@ -114,7 +114,6 @@ public class User {
   }
 
 
-
   public void setAccessRole(AccessRoleEnum accessRole) {
     this.accessRole = accessRole;
   }
@@ -138,7 +137,6 @@ public class User {
   public Boolean getDisabled() {
     return disabled;
   }
-
 
 
   public void setDisabled(Boolean disabled) {
@@ -166,7 +164,6 @@ public class User {
   }
 
 
-
   public void setEmail(String email) {
     this.email = email;
   }
@@ -192,7 +189,6 @@ public class User {
   }
 
 
-
   public void setHandle(String handle) {
     this.handle = handle;
   }
@@ -210,7 +206,6 @@ public class User {
   public String getIcon() {
     return icon;
   }
-
 
 
 
@@ -235,7 +230,6 @@ public class User {
   }
 
 
-
   public void setName(String name) {
     this.name = name;
   }
@@ -253,7 +247,6 @@ public class User {
   public Boolean getVerified() {
     return verified;
   }
-
 
 
 

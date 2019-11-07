@@ -69,7 +69,6 @@ public class MonitorStateGroupValue {
   }
 
 
-
   public void setFromTs(Long fromTs) {
     this.fromTs = fromTs;
   }
@@ -93,7 +92,6 @@ public class MonitorStateGroupValue {
   public Float getLeft() {
     return left;
   }
-
 
 
   public void setLeft(Float left) {
@@ -121,7 +119,6 @@ public class MonitorStateGroupValue {
   }
 
 
-
   public void setRight(Float right) {
     this.right = right;
   }
@@ -147,7 +144,6 @@ public class MonitorStateGroupValue {
   }
 
 
-
   public void setToTs(Long toTs) {
     this.toTs = toTs;
   }
@@ -171,7 +167,6 @@ public class MonitorStateGroupValue {
   public Float getValue() {
     return value;
   }
-
 
 
   public void setValue(Float value) {

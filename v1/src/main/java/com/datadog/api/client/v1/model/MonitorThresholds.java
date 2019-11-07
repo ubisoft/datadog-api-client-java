@@ -73,7 +73,6 @@ public class MonitorThresholds {
   }
 
 
-
   public void setCritical(Float critical) {
     this.critical = critical;
   }
@@ -97,7 +96,6 @@ public class MonitorThresholds {
   public Float getCriticalRecovery() {
     return criticalRecovery;
   }
-
 
 
   public void setCriticalRecovery(Float criticalRecovery) {
@@ -125,7 +123,6 @@ public class MonitorThresholds {
   }
 
 
-
   public void setOk(Float ok) {
     this.ok = ok;
   }
@@ -149,7 +146,6 @@ public class MonitorThresholds {
   public Float getUnknown() {
     return unknown;
   }
-
 
 
   public void setUnknown(Float unknown) {
@@ -177,7 +173,6 @@ public class MonitorThresholds {
   }
 
 
-
   public void setWarning(Float warning) {
     this.warning = warning;
   }
@@ -201,7 +196,6 @@ public class MonitorThresholds {
   public Float getWarningRecovery() {
     return warningRecovery;
   }
-
 
 
   public void setWarningRecovery(Float warningRecovery) {

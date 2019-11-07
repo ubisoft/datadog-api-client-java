@@ -64,7 +64,6 @@ public class ApplicationKeyListResponse {
   }
 
 
-
   public void setApplicationKeys(List<ApplicationKey> applicationKeys) {
     this.applicationKeys = applicationKeys;
   }
