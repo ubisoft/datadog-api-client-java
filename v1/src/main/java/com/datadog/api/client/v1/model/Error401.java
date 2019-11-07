@@ -59,7 +59,6 @@ public class Error401 {
   }
 
 
-
   public void setErrors(List<String> errors) {
     this.errors = errors;
   }

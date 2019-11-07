@@ -21,6 +21,7 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.openapitools.jackson.nullable.JsonNullable;
 import java.util.NoSuchElementException;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -73,7 +74,6 @@ public class DowntimeRecurrence {
   }
 
 
-
   public void setPeriod(Integer period) {
     this.period = period;
   }
@@ -99,7 +99,6 @@ public class DowntimeRecurrence {
   }
 
 
-
   public void setType(String type) {
     this.type = type;
   }
@@ -117,7 +116,7 @@ public class DowntimeRecurrence {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(example = "1447786293", value = "")
-  @com.fasterxml.jackson.annotation.JsonIgnore
+  @JsonIgnore
 
   public Long getUntilDate() {
         return untilDate.orElse(null);
@@ -129,7 +128,7 @@ public class DowntimeRecurrence {
   public JsonNullable<Long> getUntilDate_JsonNullable() {
     return untilDate;
   }
-
+  
   @JsonProperty(JSON_PROPERTY_UNTIL_DATE)
   public void setUntilDate_JsonNullable(JsonNullable<Long> untilDate) {
     this.untilDate = untilDate;
@@ -152,7 +151,7 @@ public class DowntimeRecurrence {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(example = "2", value = "")
-  @com.fasterxml.jackson.annotation.JsonIgnore
+  @JsonIgnore
 
   public Integer getUntilOccurrences() {
         return untilOccurrences.orElse(null);
@@ -164,7 +163,7 @@ public class DowntimeRecurrence {
   public JsonNullable<Integer> getUntilOccurrences_JsonNullable() {
     return untilOccurrences;
   }
-
+  
   @JsonProperty(JSON_PROPERTY_UNTIL_OCCURRENCES)
   public void setUntilOccurrences_JsonNullable(JsonNullable<Integer> untilOccurrences) {
     this.untilOccurrences = untilOccurrences;
@@ -201,7 +200,6 @@ public class DowntimeRecurrence {
   public List<String> getWeekDays() {
     return weekDays;
   }
-
 
 
   public void setWeekDays(List<String> weekDays) {

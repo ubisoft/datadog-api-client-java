@@ -24,6 +24,7 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.openapitools.jackson.nullable.JsonNullable;
 import java.util.NoSuchElementException;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -183,7 +184,6 @@ public class ServiceLevelObjective {
   }
 
 
-
   public void setCreatedAt(Long createdAt) {
     this.createdAt = createdAt;
   }
@@ -209,7 +209,6 @@ public class ServiceLevelObjective {
   }
 
 
-
   public void setCreator(Creator creator) {
     this.creator = creator;
   }
@@ -227,7 +226,7 @@ public class ServiceLevelObjective {
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "A user-defined description of the service level objective. Always included in service level objective responses (but may be null). Optional in create/update requests.")
-  @com.fasterxml.jackson.annotation.JsonIgnore
+  @JsonIgnore
 
   public String getDescription() {
         return description.orElse(null);
@@ -239,7 +238,7 @@ public class ServiceLevelObjective {
   public JsonNullable<String> getDescription_JsonNullable() {
     return description;
   }
-
+  
   @JsonProperty(JSON_PROPERTY_DESCRIPTION)
   public void setDescription_JsonNullable(JsonNullable<String> description) {
     this.description = description;
@@ -278,7 +277,6 @@ public class ServiceLevelObjective {
   }
 
 
-
   public void setGroups(List<String> groups) {
     this.groups = groups;
   }
@@ -304,7 +302,6 @@ public class ServiceLevelObjective {
   }
 
 
-
   public void setId(String id) {
     this.id = id;
   }
@@ -328,7 +325,6 @@ public class ServiceLevelObjective {
   public Long getModifiedAt() {
     return modifiedAt;
   }
-
 
 
   public void setModifiedAt(Long modifiedAt) {
@@ -364,7 +360,6 @@ public class ServiceLevelObjective {
   }
 
 
-
   public void setMonitorIds(List<Integer> monitorIds) {
     this.monitorIds = monitorIds;
   }
@@ -398,7 +393,6 @@ public class ServiceLevelObjective {
   }
 
 
-
   public void setMonitorTags(List<String> monitorTags) {
     this.monitorTags = monitorTags;
   }
@@ -421,7 +415,6 @@ public class ServiceLevelObjective {
   public String getName() {
     return name;
   }
-
 
 
   public void setName(String name) {
@@ -447,7 +440,6 @@ public class ServiceLevelObjective {
   public ServiceLevelObjectiveQuery getQuery() {
     return query;
   }
-
 
 
   public void setQuery(ServiceLevelObjectiveQuery query) {
@@ -483,7 +475,6 @@ public class ServiceLevelObjective {
   }
 
 
-
   public void setTags(List<String> tags) {
     this.tags = tags;
   }
@@ -513,7 +504,6 @@ public class ServiceLevelObjective {
   }
 
 
-
   public void setThresholds(List<SloThreshold> thresholds) {
     this.thresholds = thresholds;
   }
@@ -536,7 +526,6 @@ public class ServiceLevelObjective {
   public TypeEnum getType() {
     return type;
   }
-
 
 
   public void setType(TypeEnum type) {
@@ -562,7 +551,6 @@ public class ServiceLevelObjective {
   public TypeIdEnum getTypeId() {
     return typeId;
   }
-
 
 
   public void setTypeId(TypeIdEnum typeId) {

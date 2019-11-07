@@ -52,7 +52,6 @@ public class CancelDowntimesByScopeRequest {
   }
 
 
-
   public void setScope(String scope) {
     this.scope = scope;
   }

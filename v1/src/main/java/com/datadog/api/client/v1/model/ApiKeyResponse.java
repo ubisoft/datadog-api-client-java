@@ -54,7 +54,6 @@ public class ApiKeyResponse {
   }
 
 
-
   public void setApiKey(ApiKey apiKey) {
     this.apiKey = apiKey;
   }

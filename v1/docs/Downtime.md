@@ -6,13 +6,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**active** | **Boolean** |  |  [optional]
-**canceled** | **Long** |  |  [optional]
-**creatorId** | **Integer** |  |  [optional]
+**active** | **Boolean** |  |  [optional] [readonly]
+**canceled** | **Long** |  |  [optional] [readonly]
+**creatorId** | **Integer** |  |  [optional] [readonly]
 **disabled** | **Boolean** |  |  [optional]
-**downtimeType** | **Integer** |  |  [optional]
+**downtimeType** | **Integer** |  |  [optional] [readonly]
 **end** | **Long** |  |  [optional]
-**id** | **Long** |  |  [optional]
+**id** | **Long** |  |  [optional] [readonly]
 **message** | **String** |  |  [optional]
 **monitorId** | **Long** |  |  [optional]
 **monitorTags** | **List&lt;String&gt;** |  |  [optional]
@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 **scope** | **List&lt;String&gt;** |  |  [optional]
 **start** | **Long** |  |  [optional]
 **timezone** | **String** |  |  [optional]
-**updaterId** | **Integer** |  |  [optional]
+**updaterId** | **Integer** |  |  [optional] [readonly]
 
 
 

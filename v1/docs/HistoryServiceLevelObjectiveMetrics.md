@@ -2,6 +2,7 @@
 
 # HistoryServiceLevelObjectiveMetrics
 
+A `metric` based SLO history response.
 ## Properties
 
 Name | Type | Description | Notes

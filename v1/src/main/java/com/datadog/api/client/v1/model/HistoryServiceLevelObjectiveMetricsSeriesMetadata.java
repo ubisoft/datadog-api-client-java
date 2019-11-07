@@ -74,7 +74,6 @@ public class HistoryServiceLevelObjectiveMetricsSeriesMetadata {
   }
 
 
-
   public void setAggr(String aggr) {
     this.aggr = aggr;
   }
@@ -98,7 +97,6 @@ public class HistoryServiceLevelObjectiveMetricsSeriesMetadata {
   public String getExpression() {
     return expression;
   }
-
 
 
   public void setExpression(String expression) {
@@ -126,7 +124,6 @@ public class HistoryServiceLevelObjectiveMetricsSeriesMetadata {
   }
 
 
-
   public void setMetric(String metric) {
     this.metric = metric;
   }
@@ -150,7 +147,6 @@ public class HistoryServiceLevelObjectiveMetricsSeriesMetadata {
   public Integer getQueryIndex() {
     return queryIndex;
   }
-
 
 
   public void setQueryIndex(Integer queryIndex) {
@@ -178,7 +174,6 @@ public class HistoryServiceLevelObjectiveMetricsSeriesMetadata {
   }
 
 
-
   public void setScope(String scope) {
     this.scope = scope;
   }
@@ -202,7 +197,6 @@ public class HistoryServiceLevelObjectiveMetricsSeriesMetadata {
   public String getUnit() {
     return unit;
   }
-
 
 
   public void setUnit(String unit) {

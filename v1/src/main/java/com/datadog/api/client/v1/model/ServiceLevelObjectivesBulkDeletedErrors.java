@@ -99,7 +99,6 @@ public class ServiceLevelObjectivesBulkDeletedErrors {
   }
 
 
-
   public void setId(String id) {
     this.id = id;
   }
@@ -124,7 +123,6 @@ public class ServiceLevelObjectivesBulkDeletedErrors {
   }
 
 
-
   public void setMessage(String message) {
     this.message = message;
   }
@@ -147,7 +145,6 @@ public class ServiceLevelObjectivesBulkDeletedErrors {
   public TimeframeEnum getTimeframe() {
     return timeframe;
   }
-
 
 
   public void setTimeframe(TimeframeEnum timeframe) {

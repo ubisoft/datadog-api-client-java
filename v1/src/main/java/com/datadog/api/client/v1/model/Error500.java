@@ -59,7 +59,6 @@ public class Error500 {
   }
 
 
-
   public void setErrors(List<String> errors) {
     this.errors = errors;
   }

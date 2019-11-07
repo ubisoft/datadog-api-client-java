@@ -69,7 +69,6 @@ public class SloThreshold {
   }
 
 
-
   public void setTarget(Double target) {
     this.target = target;
   }
@@ -95,7 +94,6 @@ public class SloThreshold {
   }
 
 
-
   public void setTargetDisplay(String targetDisplay) {
     this.targetDisplay = targetDisplay;
   }
@@ -118,7 +116,6 @@ public class SloThreshold {
   public SloTimeframe getTimeframe() {
     return timeframe;
   }
-
 
 
   public void setTimeframe(SloTimeframe timeframe) {
@@ -146,7 +143,6 @@ public class SloThreshold {
   }
 
 
-
   public void setWarning(Double warning) {
     this.warning = warning;
   }
@@ -170,7 +166,6 @@ public class SloThreshold {
   public String getWarningDisplay() {
     return warningDisplay;
   }
-
 
 
   public void setWarningDisplay(String warningDisplay) {

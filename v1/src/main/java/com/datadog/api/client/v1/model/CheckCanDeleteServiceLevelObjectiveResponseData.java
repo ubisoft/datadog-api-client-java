@@ -64,7 +64,6 @@ public class CheckCanDeleteServiceLevelObjectiveResponseData {
   }
 
 
-
   public void setOk(List<String> ok) {
     this.ok = ok;
   }

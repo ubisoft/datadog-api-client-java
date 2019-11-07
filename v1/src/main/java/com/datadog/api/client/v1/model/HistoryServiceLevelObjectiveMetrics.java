@@ -79,7 +79,6 @@ public class HistoryServiceLevelObjectiveMetrics {
   }
 
 
-
   public void setDenominator(HistoryServiceLevelObjectiveMetricsSeries denominator) {
     this.denominator = denominator;
   }
@@ -103,7 +102,6 @@ public class HistoryServiceLevelObjectiveMetrics {
   public Integer getInterval() {
     return interval;
   }
-
 
 
   public void setInterval(Integer interval) {
@@ -131,7 +129,6 @@ public class HistoryServiceLevelObjectiveMetrics {
   }
 
 
-
   public void setMessage(String message) {
     this.message = message;
   }
@@ -155,7 +152,6 @@ public class HistoryServiceLevelObjectiveMetrics {
   public HistoryServiceLevelObjectiveMetricsSeries getNumerator() {
     return numerator;
   }
-
 
 
   public void setNumerator(HistoryServiceLevelObjectiveMetricsSeries numerator) {
@@ -183,7 +179,6 @@ public class HistoryServiceLevelObjectiveMetrics {
   }
 
 
-
   public void setQuery(String query) {
     this.query = query;
   }
@@ -209,7 +204,6 @@ public class HistoryServiceLevelObjectiveMetrics {
   }
 
 
-
   public void setResType(String resType) {
     this.resType = resType;
   }
@@ -233,7 +227,6 @@ public class HistoryServiceLevelObjectiveMetrics {
   public Integer getRespVersion() {
     return respVersion;
   }
-
 
 
   public void setRespVersion(Integer respVersion) {

@@ -74,7 +74,6 @@ public class HistoryServiceLevelObjectiveMetricsSeries {
   }
 
 
-
   public void setCount(Long count) {
     this.count = count;
   }
@@ -100,7 +99,6 @@ public class HistoryServiceLevelObjectiveMetricsSeries {
   }
 
 
-
   public void setMetadata(HistoryServiceLevelObjectiveMetricsSeriesMetadata metadata) {
     this.metadata = metadata;
   }
@@ -124,7 +122,6 @@ public class HistoryServiceLevelObjectiveMetricsSeries {
   public Double getSum() {
     return sum;
   }
-
 
 
   public void setSum(Double sum) {
@@ -160,7 +157,6 @@ public class HistoryServiceLevelObjectiveMetricsSeries {
   }
 
 
-
   public void setTimes(List<Long> times) {
     this.times = times;
   }
@@ -192,7 +188,6 @@ public class HistoryServiceLevelObjectiveMetricsSeries {
   public List<BigDecimal> getValues() {
     return values;
   }
-
 
 
   public void setValues(List<BigDecimal> values) {

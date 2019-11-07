@@ -87,7 +87,6 @@ public class MonitorStateGroup {
   }
 
 
-
   public void setLastDataTs(Long lastDataTs) {
     this.lastDataTs = lastDataTs;
   }
@@ -111,7 +110,6 @@ public class MonitorStateGroup {
   public Long getLastNodataTs() {
     return lastNodataTs;
   }
-
 
 
   public void setLastNodataTs(Long lastNodataTs) {
@@ -139,7 +137,6 @@ public class MonitorStateGroup {
   }
 
 
-
   public void setLastNotifiedTs(Long lastNotifiedTs) {
     this.lastNotifiedTs = lastNotifiedTs;
   }
@@ -163,7 +160,6 @@ public class MonitorStateGroup {
   public Long getLastResolvedTs() {
     return lastResolvedTs;
   }
-
 
 
   public void setLastResolvedTs(Long lastResolvedTs) {
@@ -191,7 +187,6 @@ public class MonitorStateGroup {
   }
 
 
-
   public void setLastTriggeredTs(Long lastTriggeredTs) {
     this.lastTriggeredTs = lastTriggeredTs;
   }
@@ -215,7 +210,6 @@ public class MonitorStateGroup {
   public String getMessage() {
     return message;
   }
-
 
 
   public void setMessage(String message) {
@@ -243,7 +237,6 @@ public class MonitorStateGroup {
   }
 
 
-
   public void setName(String name) {
     this.name = name;
   }
@@ -269,7 +262,6 @@ public class MonitorStateGroup {
   }
 
 
-
   public void setStatus(MonitorOverallStates status) {
     this.status = status;
   }
@@ -293,7 +285,6 @@ public class MonitorStateGroup {
   public MonitorStateGroupValue getTriggeringValue() {
     return triggeringValue;
   }
-
 
 
   public void setTriggeringValue(MonitorStateGroupValue triggeringValue) {

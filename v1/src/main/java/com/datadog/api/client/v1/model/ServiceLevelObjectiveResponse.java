@@ -64,7 +64,6 @@ public class ServiceLevelObjectiveResponse {
   }
 
 
-
   public void setData(List<ServiceLevelObjective> data) {
     this.data = data;
   }
@@ -96,7 +95,6 @@ public class ServiceLevelObjectiveResponse {
   public List<String> getErrors() {
     return errors;
   }
-
 
 
   public void setErrors(List<String> errors) {
