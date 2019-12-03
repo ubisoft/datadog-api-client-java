@@ -310,10 +310,10 @@ public class Example {
 
         MonitorsApi apiInstance = new MonitorsApi(defaultClient);
         String groupStates = "groupStates_example"; // String | When specified, shows additional information about the group states. Choose one or more from `all`, `alert`, `warn`, and `no data`.
-        String name = "name_example"; // String | 
-        String tags = "tags_example"; // String | 
-        String monitorTags = "monitorTags_example"; // String | 
-        Boolean withDowntimes = true; // Boolean | 
+        String name = "name_example"; // String | A string to filter monitors by name.
+        String tags = "tags_example"; // String | A comma separated list indicating what tags, if any, should be used to filter the list of monitorsby scope, e.g. host:host0.
+        String monitorTags = "monitorTags_example"; // String | A comma separated list indicating what service and/or custom tags, if any, should be used to filter the list of monitors. Tags created in the Datadog UI automatically have the service key prepended (e.g. service:my-app).
+        Boolean withDowntimes = true; // Boolean | If this argument is set to true, then the returned data includes all current downtimes for each monitor.
         try {
             List<Monitor> result = apiInstance.getAllMonitors(groupStates, name, tags, monitorTags, withDowntimes);
             System.out.println(result);
@@ -334,10 +334,10 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupStates** | **String**| When specified, shows additional information about the group states. Choose one or more from &#x60;all&#x60;, &#x60;alert&#x60;, &#x60;warn&#x60;, and &#x60;no data&#x60;. | [optional]
- **name** | **String**|  | [optional]
- **tags** | **String**|  | [optional]
- **monitorTags** | **String**|  | [optional]
- **withDowntimes** | **Boolean**|  | [optional]
+ **name** | **String**| A string to filter monitors by name. | [optional]
+ **tags** | **String**| A comma separated list indicating what tags, if any, should be used to filter the list of monitorsby scope, e.g. host:host0. | [optional]
+ **monitorTags** | **String**| A comma separated list indicating what service and/or custom tags, if any, should be used to filter the list of monitors. Tags created in the Datadog UI automatically have the service key prepended (e.g. service:my-app). | [optional]
+ **withDowntimes** | **Boolean**| If this argument is set to true, then the returned data includes all current downtimes for each monitor. | [optional]
 
 ### Return type
 

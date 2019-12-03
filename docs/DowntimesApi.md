@@ -303,8 +303,7 @@ Get all downtimes
 ### Overview
 Get All Scheduled Downtimes
 ### Arguments
-* **`current_only`** [*optional*, *default* = **False**]: Only return downtimes
-  that are active when the request is made.'
+* **`current_only`** [*optional*, *default* = **False**]: Only return downtimes that are active when the request is made.
 
 ### Example
 
@@ -335,7 +334,7 @@ public class Example {
         //appKeyAuth.setApiKeyPrefix("Token");
 
         DowntimesApi apiInstance = new DowntimesApi(defaultClient);
-        Boolean currentOnly = true; // Boolean | 
+        Boolean currentOnly = true; // Boolean | Only return downtimes that are active when the request is made.
         try {
             List<Downtime> result = apiInstance.getAllDowntimes(currentOnly);
             System.out.println(result);
@@ -355,7 +354,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **currentOnly** | **Boolean**|  | [optional]
+ **currentOnly** | **Boolean**| Only return downtimes that are active when the request is made. | [optional]
 
 ### Return type
 

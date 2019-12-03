@@ -370,9 +370,9 @@ public class Example {
 
         AwsIntegrationApi apiInstance = new AwsIntegrationApi(defaultClient);
         AWSAccount awSAccount = new AWSAccount(); // AWSAccount | AWS request object
-        String accountId = "accountId_example"; // String | 
-        String roleName = "roleName_example"; // String | 
-        String accessKeyId = "accessKeyId_example"; // String | 
+        String accountId = "accountId_example"; // String | Only return AWS accounts that matches this account_id.
+        String roleName = "roleName_example"; // String | Only return AWS accounts that matches this role_name. *It is required if account_id is specified.*
+        String accessKeyId = "accessKeyId_example"; // String | Only return AWS accounts that matches this access_key_id. *It required if none of the other two options are specified.*
         try {
             Object result = apiInstance.updateAWSAccount(awSAccount, accountId, roleName, accessKeyId);
             System.out.println(result);
@@ -393,9 +393,9 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **awSAccount** | [**AWSAccount**](AWSAccount.md)| AWS request object |
- **accountId** | **String**|  | [optional]
- **roleName** | **String**|  | [optional]
- **accessKeyId** | **String**|  | [optional]
+ **accountId** | **String**| Only return AWS accounts that matches this account_id. | [optional]
+ **roleName** | **String**| Only return AWS accounts that matches this role_name. *It is required if account_id is specified.* | [optional]
+ **accessKeyId** | **String**| Only return AWS accounts that matches this access_key_id. *It required if none of the other two options are specified.* | [optional]
 
 ### Return type
 
