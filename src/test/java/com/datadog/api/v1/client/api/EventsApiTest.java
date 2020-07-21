@@ -72,7 +72,7 @@ public class EventsApiTest extends V1ApiTest {
         AtomicReference<EventResponse> eventGetResponse = new AtomicReference<>();
         // Confirm the event is retrievable from the API
         // Will fail with a retryException if we can't get the event in this timeframe
-        TestUtils.retry(10, 20, () -> {
+        retry(10, 20, () -> {
             try {
                 eventGetResponse.set(api.getEvent(eventId).execute());
             } catch (ApiException e) {
@@ -96,7 +96,7 @@ public class EventsApiTest extends V1ApiTest {
 
         // Confirm the event is in the list of events returned from the API
         // Will fail with a retryException if we can't get the event in this timeframe
-        TestUtils.retry(10, 20, () -> {
+        retry(10, 20, () -> {
             List<Event> events;
             try {
                 EventListResponse eventListResponse = api.listEvents().start(start).end(end).priority(priority)

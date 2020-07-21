@@ -55,7 +55,7 @@ public class LogsApiTest extends V1ApiTest {
         String hostname = getUniqueEntityName();
 
         String intakeURL = "https://http-intake.logs.datadoghq.com/v1/input";
-        if (TestUtils.getRecordingMode().equals(RecordingMode.MODE_REPLAYING)) {
+        if (getRecordingMode().equals(RecordingMode.MODE_REPLAYING)) {
             // when running from cassettes, we need to make sure that the default base URL
             // is used for mock server certificates to work properly
             intakeURL = "/v1/input";
@@ -89,7 +89,7 @@ public class LogsApiTest extends V1ApiTest {
                 .sort(LogsSort.TIME_ASCENDING);
 
         // Make sure that both log items are indexed
-        TestUtils.retry(5, 10, () -> {
+        retry(5, 10, () -> {
             try {
                 LogsListResponse response = api.listLogs().body(request).execute();
                 return 2 == response.getLogs().size();
@@ -98,7 +98,7 @@ public class LogsApiTest extends V1ApiTest {
             }
         });
 
-        TestUtils.retry(5, 10, () -> {
+        retry(5, 10, () -> {
             try {
                 LogsListResponse logsResponse;
 

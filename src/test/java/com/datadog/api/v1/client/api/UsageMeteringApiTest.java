@@ -204,7 +204,7 @@ public class UsageMeteringApiTest extends V1ApiTest {
             assertNotNull(response.getMeta());
             assertNotNull(response.getData());
         } catch (ApiException e) {
-            if (TestUtils.getRecordingMode().equals(RecordingMode.MODE_REPLAYING) == false
+            if (getRecordingMode().equals(RecordingMode.MODE_REPLAYING) == false
             || e.getCode() == 404 || e.getCode() == 403) {
                 System.out.println("\nNo reports are available yet or this org is forbidden\n");
             }
@@ -222,7 +222,7 @@ public class UsageMeteringApiTest extends V1ApiTest {
             assertNotNull(response.getMeta());
             assertNotNull(response.getData());
         } catch (ApiException e) {
-            if (TestUtils.getRecordingMode().equals(RecordingMode.MODE_REPLAYING) == false
+            if (getRecordingMode().equals(RecordingMode.MODE_REPLAYING) == false
             || e.getCode() == 404 || e.getCode() == 403) {
                 System.out.println("\nNo reports are available yet or this org is forbidden\n");
             }
@@ -238,7 +238,7 @@ public class UsageMeteringApiTest extends V1ApiTest {
             assertNotNull(response.getMeta());
             assertNotNull(response.getData());
         } catch (ApiException e) {
-            if (TestUtils.getRecordingMode().equals(RecordingMode.MODE_REPLAYING) == false
+            if (getRecordingMode().equals(RecordingMode.MODE_REPLAYING) == false
             || e.getCode() == 404 || e.getCode() == 403) {
                 System.out.println("\nNo reports are available yet or this org is forbidden\n");
             }
@@ -253,7 +253,7 @@ public class UsageMeteringApiTest extends V1ApiTest {
             assertNotNull(response.getMeta());
             assertNotNull(response.getData());
         } catch (ApiException e) {
-            if (TestUtils.getRecordingMode().equals(RecordingMode.MODE_REPLAYING) == false
+            if (getRecordingMode().equals(RecordingMode.MODE_REPLAYING) == false
             || e.getCode() == 404 || e.getCode() == 403) {
                 System.out.println("\nNo reports are available yet or this org is forbidden\n");
             }
@@ -806,7 +806,7 @@ public class UsageMeteringApiTest extends V1ApiTest {
     }
 
     @Test
-    public void getMonthlyCustomReportsErrorsTest() throws IOException {        
+    public void getMonthlyCustomReportsErrorsTest() throws IOException {
         try {
             generalFakeAuthApiClient.setUnstableOperationEnabled("getMonthlyCustomReports", true);
             fakeAuthApi.getMonthlyCustomReports().execute();
@@ -817,7 +817,7 @@ public class UsageMeteringApiTest extends V1ApiTest {
             assertNotNull(error.getErrors());
         }
     }
-    
+
     @Test
     public void getUsageBillableSummary400ErrorTest() throws IOException {
         String fixtureData = TestUtils.getFixture(fixturePrefix + "/error_400.json");

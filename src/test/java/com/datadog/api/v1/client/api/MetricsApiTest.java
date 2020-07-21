@@ -75,7 +75,7 @@ public class MetricsApiTest extends V1ApiTest {
         assertEquals("{\"status\": \"ok\"}", response.getData());
 
         // Check that the metric was submitted successfully
-        TestUtils.retry(10, 10, () -> {
+        retry(10, 10, () -> {
             MetricsListResponse metrics;
             try {
                 metrics = api.listActiveMetrics().from(nowSeconds).execute();

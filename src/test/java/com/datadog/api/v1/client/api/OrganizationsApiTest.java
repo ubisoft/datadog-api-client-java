@@ -268,7 +268,7 @@ public class OrganizationsApiTest extends V1ApiTest {
     @Test
     public void orgsUploadIdpErrorsTest() throws URISyntaxException, IOException {
         // Boundary is uniquely generated at each request, so the test will fail when replaying
-        assumeFalse("This test does not support replay from recording", TestUtils.getRecordingMode().equals(RecordingMode.MODE_REPLAYING));
+        assumeFalse("This test does not support replay from recording", getRecordingMode().equals(RecordingMode.MODE_REPLAYING));
 
         // Get random file.
         File idpFile = new File(OrganizationsApiTest.class.getResource("org_fixtures/error_415.json").toURI());

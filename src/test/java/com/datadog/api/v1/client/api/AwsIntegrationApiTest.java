@@ -114,7 +114,7 @@ public class AwsIntegrationApiTest extends V1ApiTest {
     @After
     public void removeAccounts() throws TestUtils.RetryException {
         for (AWSAccount account : accountsToDelete) {
-            TestUtils.retry(random.nextInt(10), 20, () -> {
+            retry(random.nextInt(10), 20, () -> {
                 try {
                     api.deleteAWSAccount().body(account).execute();
                 } catch (ApiException e) {
@@ -162,7 +162,7 @@ public class AwsIntegrationApiTest extends V1ApiTest {
         awsAccount.setAccountId(generateAwsAccountId());
         awsAccount.setRoleName(getUniqueEntityName());
 
-        TestUtils.retry(random.nextInt(10), 20, () -> {
+        retry(random.nextInt(10), 20, () -> {
             try {
                 AWSAccountCreateResponse createResponse = api.createAWSAccount().body(awsAccount).execute();
                 accountsToDelete.add(awsAccount);
@@ -191,7 +191,7 @@ public class AwsIntegrationApiTest extends V1ApiTest {
         awsAccountFull.addFilterTagsItem("dontCollect:java");
         awsAccountFull.setAccountSpecificNamespaceRules(accountSpecificNamespaceRules);
 
-        TestUtils.retry(random.nextInt(10), 20, () -> {
+        retry(random.nextInt(10), 20, () -> {
             try {
                 AWSAccountCreateResponse createResponse = api.createAWSAccount().body(awsAccountFull).execute();
                 accountsToDelete.add(awsAccountFull);
@@ -247,7 +247,7 @@ public class AwsIntegrationApiTest extends V1ApiTest {
             awsAccounts.get(i).setHostTags(hostTags);
             awsAccounts.get(i).setAccountSpecificNamespaceRules(accountSpecificNamespaceRules);
             int finalI = i;
-            TestUtils.retry(random.nextInt(10), 20, () -> {
+            retry(random.nextInt(10), 20, () -> {
                 try {
                     AWSAccountCreateResponse createResponse = api.createAWSAccount().body(awsAccounts.get(finalI)).execute();
                     accountsToDelete.add(awsAccounts.get(finalI));
@@ -273,7 +273,7 @@ public class AwsIntegrationApiTest extends V1ApiTest {
         awsAccount.setAccountId(generateAwsAccountId());
         awsAccount.setRoleName(getUniqueEntityName());
 
-        TestUtils.retry(random.nextInt(10), 20, () -> {
+        retry(random.nextInt(10), 20, () -> {
             try {
                 AWSAccountCreateResponse createResponse = api.createAWSAccount().body(awsAccount).execute();
                 accountsToDelete.add(awsAccount);
@@ -295,7 +295,7 @@ public class AwsIntegrationApiTest extends V1ApiTest {
         excludedRegions.add("us-west-1");
         awsAccount.setExcludedRegions(excludedRegions);
 
-        TestUtils.retry(random.nextInt(10), 20, () -> {
+        retry(random.nextInt(10), 20, () -> {
             try {
                 api.updateAWSAccount().body(awsAccount).accountId(awsAccount.getAccountId()).roleName(awsAccount.getRoleName()).execute();
             } catch (ApiException e) {
@@ -318,7 +318,7 @@ public class AwsIntegrationApiTest extends V1ApiTest {
         awsAccount.setAccountId(generateAwsAccountId());
         awsAccount.setRoleName(getUniqueEntityName());
 
-        TestUtils.retry(random.nextInt(10), 20, () -> {
+        retry(random.nextInt(10), 20, () -> {
             try {
                 AWSAccountCreateResponse createResponse = api.createAWSAccount().body(awsAccount).execute();
                 accountsToDelete.add(awsAccount);
@@ -482,7 +482,7 @@ public class AwsIntegrationApiTest extends V1ApiTest {
      */
     @Test
     public void aWSLogsCheckLambdaAsyncTest() throws ApiException, TestUtils.RetryException {
-        TestUtils.retry(random.nextInt(10), 20, () -> {
+        retry(random.nextInt(10), 20, () -> {
             try {
                 api.createAWSAccount().body(uniqueAWSAccount).execute();
                 accountsToDelete.add(uniqueAWSAccount);
@@ -499,7 +499,7 @@ public class AwsIntegrationApiTest extends V1ApiTest {
 
         // Give the async call time to finish, only run assertions once we know we have an error state
         // This should only require a small amount of time to be complete
-        TestUtils.retry(5, 20, () -> {
+        retry(5, 20, () -> {
             AWSLogsAsyncResponse retryResponse;
             try {
                 retryResponse = logsApi.checkAWSLogsLambdaAsync().body(uniqueAWSAccountLambdaRequest).execute();
@@ -530,7 +530,7 @@ public class AwsIntegrationApiTest extends V1ApiTest {
      */
     @Test
     public void aWSLogsCheckServicesAsyncTest() throws ApiException, TestUtils.RetryException {
-        TestUtils.retry(random.nextInt(10), 20, () -> {
+        retry(random.nextInt(10), 20, () -> {
             try {
                 api.createAWSAccount().body(uniqueAWSAccount).execute();
                 accountsToDelete.add(uniqueAWSAccount);
@@ -554,7 +554,7 @@ public class AwsIntegrationApiTest extends V1ApiTest {
      */
     @Test
     public void aWSLogsAddListEnableAndDeleteTest() throws ApiException, TestUtils.RetryException {
-        TestUtils.retry(random.nextInt(10), 20, () -> {
+        retry(random.nextInt(10), 20, () -> {
             try {
                 api.createAWSAccount().body(uniqueAWSAccount).execute();
                 accountsToDelete.add(uniqueAWSAccount);

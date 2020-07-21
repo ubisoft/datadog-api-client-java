@@ -80,7 +80,7 @@ public class HostsApiTest extends V1ApiTest {
         assertEquals("{\"status\": \"ok\"}", response.getData());
 
         // wait for host to appear
-        TestUtils.retry(10, 10, () -> {
+        retry(10, 10, () -> {
             MetricsListResponse metrics;
             try {
                 HostTags hostTagsResp = tagsAPI.getHostTags(hostname).execute();

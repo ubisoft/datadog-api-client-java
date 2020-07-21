@@ -35,7 +35,7 @@ public abstract class V1ApiTest extends TestUtils.APITest {
     protected static ApiClient generalApiUnitTestClient;
 
     @BeforeClass
-    public static void initGeneralApiClient() {
+    public void initGeneralApiClient() {
         generalApiClient = new ApiClient();
 
         // Configure authorization
@@ -48,8 +48,8 @@ public abstract class V1ApiTest extends TestUtils.APITest {
         generalApiClient.setDebugging("true".equals(System.getenv("DEBUG")));
 
         // Set proxy to the mockServer for recording
-        if (!TestUtils.getRecordingMode().equals(RecordingMode.MODE_REPLAYING)) {
-            if (!(TestUtils.isIbmJdk() || TestUtils.getRecordingMode().equals(RecordingMode.MODE_IGNORE))) {
+        if (!getRecordingMode().equals(RecordingMode.MODE_REPLAYING)) {
+            if (!(TestUtils.isIbmJdk() || getRecordingMode().equals(RecordingMode.MODE_IGNORE))) {
                 ClientConfig config = (ClientConfig) generalApiClient.getHttpClient().getConfiguration();
                 config.connectorProvider(new HttpUrlConnectorProvider().connectionFactory(new TestUtils.MockServerProxyConnectionFactory()));
             }
@@ -61,7 +61,7 @@ public abstract class V1ApiTest extends TestUtils.APITest {
     }
 
     @BeforeClass
-    public static void initGeneralFakeAuthApiClient() {
+    public void initGeneralFakeAuthApiClient() {
         generalFakeAuthApiClient = new ApiClient();
 
         // Configure authorization
@@ -74,8 +74,8 @@ public abstract class V1ApiTest extends TestUtils.APITest {
         generalFakeAuthApiClient.setDebugging("true".equals(System.getenv("DEBUG")));
 
         // Set proxy to the mockServer for recording
-        if (!TestUtils.getRecordingMode().equals(RecordingMode.MODE_REPLAYING)) {
-            if (!(TestUtils.isIbmJdk() || TestUtils.getRecordingMode().equals(RecordingMode.MODE_IGNORE))) {
+        if (!getRecordingMode().equals(RecordingMode.MODE_REPLAYING)) {
+            if (!(TestUtils.isIbmJdk() || getRecordingMode().equals(RecordingMode.MODE_IGNORE))) {
                 ClientConfig config = (ClientConfig) generalFakeAuthApiClient.getHttpClient().getConfiguration();
                 config.connectorProvider(new HttpUrlConnectorProvider().connectionFactory(new TestUtils.MockServerProxyConnectionFactory()));
             }
@@ -87,7 +87,7 @@ public abstract class V1ApiTest extends TestUtils.APITest {
     }
 
     @BeforeClass
-    public static void initGeneralApiUnitTestClient() {
+    public void initGeneralApiUnitTestClient() {
         generalApiUnitTestClient = new ApiClient();
         generalApiUnitTestClient.setBasePath(String.format("http://localhost:%d", WIREMOCK_PORT));
         // Disable templated servers

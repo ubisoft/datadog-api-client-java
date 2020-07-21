@@ -68,7 +68,7 @@ public class TagsApiTest extends V1ApiTest {
         assertEquals("{\"status\": \"ok\"}", response.getData());
 
         // wait for host to appear
-        TestUtils.retry(10, 10, () -> {
+        retry(10, 10, () -> {
             MetricsListResponse metrics;
             try {
                 HostTags hostTagsResp = api.getHostTags(hostname).execute();
@@ -97,7 +97,7 @@ public class TagsApiTest extends V1ApiTest {
         assertEquals(0, getTagsResp.getTags().size());
 
         // wait for host to appear
-        TestUtils.retry(10, 10, () -> {
+        retry(10, 10, () -> {
             MetricsListResponse metrics;
             try {
                 TagToHosts hostTagsResp = api.listHostTags().source("datadog").execute();

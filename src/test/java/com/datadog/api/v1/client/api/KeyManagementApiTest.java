@@ -496,7 +496,7 @@ public class KeyManagementApiTest extends V1ApiTest {
     @Test
     public void aPPKeysMgmtCreate409ErrorsTest() throws ApiException, IOException {
         // This test case does not support reply from recording
-        assumeFalse(TestUtils.getRecordingMode().equals(RecordingMode.MODE_REPLAYING));
+        assumeFalse(getRecordingMode().equals(RecordingMode.MODE_REPLAYING));
 
         long nowMillis = now.toInstant().toEpochMilli()/1000;
         String testAppKeyName = getUniqueEntityName();
@@ -569,7 +569,7 @@ public class KeyManagementApiTest extends V1ApiTest {
     @Test
     public void aPPKeysMgmtUpdate409ErrorsTest() throws ApiException, IOException {
         // This test case does not support reply from recording
-        assumeFalse(TestUtils.getRecordingMode().equals(RecordingMode.MODE_REPLAYING));
+        assumeFalse(getRecordingMode().equals(RecordingMode.MODE_REPLAYING));
 
         // Create two app keys to trigger the 409 conflict
         String testAppKeyName1 = getUniqueEntityName();

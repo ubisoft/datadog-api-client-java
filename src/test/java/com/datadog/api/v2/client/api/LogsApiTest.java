@@ -68,7 +68,7 @@ public class LogsApiTest extends V2APITest {
         String hostname = getUniqueEntityName();
 
         String intakeURL;
-        if (TestUtils.getRecordingMode().equals(RecordingMode.MODE_REPLAYING)) {
+        if (getRecordingMode().equals(RecordingMode.MODE_REPLAYING)) {
             // when running from cassettes, we need to make sure that the default base URL
             // is used for mock server certificates to work properly
             intakeURL = "/v1/input";
@@ -108,7 +108,7 @@ public class LogsApiTest extends V2APITest {
         // Make sure both logs are indexed
         LogsListRequest bothMessagesRequest = new LogsListRequest()
                 .filter(allLogsFilter);
-        TestUtils.retry(10, 10, () -> {
+        retry(10, 10, () -> {
             try {
                 LogsListResponse response = api.listLogs().body(bothMessagesRequest).execute();
                 return response.getData() != null && response.getData().size() == 2;
@@ -168,7 +168,7 @@ public class LogsApiTest extends V2APITest {
 
         // Make sure both logs are indexed
         AtomicReference<LogsListResponse> responseAscending = new AtomicReference<>();
-        TestUtils.retry(5, 10, () -> {
+        retry(5, 10, () -> {
             try {
                 // Sort works correctly
                 responseAscending.set(api.listLogsGet()
@@ -189,7 +189,7 @@ public class LogsApiTest extends V2APITest {
 
         // Make sure both logs are indexed
         AtomicReference<LogsListResponse> responseDescending = new AtomicReference<>();
-        TestUtils.retry(5, 10, () -> {
+        retry(5, 10, () -> {
             try {
                 // Sort works correctly
                 responseDescending.set(api.listLogsGet()
@@ -210,7 +210,7 @@ public class LogsApiTest extends V2APITest {
 
         // Paging
         AtomicReference<LogsListResponse> pageOneResponse = new AtomicReference<>();
-        TestUtils.retry(5, 10, () -> {
+        retry(5, 10, () -> {
             try {
                 pageOneResponse.set(api.listLogsGet()
                         .filterQuery(suffix)
@@ -230,7 +230,7 @@ public class LogsApiTest extends V2APITest {
         assertTrue(pageOneResponse.get().getLinks().getNext().contains(URLEncoder.encode(cursor)));
 
         AtomicReference<LogsListResponse> pageTwoResponse = new AtomicReference<>();
-        TestUtils.retry(5, 10, () -> {
+        retry(5, 10, () -> {
             try {
                 pageTwoResponse.set(api.listLogsGet()
                         .filterQuery(suffix)

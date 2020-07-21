@@ -30,7 +30,7 @@ public abstract class V2APITest extends TestUtils.APITest {
     protected static ApiClient generalApiUnitTestClient;
 
     @BeforeClass
-    public static void initGeneralApiClient() {
+    public void initGeneralApiClient() {
         generalApiClient = new ApiClient();
 
         // Configure authorization
@@ -44,8 +44,8 @@ public abstract class V2APITest extends TestUtils.APITest {
         generalApiClient.setDebugging("true".equals(System.getenv("DEBUG")));
 
         // Set proxy to the mockServer for recording
-        if (!TestUtils.getRecordingMode().equals(RecordingMode.MODE_REPLAYING)) {
-            if (!(TestUtils.isIbmJdk() || TestUtils.getRecordingMode().equals(RecordingMode.MODE_IGNORE))) {
+        if (!getRecordingMode().equals(RecordingMode.MODE_REPLAYING)) {
+            if (!(TestUtils.isIbmJdk() || getRecordingMode().equals(RecordingMode.MODE_IGNORE))) {
                 ClientConfig config = (ClientConfig) generalApiClient.getHttpClient().getConfiguration();
                 config.connectorProvider(new HttpUrlConnectorProvider().connectionFactory(new TestUtils.MockServerProxyConnectionFactory()));
             }

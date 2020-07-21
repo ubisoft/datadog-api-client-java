@@ -45,6 +45,7 @@ import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.attribute.FileTime;
 import java.security.Security;
 import java.time.Clock;
 import java.time.Instant;
@@ -65,58 +66,12 @@ public class TestUtils {
     public static String MOCKSERVER_HOST = "localhost";
     public static int MOCKSERVER_PORT = 9090 + SUREFIRE_FORK;
 
-    public static void retry(int interval, int count, BooleanSupplier call) throws RetryException {
-        for (int i = 0; i <= count; i++) {
-            try {
-                if (call.getAsBoolean()) {
-                    return;
-                }
-            } catch (AssertionError e) {
-                if (i == count) {
-                    throw e;
-                }
-            }
-            if (!getRecordingMode().equals(RecordingMode.MODE_REPLAYING)) {
-                try {
-                    Thread.sleep(interval * 1000);
-                } catch (InterruptedException e) {
-                    return;
-                }
-            }
-        }
-        throw new RetryException(String.format("Retry error: failed to satisfy the condition after %d times", count));
-    }
-
     public static String getFixture(String path) throws IOException {
         return IOUtils.toString(TestUtils.class.getResourceAsStream(path), "UTF-8");
     }
 
-    public static RecordingMode getRecordingMode() {
-        String envRecording = System.getenv("RECORD");
-        RecordingMode rm = RecordingMode.MODE_REPLAYING;
-        if (envRecording != null) {
-            if (envRecording.equals(RecordingMode.MODE_IGNORE.value)) {
-                rm = RecordingMode.MODE_IGNORE;
-            } else if (envRecording.equals(RecordingMode.MODE_RECORDING.value)) {
-                rm = RecordingMode.MODE_RECORDING;
-            }
-        }
-        return rm;
-    }
-
     public static boolean isIbmJdk() {
         return System.getProperty("java.vendor").equals("IBM Corporation");
-    }
-
-    public static boolean handleIbmJdk() {
-        if (!isIbmJdk()) {
-            return false;
-        }
-        if (getRecordingMode().equals(RecordingMode.MODE_REPLAYING)) {
-            throw new RuntimeException("Can't run recorded tests on IBM JDK: https://github.com/mock-server/mockserver/issues/750");
-        }
-        System.err.println("NOTE: Running on IBM JDK can't record cassettes, will only run tests: https://github.com/mock-server/mockserver/issues/750");
-        return true;
     }
 
     public static class RetryException extends Exception {
@@ -159,6 +114,59 @@ public class TestUtils {
 
         public abstract String getTracingEndpoint();
 
+        public void retry(int interval, int count, BooleanSupplier call) throws RetryException {
+            for (int i = 0; i <= count; i++) {
+                try {
+                    if (call.getAsBoolean()) {
+                        return;
+                    }
+                } catch (AssertionError e) {
+                    if (i == count) {
+                        throw e;
+                    }
+                }
+                if (!getRecordingMode().equals(RecordingMode.MODE_REPLAYING)) {
+                    try {
+                        Thread.sleep(interval * 1000);
+                    } catch (InterruptedException e) {
+                        return;
+                    }
+                }
+            }
+            throw new RetryException(String.format("Retry error: failed to satisfy the condition after %d times", count));
+        }
+
+        public RecordingMode getRecordingMode() {
+            String envRecording = System.getenv("RECORD");
+            String envRerecord = System.getenv("RERECORD_FAILED_TESTS");
+            RecordingMode rm = RecordingMode.MODE_REPLAYING;
+            if (envRecording != null) {
+                if (envRecording.equals(RecordingMode.MODE_IGNORE.value)) {
+                    rm = RecordingMode.MODE_IGNORE;
+                } else if (envRecording.equals(RecordingMode.MODE_RECORDING.value)) {
+                    rm = RecordingMode.MODE_RECORDING;
+                }
+            }
+            if (envRerecord != null && envRecording.equals("true")) {
+                Path rerecordFile = Paths.get("src/test/resources/cassettes", version, getQualifiedTestcaseName() + ".rerecord");
+                if (Files.exists(rerecordFile)) {
+                    rm = RecordingMode.MODE_RECORDING;
+                }
+            }
+            return rm;
+        }
+
+        public boolean handleIbmJdk() {
+            if (!isIbmJdk()) {
+                return false;
+            }
+            if (getRecordingMode().equals(RecordingMode.MODE_REPLAYING)) {
+                throw new RuntimeException("Can't run recorded tests on IBM JDK: https://github.com/mock-server/mockserver/issues/750");
+            }
+            System.err.println("NOTE: Running on IBM JDK can't record cassettes, will only run tests: https://github.com/mock-server/mockserver/issues/750");
+            return true;
+        }
+
         /**
          * Combines all cassettes into a single huge one.
          *
@@ -194,7 +202,7 @@ public class TestUtils {
             return humongousCassette.toPath();
         }
 
-        private static void setupMockServer() {
+        private void setupMockServer() {
             // Mockserver uses a connection pool with keepAlive connections to talk to the API.
             // It seems that there are circumstances under which a reused connection freezes
             // forever. We temporarily workaround this by making all connections closing
@@ -215,10 +223,8 @@ public class TestUtils {
             mockServer = startClientAndServer(MOCKSERVER_PORT);
         }
 
-        static {
-            // to have mockserver initialized only once before running all tests, we use
-            // a static block - we put all cassettes into one huge file and create mockserver
-            // instance using that file (when replaying)
+        @BeforeClass
+        public void mockServer() {
             setupMockServer();
         }
 
@@ -249,7 +255,7 @@ public class TestUtils {
         }
 
         @BeforeClass
-        public static void getSecretsFromEnv() {
+        public void getSecretsFromEnv() {
             if (getRecordingMode().equals(RecordingMode.MODE_REPLAYING)) return;
 
             HashMap<String, String> secrets = new HashMap<String, String>();
@@ -276,7 +282,7 @@ public class TestUtils {
                 return;
             }
             // Use a fixed time in tests to allow replaying from cassettes
-            if (!TestUtils.getRecordingMode().equals(RecordingMode.MODE_REPLAYING)) {
+            if (!getRecordingMode().equals(RecordingMode.MODE_REPLAYING)) {
                 // When recording, set the clock to the current time and save it to a `freeze` file for replaying
                 clock = Clock.fixed(Instant.now(), ZoneOffset.UTC);
                 now = OffsetDateTime.ofInstant(Instant.now(clock), ZoneOffset.UTC);
@@ -368,6 +374,20 @@ public class TestUtils {
         @After
         public void resetWiremock() {
             reset();
+        }
+
+        @After
+        public void markForRerecording() {
+            String envRerecord = System.getenv("RERECORD_FAILED_TESTS");
+            if (envRerecord != null && envRerecord.equals("true")) {
+                Path rerecordFile = Paths.get("src/test/resources/cassettes", version, getQualifiedTestcaseName() + ".rerecord");
+                try {
+                    Files.setLastModifiedTime(rerecordFile, FileTime.from(OffsetDateTime.now().toInstant()));
+                } catch (java.io.IOException e) {
+                    System.out.println("Could not create file " + rerecordFile);
+                }
+
+            }
         }
 
         /**
