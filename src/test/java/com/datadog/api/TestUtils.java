@@ -35,7 +35,6 @@ import org.mockserver.model.LogEventRequestAndResponse;
 import org.mockserver.model.Parameter;
 import org.mockserver.socket.tls.KeyStoreFactory;
 
-import javax.net.ssl.HttpsURLConnection;
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.InetSocketAddress;
@@ -51,9 +50,11 @@ import java.time.Instant;
 import java.time.OffsetDateTime;
 import java.time.ZoneOffset;
 import java.util.ArrayList;
+import java.util.function.BooleanSupplier;
 import java.util.HashMap;
 import java.util.List;
-import java.util.function.BooleanSupplier;
+import java.util.regex.Pattern;
+import javax.net.ssl.HttpsURLConnection;
 
 import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.options;
 import static com.github.tomakehurst.wiremock.client.WireMock.reset;
@@ -411,5 +412,24 @@ public class TestUtils {
         public String getUniqueEntityName(String suffix) {
             return String.format("%s-%s", getUniqueEntityName(), suffix);
         }
+
+        /*
+         * Convert an identifier to class name.
+         */
+        public String toClassName(String identifier) {
+            return Pattern.compile("([A-Z])([A-Z]+)([A-Z][a-z])").matcher(identifier).replaceAll(m -> {
+                return m.group(1) + m.group(2).toLowerCase() + m.group(3);
+            });
+        }
+
+        /*
+         * Convert an identifier to method name.
+         */
+        public String toMethodName(String identifier) {
+            return Pattern.compile("^([A-Z])").matcher(identifier).replaceAll(m -> {
+                return m.group(1).toLowerCase();
+            });
+        }
+
     }
 }
