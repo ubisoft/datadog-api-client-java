@@ -1,16 +1,28 @@
 package com.datadog.api.v2.client.api;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.java.Scenario;
+import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.HashMap;
+import java.util.Map;
+import org.glassfish.jersey.client.ClientConfig;
+import org.glassfish.jersey.client.HttpUrlConnectorProvider;
 import static org.junit.Assert.*;
 
 import com.datadog.api.v2.client.ApiClient;
 import com.datadog.api.v2.client.ApiResponse;
+import com.datadog.api.RecordingMode;
+import com.datadog.api.TestUtils;
+
+import java.util.regex.Pattern;
+import java.util.Arrays;
+import java.util.List;
+
 
 public class ClientSteps extends V2APITest {
 
@@ -22,14 +34,80 @@ public class ClientSteps extends V2APITest {
     private static Method requestBuilder;
     private static ApiResponse<?> response;
 
+    private HashMap<String, Object> context;
+
     @Before
-    public void single_argument(Scenario scenario) {
+    public void setupClient(Scenario scenario) {
         client = new ApiClient();
+
+        client.setServerIndex(0);
+
+        // Set debugging based on env
+        client.setDebugging("true".equals(System.getenv("DEBUG")));
+
+        // Set proxy to the mockServer for recording
+        /*
+        if (!TestUtils.getRecordingMode().equals(RecordingMode.MODE_REPLAYING)) {
+            if (!(TestUtils.isIbmJdk() || TestUtils.getRecordingMode().equals(RecordingMode.MODE_IGNORE))) {
+                ClientConfig config = (ClientConfig) client.getHttpClient().getConfiguration();
+                config.connectorProvider(new HttpUrlConnectorProvider().connectionFactory(new TestUtils.MockServerProxyConnectionFactory()));
+            }
+        } else {
+            // Set base path to the mock server for replaying
+            client.setBasePath("https://" + TestUtils.MOCKSERVER_HOST + ":" + TestUtils.MOCKSERVER_PORT);
+            client.setServerIndex(null);
+        }
+        */
+
+        client.addDefaultHeader("JAVA-TEST-NAME", name.getMethodName());
+    }
+
+    @Before
+    public void setupContext(Scenario scenario) {
+        context = new HashMap<String, Object>();
+        String unique = "java-unique"; // getUniqueEntityName();
+        context.put("unique", unique);
+        context.put("unique_lower", unique.toLowerCase());
     }
 
     @Override
     public String getTracingEndpoint() {
         return "features";
+    }
+
+    @SuppressWarnings("unchecked")
+    public static <T> T getPropertyValue(Object obj, String field) throws java.lang.IllegalAccessException, java.lang.NoSuchFieldException {
+        Class<?> clazz = obj.getClass();
+        Field f = clazz.getDeclaredField(field);
+        f.setAccessible(true);
+        Object ret = f.get(obj);
+
+        return (T) ret;
+    }
+
+    public Object lookup(String path) {
+        Object result = context;
+        System.out.printf("%s\n", Arrays.asList(path.split("(?<=\\.)")));
+        for (String dotPart: Arrays.asList(path.split("(?<=\\.)"))) {
+            dotPart = dotPart.replaceAll("\\.", "");
+            System.out.println(dotPart);
+            for (String part: Arrays.asList(dotPart.split("(?<=\\[)"))) {
+                System.out.printf("%s -> %s\n", result, part);
+                if (part.indexOf("]") != -1) {
+                    Integer index = Integer.parseInt(part.replaceAll("]", ""));
+                    result = List.class.cast(result).get(index);
+                } else {
+                    result = HashMap.class.cast(result).get(part);
+                }
+            }
+        }
+        return result;
+    }
+
+    public String templated(String source) {
+        return Pattern.compile("\\{\\{ ?([^ }]+) ?\\}\\}").matcher(source).replaceAll(m -> {
+            return lookup(m.group(1)).toString();
+        });
     }
 
     @Given("an instance of {string} API")
@@ -77,7 +155,9 @@ public class ClientSteps extends V2APITest {
 
     @Given("body {}")
     public void setBody(String data) {
-        body = data;
+        System.out.println(data);
+        body = templated(data);
+        System.out.println(body);
     }
 
     @Given("there is a valid {string} in the system")
@@ -88,7 +168,7 @@ public class ClientSteps extends V2APITest {
     @When("the request is sent")
     public void theRequestIsSent() throws java.lang.IllegalAccessException, java.lang.NoSuchMethodException, java.lang.reflect.InvocationTargetException {
         Class requestClass = requestBuilder.getReturnType();
-        // response = (ApiResponse<?>) requestClass.getMethod("executeWithHttpInfo").invoke(requestBuilder.invoke(api));
+        response = (ApiResponse<?>) requestClass.getMethod("executeWithHttpInfo").invoke(requestBuilder.invoke(api));
     }
 
     @Then("the response status is {int} {}")
