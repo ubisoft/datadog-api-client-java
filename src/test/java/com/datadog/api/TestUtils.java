@@ -431,5 +431,17 @@ public class TestUtils {
             });
         }
 
+        /*
+         * Convert an identifier to property name.
+         */
+        public String toPropertyName(String identifier) {
+            identifier = Pattern.compile("_(.)").matcher(identifier).replaceAll(m -> {
+                return m.group(1).toUpperCase();
+            });
+            return Pattern.compile("\\[(.)([^]]*)\\]").matcher(identifier).replaceAll(m -> {
+                return m.group(1).toUpperCase() + m.group(2);
+            });
+        }
+
     }
 }

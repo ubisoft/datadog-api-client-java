@@ -899,7 +899,7 @@ public class UsageMeteringApiTest extends V1ApiTest {
     }
 
     @Test
-    public void getMonthlyCustomReportsErrorsTest() throws IOException {        
+    public void getMonthlyCustomReportsErrorsTest() throws IOException {
         try {
             generalFakeAuthApiClient.setUnstableOperationEnabled("getMonthlyCustomReports", true);
             fakeAuthApi.getMonthlyCustomReports().execute();
@@ -910,7 +910,7 @@ public class UsageMeteringApiTest extends V1ApiTest {
             assertNotNull(error.getErrors());
         }
     }
-    
+
     @Test
     public void getUsageBillableSummary400ErrorTest() throws IOException {
         String fixtureData = TestUtils.getFixture(fixturePrefix + "/error_400.json");

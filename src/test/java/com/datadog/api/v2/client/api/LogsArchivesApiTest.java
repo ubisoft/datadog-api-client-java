@@ -152,7 +152,7 @@ public class LogsArchivesApiTest extends V2APITest {
         ApiResponse<Void> response = api.deleteLogsArchive(ARCHIVE_ID).executeWithHttpInfo();
         assertEquals(204, response.getStatusCode());
     }
-    
+
     /**
      * Get an archive
      *
@@ -172,7 +172,7 @@ public class LogsArchivesApiTest extends V2APITest {
         LogsArchive response = api.getLogsArchive(ARCHIVE_ID).execute();
         assertEquals(objectMapper.readValue(fixtureData, LogsArchive.class), response);
     }
-    
+
     /**
      * Get all archives
      *
@@ -192,7 +192,7 @@ public class LogsArchivesApiTest extends V2APITest {
         LogsArchives response = api.listLogsArchives().execute();
         assertEquals(objectMapper.readValue(fixtureData, LogsArchives.class), response);
     }
-    
+
     /**
      * Update an archive
      *
@@ -265,5 +265,5 @@ public class LogsArchivesApiTest extends V2APITest {
                 .query("service:toto");
         return new LogsArchiveCreateRequest().data(new LogsArchiveCreateRequestDefinition().attributes(attributes));
     }
-    
+
 }
