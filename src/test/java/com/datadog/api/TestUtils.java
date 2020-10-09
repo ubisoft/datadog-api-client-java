@@ -53,7 +53,6 @@ import java.util.ArrayList;
 import java.util.function.BooleanSupplier;
 import java.util.HashMap;
 import java.util.List;
-import java.util.regex.Pattern;
 import javax.net.ssl.HttpsURLConnection;
 
 import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.options;
@@ -412,36 +411,5 @@ public class TestUtils {
         public String getUniqueEntityName(String suffix) {
             return String.format("%s-%s", getUniqueEntityName(), suffix);
         }
-
-        /*
-         * Convert an identifier to class name.
-         */
-        public String toClassName(String identifier) {
-            return Pattern.compile("([A-Z])([A-Z]+)([A-Z][a-z])").matcher(identifier).replaceAll(m -> {
-                return m.group(1) + m.group(2).toLowerCase() + m.group(3);
-            });
-        }
-
-        /*
-         * Convert an identifier to method name.
-         */
-        public String toMethodName(String identifier) {
-            return Pattern.compile("^([A-Z])").matcher(identifier).replaceAll(m -> {
-                return m.group(1).toLowerCase();
-            });
-        }
-
-        /*
-         * Convert an identifier to property name.
-         */
-        public String toPropertyName(String identifier) {
-            identifier = Pattern.compile("_(.)").matcher(identifier).replaceAll(m -> {
-                return m.group(1).toUpperCase();
-            });
-            return Pattern.compile("\\[(.)([^]]*)\\]").matcher(identifier).replaceAll(m -> {
-                return m.group(1).toUpperCase() + m.group(2);
-            });
-        }
-
     }
 }
