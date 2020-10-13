@@ -4,7 +4,6 @@ import static org.junit.Assert.*;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -16,23 +15,12 @@ import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import com.datadog.api.v2.client.api.Undo;
-import com.datadog.api.v2.client.api.UsersApi;
-import com.datadog.api.v2.client.ApiClient;
-import com.datadog.api.v2.client.model.UserCreateAttributes;
-import com.datadog.api.v2.client.model.UserCreateData;
-import com.datadog.api.v2.client.model.UserCreateRequest;
-import com.datadog.api.v2.client.model.UserResponse;
 
 public class ClientSteps {
     protected static final String TEST_API_KEY_NAME = "DD_TEST_CLIENT_API_KEY";
     protected static final String TEST_APP_KEY_NAME = "DD_TEST_CLIENT_APP_KEY";
 
     private static String apiVersion;
-
-    private Scenario currentScenario;
-
-    protected OffsetDateTime now;
 
     private World world;
 
@@ -42,32 +30,13 @@ public class ClientSteps {
 
     @Before(order = 0)
     public void setupVersion(Scenario scenario) throws java.io.IOException {
-        currentScenario = scenario;
-        // setupClock();
-        now = OffsetDateTime.now();
+        world.scenario = scenario;
+
         String[] parts = scenario.getUri().toString().split("/");
         // get version
         // src/test/resources/com/datadog/api/>>>v2<<</client/api/teams.feature
         apiVersion = parts[parts.length - 4];
         // TODO scenario.getSourceTagNames();
-    }
-
-    public String getUniqueEntityName() {
-        // NOTE: some endpoints have limits on certain fields (e.g. Roles V2 names can
-        // only be 55 chars long),
-        // so we need to keep this short
-        String name = Pattern.compile("[^A-Za-z0-9]+").matcher(currentScenario.getName()).replaceAll("_");
-        String result = String.format("java-%s-%d", name.substring(0, 20), now.toEpochSecond());
-        // In case this is used in URL, make sure we replace potential slash
-        return result;
-    }
-
-    public String getUniqueEntityName(int maxLen) {
-        String result = getUniqueEntityName();
-        if (result.length() > maxLen) {
-            result = result.substring(0, maxLen);
-        }
-        return result;
     }
 
     @Before(order = 1)
@@ -78,7 +47,7 @@ public class ClientSteps {
 
     @Before(order = 2)
     public void setupContext() {
-        String unique = getUniqueEntityName();
+        String unique = world.getUniqueEntityName();
         world.context.put("unique", unique);
         world.context.put("unique_lower", unique.toLowerCase());
     }
@@ -189,39 +158,6 @@ public class ClientSteps {
         assertEquals(lookup(world.context, fixturePath), lookup(responseData, responsePath));
     }
 
-    // specific actions
-    @Given("there is a valid {string} in the system")
-    public void thereIsAValidInTheSystem(String name) throws com.datadog.api.v2.client.ApiException {
-        if (name.equals("user")) {
-            final String testingUserName = getUniqueEntityName().toLowerCase();
-            final String testingUserHandle = testingUserName + "@datadoghq.com";
-            UserCreateAttributes uca = new UserCreateAttributes().email(testingUserHandle).name(testingUserName);
-            UserCreateData ucd = new UserCreateData().attributes(uca);
-            UserCreateRequest ucr = new UserCreateRequest().data(ucd);
-            UsersApi usersAPI = new UsersApi((ApiClient) world.client);
-            UserResponse ur = usersAPI.createUser().body(ucr).execute();
-            world.context.put(name, ur);
-            Undo.createUser(usersAPI, (Object) ur);
-        } else {
-            throw new RuntimeException(name);
-        }
-    }
-
-    @Given("the {string} is granted to the {string}")
-    public void theIsGrantedToThe(String string, String string2) {
-        assertTrue(false);
-    }
-
-    @Given("the {string} has the {string}")
-    public void theHasThe(String string, String string2) {
-        assertTrue(false);
-    }
-
-    @Given("the {string} has a {string}")
-    public void theHasA(String string, String string2) {
-        assertTrue(false);
-    }
-
     /*
      * Convert an identifier to class name.
      */
@@ -264,12 +200,6 @@ public class ClientSteps {
         f.setAccessible(true);
         Object ret = f.get(obj);
         return (T) ret;
-    }
-
-    @SuppressWarnings("unchecked")
-    public static <T> T fromClass(Class<T> clazz, Object obj)
-            throws java.lang.IllegalAccessException, java.lang.NoSuchFieldException {
-        return (T) obj;
     }
 
     public static Object lookup(Object data, String path)
