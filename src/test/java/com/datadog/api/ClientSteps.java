@@ -6,8 +6,10 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.function.Function;
 import java.util.HashMap;
 import java.util.List;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import io.cucumber.java.Before;
@@ -162,7 +164,7 @@ public class ClientSteps {
      * Convert an identifier to class name.
      */
     public static String toClassName(String identifier) {
-        return Pattern.compile("([A-Z])([A-Z]+)([A-Z][a-z])").matcher(identifier).replaceAll(m -> {
+        return replace(identifier, Pattern.compile("([A-Z])([A-Z]+)([A-Z][a-z])"), m -> {
             return m.group(1) + m.group(2).toLowerCase() + m.group(3);
         });
     }
@@ -171,7 +173,7 @@ public class ClientSteps {
      * Convert an identifier to method name.
      */
     public static String toMethodName(String identifier) {
-        return Pattern.compile("^([A-Z])").matcher(identifier).replaceAll(m -> {
+        return replace(identifier, Pattern.compile("^([A-Z])"), m -> {
             return m.group(1).toLowerCase();
         });
     }
@@ -180,10 +182,10 @@ public class ClientSteps {
      * Convert an identifier to property name.
      */
     public static String toPropertyName(String identifier) {
-        identifier = Pattern.compile("_(.)").matcher(identifier).replaceAll(m -> {
+        identifier = replace(identifier, Pattern.compile("_(.)"), m -> {
             return m.group(1).toUpperCase();
         });
-        return Pattern.compile("\\[(.)([^]]*)\\]").matcher(identifier).replaceAll(m -> {
+        return replace(identifier, Pattern.compile("\\[(.)([^]]*)\\]"), m -> {
             return m.group(1).toUpperCase() + m.group(2);
         });
     }
@@ -227,7 +229,7 @@ public class ClientSteps {
 
     public static String templated(Object context, String source)
             throws java.lang.IllegalAccessException, java.lang.NoSuchFieldException {
-        return Pattern.compile("\\{\\{ ?([^ }]+) ?\\}\\}").matcher(source).replaceAll(m -> {
+        return replace(source, Pattern.compile("\\{\\{ ?([^ }]+) ?\\}\\}"), m -> {
             try {
                 return lookup(context, m.group(1)).toString();
             } catch (Exception e) {
@@ -237,4 +239,15 @@ public class ClientSteps {
         });
     }
 
+    public static String replace(String input, Pattern regex, Function<Matcher, String> replacer) {
+        // return regex.matcher(input).replaceAll(replacer) in Java 9+
+        StringBuffer result = new StringBuffer();
+        Matcher m = regex.matcher(input);
+        while (m.find()) {
+            m.appendReplacement(result, replacer.apply(m));
+        }
+        m.appendTail(result);
+
+        return result.toString();
+    }
 }

@@ -116,7 +116,7 @@ public class World {
             return null;
         }
 
-        Class<?> undoClass = Class.forName(apiClass.getPackageName() + ".Undo");
+        Class<?> undoClass = Class.forName(apiClass.getPackage().getName() + ".Undo");
         Method dataMethod = responseClass.getMethod("getData");
         return undoClass.getMethod(actionName, apiClass, dataMethod.getReturnType());
     }
