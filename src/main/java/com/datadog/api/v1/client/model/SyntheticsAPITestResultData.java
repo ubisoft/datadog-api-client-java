@@ -19,6 +19,7 @@ import com.datadog.api.v1.client.model.SyntheticsErrorCode;
 import com.datadog.api.v1.client.model.SyntheticsSSLCertificate;
 import com.datadog.api.v1.client.model.SyntheticsTestProcessStatus;
 import com.datadog.api.v1.client.model.SyntheticsTiming;
+import com.datadog.api.v1.client.model.any;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -67,13 +68,13 @@ public class SyntheticsAPITestResultData {
   private Long httpStatusCode;
 
   public static final String JSON_PROPERTY_REQUEST_HEADERS = "requestHeaders";
-  private Map<String, Object> requestHeaders = null;
+  private Map<String, any> requestHeaders = null;
 
   public static final String JSON_PROPERTY_RESPONSE_BODY = "responseBody";
   private String responseBody;
 
   public static final String JSON_PROPERTY_RESPONSE_HEADERS = "responseHeaders";
-  private Map<String, Object> responseHeaders = null;
+  private Map<String, any> responseHeaders = null;
 
   public static final String JSON_PROPERTY_RESPONSE_SIZE = "responseSize";
   private Long responseSize;
@@ -202,12 +203,12 @@ public class SyntheticsAPITestResultData {
   }
 
 
-  public SyntheticsAPITestResultData requestHeaders(Map<String, Object> requestHeaders) {
+  public SyntheticsAPITestResultData requestHeaders(Map<String, any> requestHeaders) {
     this.requestHeaders = requestHeaders;
     return this;
   }
 
-  public SyntheticsAPITestResultData putRequestHeadersItem(String key, Object requestHeadersItem) {
+  public SyntheticsAPITestResultData putRequestHeadersItem(String key, any requestHeadersItem) {
     if (this.requestHeaders == null) {
       this.requestHeaders = new HashMap<>();
     }
@@ -224,12 +225,12 @@ public class SyntheticsAPITestResultData {
   @JsonProperty(JSON_PROPERTY_REQUEST_HEADERS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public Map<String, Object> getRequestHeaders() {
+  public Map<String, any> getRequestHeaders() {
     return requestHeaders;
   }
 
 
-  public void setRequestHeaders(Map<String, Object> requestHeaders) {
+  public void setRequestHeaders(Map<String, any> requestHeaders) {
     this.requestHeaders = requestHeaders;
   }
 
@@ -258,12 +259,12 @@ public class SyntheticsAPITestResultData {
   }
 
 
-  public SyntheticsAPITestResultData responseHeaders(Map<String, Object> responseHeaders) {
+  public SyntheticsAPITestResultData responseHeaders(Map<String, any> responseHeaders) {
     this.responseHeaders = responseHeaders;
     return this;
   }
 
-  public SyntheticsAPITestResultData putResponseHeadersItem(String key, Object responseHeadersItem) {
+  public SyntheticsAPITestResultData putResponseHeadersItem(String key, any responseHeadersItem) {
     if (this.responseHeaders == null) {
       this.responseHeaders = new HashMap<>();
     }
@@ -280,12 +281,12 @@ public class SyntheticsAPITestResultData {
   @JsonProperty(JSON_PROPERTY_RESPONSE_HEADERS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public Map<String, Object> getResponseHeaders() {
+  public Map<String, any> getResponseHeaders() {
     return responseHeaders;
   }
 
 
-  public void setResponseHeaders(Map<String, Object> responseHeaders) {
+  public void setResponseHeaders(Map<String, any> responseHeaders) {
     this.responseHeaders = responseHeaders;
   }
 

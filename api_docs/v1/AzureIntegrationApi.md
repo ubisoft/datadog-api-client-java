@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## createAzureIntegration
 
-> Object createAzureIntegration().body(body).execute();
+> any createAzureIntegration().body(body).execute();
 
 Create an Azure integration
 
@@ -57,7 +57,7 @@ public class Example {
         AzureIntegrationApi apiInstance = new AzureIntegrationApi(defaultClient);
         AzureAccount body = new AzureAccount(); // AzureAccount | Create a Datadog-Azure integration for your Datadog account request body.
         try {
-            Object result = apiInstance.createAzureIntegration()
+            any result = apiInstance.createAzureIntegration()
                 .body(body)
                 .execute();
             System.out.println(result);
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**any**](any.md)
 
 ### Authorization
 
@@ -102,7 +102,7 @@ Name | Type | Description  | Notes
 
 ## deleteAzureIntegration
 
-> Object deleteAzureIntegration().body(body).execute();
+> any deleteAzureIntegration().body(body).execute();
 
 Delete an Azure integration
 
@@ -139,7 +139,7 @@ public class Example {
         AzureIntegrationApi apiInstance = new AzureIntegrationApi(defaultClient);
         AzureAccount body = new AzureAccount(); // AzureAccount | Delete a given Datadog-Azure integration request body.
         try {
-            Object result = apiInstance.deleteAzureIntegration()
+            any result = apiInstance.deleteAzureIntegration()
                 .body(body)
                 .execute();
             System.out.println(result);
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**any**](any.md)
 
 ### Authorization
 
@@ -261,7 +261,7 @@ This endpoint does not need any parameter.
 
 ## updateAzureHostFilters
 
-> Object updateAzureHostFilters().body(body).execute();
+> any updateAzureHostFilters().body(body).execute();
 
 Update Azure integration host filters
 
@@ -298,7 +298,7 @@ public class Example {
         AzureIntegrationApi apiInstance = new AzureIntegrationApi(defaultClient);
         AzureAccount body = new AzureAccount(); // AzureAccount | Update a Datadog-Azure integration's host filters request body.
         try {
-            Object result = apiInstance.updateAzureHostFilters()
+            any result = apiInstance.updateAzureHostFilters()
                 .body(body)
                 .execute();
             System.out.println(result);
@@ -322,7 +322,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**any**](any.md)
 
 ### Authorization
 
@@ -343,7 +343,7 @@ Name | Type | Description  | Notes
 
 ## updateAzureIntegration
 
-> Object updateAzureIntegration().body(body).execute();
+> any updateAzureIntegration().body(body).execute();
 
 Update an Azure integration
 
@@ -382,7 +382,7 @@ public class Example {
         AzureIntegrationApi apiInstance = new AzureIntegrationApi(defaultClient);
         AzureAccount body = new AzureAccount(); // AzureAccount | Update a Datadog-Azure integration request body.
         try {
-            Object result = apiInstance.updateAzureIntegration()
+            any result = apiInstance.updateAzureIntegration()
                 .body(body)
                 .execute();
             System.out.println(result);
@@ -406,7 +406,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**any**](any.md)
 
 ### Authorization
 

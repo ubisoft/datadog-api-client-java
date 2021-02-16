@@ -196,7 +196,7 @@ Name | Type | Description  | Notes
 
 ## createAWSLambdaARN
 
-> Object createAWSLambdaARN().body(body).execute();
+> any createAWSLambdaARN().body(body).execute();
 
 Add AWS Log Lambda ARN
 
@@ -233,7 +233,7 @@ public class Example {
         AwsLogsIntegrationApi apiInstance = new AwsLogsIntegrationApi(defaultClient);
         AWSAccountAndLambdaRequest body = new AWSAccountAndLambdaRequest(); // AWSAccountAndLambdaRequest | AWS Log Lambda Async request body.
         try {
-            Object result = apiInstance.createAWSLambdaARN()
+            any result = apiInstance.createAWSLambdaARN()
                 .body(body)
                 .execute();
             System.out.println(result);
@@ -257,7 +257,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**any**](any.md)
 
 ### Authorization
 
@@ -278,7 +278,7 @@ Name | Type | Description  | Notes
 
 ## deleteAWSLambdaARN
 
-> Object deleteAWSLambdaARN().body(body).execute();
+> any deleteAWSLambdaARN().body(body).execute();
 
 Delete an AWS Logs integration
 
@@ -315,7 +315,7 @@ public class Example {
         AwsLogsIntegrationApi apiInstance = new AwsLogsIntegrationApi(defaultClient);
         AWSAccountAndLambdaRequest body = new AWSAccountAndLambdaRequest(); // AWSAccountAndLambdaRequest | Delete AWS Lambda ARN request body.
         try {
-            Object result = apiInstance.deleteAWSLambdaARN()
+            any result = apiInstance.deleteAWSLambdaARN()
                 .body(body)
                 .execute();
             System.out.println(result);
@@ -339,7 +339,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**any**](any.md)
 
 ### Authorization
 
@@ -360,7 +360,7 @@ Name | Type | Description  | Notes
 
 ## enableAWSLogServices
 
-> Object enableAWSLogServices().body(body).execute();
+> any enableAWSLogServices().body(body).execute();
 
 Enable an AWS Logs integration
 
@@ -397,7 +397,7 @@ public class Example {
         AwsLogsIntegrationApi apiInstance = new AwsLogsIntegrationApi(defaultClient);
         AWSLogsServicesRequest body = new AWSLogsServicesRequest(); // AWSLogsServicesRequest | Enable AWS Log Services request body.
         try {
-            Object result = apiInstance.enableAWSLogServices()
+            any result = apiInstance.enableAWSLogServices()
                 .body(body)
                 .execute();
             System.out.println(result);
@@ -421,7 +421,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**any**](any.md)
 
 ### Authorization
 

@@ -12,9 +12,9 @@ Name | Type | Description | Notes
 **errorMessage** | **String** | The API test error message. |  [optional]
 **eventType** | **SyntheticsTestProcessStatus** |  |  [optional]
 **httpStatusCode** | **Long** | The API test HTTP status code. |  [optional]
-**requestHeaders** | **Map&lt;String, Object&gt;** | Request header object used for the API test. |  [optional]
+**requestHeaders** | **Map&lt;String, any&gt;** | Request header object used for the API test. |  [optional]
 **responseBody** | **String** | Response body returned for the API test. |  [optional]
-**responseHeaders** | **Map&lt;String, Object&gt;** | Response headers returned for the API test. |  [optional]
+**responseHeaders** | **Map&lt;String, any&gt;** | Response headers returned for the API test. |  [optional]
 **responseSize** | **Long** | Global size in byte of the API test response. |  [optional]
 **timings** | [**SyntheticsTiming**](SyntheticsTiming.md) |  |  [optional]
 

@@ -7,7 +7,7 @@ Object that contains the new private location, the public key for result encrypt
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**config** | **Object** | Configuration skeleton for the private location. See installation instructions of the private location on how to use this configuration. |  [optional]
+**config** | **any** | Configuration skeleton for the private location. See installation instructions of the private location on how to use this configuration. |  [optional]
 **privateLocation** | [**SyntheticsPrivateLocation**](SyntheticsPrivateLocation.md) |  |  [optional]
 **resultEncryption** | [**SyntheticsPrivateLocationCreationResponseResultEncryption**](SyntheticsPrivateLocationCreationResponseResultEncryption.md) |  |  [optional]
 

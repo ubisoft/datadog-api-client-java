@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 
 ## createAWSTagFilter
 
-> Object createAWSTagFilter().body(body).execute();
+> any createAWSTagFilter().body(body).execute();
 
 Set an AWS tag filter
 
@@ -141,7 +141,7 @@ public class Example {
         AwsIntegrationApi apiInstance = new AwsIntegrationApi(defaultClient);
         AWSTagFilterCreateRequest body = new AWSTagFilterCreateRequest(); // AWSTagFilterCreateRequest | Set an AWS tag filter using an `aws_account_identifier`, `namespace`, and filtering string. Namespace options are `application_elb`, `elb`, `lambda`, `network_elb`, `rds`, `sqs`, and `custom`.
         try {
-            Object result = apiInstance.createAWSTagFilter()
+            any result = apiInstance.createAWSTagFilter()
                 .body(body)
                 .execute();
             System.out.println(result);
@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**any**](any.md)
 
 ### Authorization
 
@@ -268,7 +268,7 @@ Name | Type | Description  | Notes
 
 ## deleteAWSAccount
 
-> Object deleteAWSAccount().body(body).execute();
+> any deleteAWSAccount().body(body).execute();
 
 Delete an AWS integration
 
@@ -305,7 +305,7 @@ public class Example {
         AwsIntegrationApi apiInstance = new AwsIntegrationApi(defaultClient);
         AWSAccount body = new AWSAccount(); // AWSAccount | AWS request object
         try {
-            Object result = apiInstance.deleteAWSAccount()
+            any result = apiInstance.deleteAWSAccount()
                 .body(body)
                 .execute();
             System.out.println(result);
@@ -329,7 +329,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**any**](any.md)
 
 ### Authorization
 
@@ -351,7 +351,7 @@ Name | Type | Description  | Notes
 
 ## deleteAWSTagFilter
 
-> Object deleteAWSTagFilter().body(body).execute();
+> any deleteAWSTagFilter().body(body).execute();
 
 Delete a tag filtering entry
 
@@ -388,7 +388,7 @@ public class Example {
         AwsIntegrationApi apiInstance = new AwsIntegrationApi(defaultClient);
         AWSTagFilterDeleteRequest body = new AWSTagFilterDeleteRequest(); // AWSTagFilterDeleteRequest | Delete a tag filtering entry for a given AWS account and `dd-aws` namespace.
         try {
-            Object result = apiInstance.deleteAWSTagFilter()
+            any result = apiInstance.deleteAWSTagFilter()
                 .body(body)
                 .execute();
             System.out.println(result);
@@ -412,7 +412,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**any**](any.md)
 
 ### Authorization
 
@@ -679,7 +679,7 @@ This endpoint does not need any parameter.
 
 ## updateAWSAccount
 
-> Object updateAWSAccount().body(body).accountId(accountId).roleName(roleName).accessKeyId(accessKeyId).execute();
+> any updateAWSAccount().body(body).accountId(accountId).roleName(roleName).accessKeyId(accessKeyId).execute();
 
 Update an AWS integration
 
@@ -719,7 +719,7 @@ public class Example {
         String roleName = "roleName_example"; // String | Only return AWS accounts that match this `role_name`. Required if `account_id` is specified.
         String accessKeyId = "accessKeyId_example"; // String | Only return AWS accounts that matches this `access_key_id`. Required if none of the other two options are specified.
         try {
-            Object result = apiInstance.updateAWSAccount()
+            any result = apiInstance.updateAWSAccount()
                 .body(body)
                 .accountId(accountId)
                 .roleName(roleName)
@@ -749,7 +749,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**any**](any.md)
 
 ### Authorization
 

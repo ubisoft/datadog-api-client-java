@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **host** | **String** | Host name to perform the test with. |  [optional]
 **method** | **HTTPMethod** |  |  [optional]
 **port** | **Long** | Port to use when performing the test. |  [optional]
-**query** | **Object** | Query to use for the test. |  [optional]
+**query** | **any** | Query to use for the test. |  [optional]
 **timeout** | **Double** | Timeout in seconds for the test. |  [optional]
 **url** | **String** | URL to perform the test with. |  [optional]
 

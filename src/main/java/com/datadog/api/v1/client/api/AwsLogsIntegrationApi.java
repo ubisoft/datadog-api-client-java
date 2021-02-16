@@ -14,6 +14,7 @@ import com.datadog.api.v1.client.model.AWSLogsAsyncResponse;
 import com.datadog.api.v1.client.model.AWSLogsListResponse;
 import com.datadog.api.v1.client.model.AWSLogsListServicesResponse;
 import com.datadog.api.v1.client.model.AWSLogsServicesRequest;
+import com.datadog.api.v1.client.model.any;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -265,7 +266,7 @@ private ApiResponse<AWSLogsAsyncResponse> checkAWSLogsServicesAsyncWithHttpInfo(
     return new APIcheckAWSLogsServicesAsyncRequest();
   }
 
-private ApiResponse<Object> createAWSLambdaARNWithHttpInfo(AWSAccountAndLambdaRequest body) throws ApiException {
+private ApiResponse<any> createAWSLambdaARNWithHttpInfo(AWSAccountAndLambdaRequest body) throws ApiException {
     Object localVarPostBody = body;
     
     // verify the required parameter 'body' is set
@@ -301,7 +302,7 @@ private ApiResponse<Object> createAWSLambdaARNWithHttpInfo(AWSAccountAndLambdaRe
 
     String[] localVarAuthNames = new String[] { "apiKeyAuth", "appKeyAuth" };
 
-    GenericType<Object> localVarReturnType = new GenericType<Object>() {};
+    GenericType<any> localVarReturnType = new GenericType<any>() {};
 
     return apiClient.invokeAPI("AwsLogsIntegrationApi.createAWSLambdaARN", localVarPath, "POST", localVarQueryParams, localVarPostBody,
                                localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType,
@@ -326,7 +327,7 @@ private ApiResponse<Object> createAWSLambdaARNWithHttpInfo(AWSAccountAndLambdaRe
 
     /**
      * Execute createAWSLambdaARN request
-     * @return Object
+     * @return any
      * @throws ApiException if fails to make API call
      * @http.response.details
        <table summary="Response Details" border="1">
@@ -338,13 +339,13 @@ private ApiResponse<Object> createAWSLambdaARNWithHttpInfo(AWSAccountAndLambdaRe
      
      */
     
-    public Object execute() throws ApiException {
+    public any execute() throws ApiException {
       return this.executeWithHttpInfo().getData();
     }
 
     /**
      * Execute createAWSLambdaARN request with HTTP info returned
-     * @return ApiResponse&lt;Object&gt;
+     * @return ApiResponse&lt;any&gt;
      * @throws ApiException if fails to make API call
      * @http.response.details
        <table summary="Response Details" border="1">
@@ -355,7 +356,7 @@ private ApiResponse<Object> createAWSLambdaARNWithHttpInfo(AWSAccountAndLambdaRe
        </table>
 
      */
-    public ApiResponse<Object> executeWithHttpInfo() throws ApiException {
+    public ApiResponse<any> executeWithHttpInfo() throws ApiException {
       return createAWSLambdaARNWithHttpInfo(body);
     }
   }
@@ -372,7 +373,7 @@ private ApiResponse<Object> createAWSLambdaARNWithHttpInfo(AWSAccountAndLambdaRe
     return new APIcreateAWSLambdaARNRequest();
   }
 
-private ApiResponse<Object> deleteAWSLambdaARNWithHttpInfo(AWSAccountAndLambdaRequest body) throws ApiException {
+private ApiResponse<any> deleteAWSLambdaARNWithHttpInfo(AWSAccountAndLambdaRequest body) throws ApiException {
     Object localVarPostBody = body;
     
     // verify the required parameter 'body' is set
@@ -408,7 +409,7 @@ private ApiResponse<Object> deleteAWSLambdaARNWithHttpInfo(AWSAccountAndLambdaRe
 
     String[] localVarAuthNames = new String[] { "apiKeyAuth", "appKeyAuth" };
 
-    GenericType<Object> localVarReturnType = new GenericType<Object>() {};
+    GenericType<any> localVarReturnType = new GenericType<any>() {};
 
     return apiClient.invokeAPI("AwsLogsIntegrationApi.deleteAWSLambdaARN", localVarPath, "DELETE", localVarQueryParams, localVarPostBody,
                                localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType,
@@ -433,7 +434,7 @@ private ApiResponse<Object> deleteAWSLambdaARNWithHttpInfo(AWSAccountAndLambdaRe
 
     /**
      * Execute deleteAWSLambdaARN request
-     * @return Object
+     * @return any
      * @throws ApiException if fails to make API call
      * @http.response.details
        <table summary="Response Details" border="1">
@@ -445,13 +446,13 @@ private ApiResponse<Object> deleteAWSLambdaARNWithHttpInfo(AWSAccountAndLambdaRe
      
      */
     
-    public Object execute() throws ApiException {
+    public any execute() throws ApiException {
       return this.executeWithHttpInfo().getData();
     }
 
     /**
      * Execute deleteAWSLambdaARN request with HTTP info returned
-     * @return ApiResponse&lt;Object&gt;
+     * @return ApiResponse&lt;any&gt;
      * @throws ApiException if fails to make API call
      * @http.response.details
        <table summary="Response Details" border="1">
@@ -462,7 +463,7 @@ private ApiResponse<Object> deleteAWSLambdaARNWithHttpInfo(AWSAccountAndLambdaRe
        </table>
 
      */
-    public ApiResponse<Object> executeWithHttpInfo() throws ApiException {
+    public ApiResponse<any> executeWithHttpInfo() throws ApiException {
       return deleteAWSLambdaARNWithHttpInfo(body);
     }
   }
@@ -479,7 +480,7 @@ private ApiResponse<Object> deleteAWSLambdaARNWithHttpInfo(AWSAccountAndLambdaRe
     return new APIdeleteAWSLambdaARNRequest();
   }
 
-private ApiResponse<Object> enableAWSLogServicesWithHttpInfo(AWSLogsServicesRequest body) throws ApiException {
+private ApiResponse<any> enableAWSLogServicesWithHttpInfo(AWSLogsServicesRequest body) throws ApiException {
     Object localVarPostBody = body;
     
     // verify the required parameter 'body' is set
@@ -515,7 +516,7 @@ private ApiResponse<Object> enableAWSLogServicesWithHttpInfo(AWSLogsServicesRequ
 
     String[] localVarAuthNames = new String[] { "apiKeyAuth", "appKeyAuth" };
 
-    GenericType<Object> localVarReturnType = new GenericType<Object>() {};
+    GenericType<any> localVarReturnType = new GenericType<any>() {};
 
     return apiClient.invokeAPI("AwsLogsIntegrationApi.enableAWSLogServices", localVarPath, "POST", localVarQueryParams, localVarPostBody,
                                localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType,
@@ -540,7 +541,7 @@ private ApiResponse<Object> enableAWSLogServicesWithHttpInfo(AWSLogsServicesRequ
 
     /**
      * Execute enableAWSLogServices request
-     * @return Object
+     * @return any
      * @throws ApiException if fails to make API call
      * @http.response.details
        <table summary="Response Details" border="1">
@@ -552,13 +553,13 @@ private ApiResponse<Object> enableAWSLogServicesWithHttpInfo(AWSLogsServicesRequ
      
      */
     
-    public Object execute() throws ApiException {
+    public any execute() throws ApiException {
       return this.executeWithHttpInfo().getData();
     }
 
     /**
      * Execute enableAWSLogServices request with HTTP info returned
-     * @return ApiResponse&lt;Object&gt;
+     * @return ApiResponse&lt;any&gt;
      * @throws ApiException if fails to make API call
      * @http.response.details
        <table summary="Response Details" border="1">
@@ -569,7 +570,7 @@ private ApiResponse<Object> enableAWSLogServicesWithHttpInfo(AWSLogsServicesRequ
        </table>
 
      */
-    public ApiResponse<Object> executeWithHttpInfo() throws ApiException {
+    public ApiResponse<any> executeWithHttpInfo() throws ApiException {
       return enableAWSLogServicesWithHttpInfo(body);
     }
   }

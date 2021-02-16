@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## createGCPIntegration
 
-> Object createGCPIntegration().body(body).execute();
+> any createGCPIntegration().body(body).execute();
 
 Create a GCP integration
 
@@ -50,7 +50,7 @@ public class Example {
         GcpIntegrationApi apiInstance = new GcpIntegrationApi(defaultClient);
         GCPAccount body = new GCPAccount(); // GCPAccount | Create a Datadog-GCP integration.
         try {
-            Object result = apiInstance.createGCPIntegration()
+            any result = apiInstance.createGCPIntegration()
                 .body(body)
                 .execute();
             System.out.println(result);
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**any**](any.md)
 
 ### Authorization
 
@@ -95,7 +95,7 @@ Name | Type | Description  | Notes
 
 ## deleteGCPIntegration
 
-> Object deleteGCPIntegration().body(body).execute();
+> any deleteGCPIntegration().body(body).execute();
 
 Delete a GCP integration
 
@@ -132,7 +132,7 @@ public class Example {
         GcpIntegrationApi apiInstance = new GcpIntegrationApi(defaultClient);
         GCPAccount body = new GCPAccount(); // GCPAccount | Delete a given Datadog-GCP integration.
         try {
-            Object result = apiInstance.deleteGCPIntegration()
+            any result = apiInstance.deleteGCPIntegration()
                 .body(body)
                 .execute();
             System.out.println(result);
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**any**](any.md)
 
 ### Authorization
 
@@ -254,7 +254,7 @@ This endpoint does not need any parameter.
 
 ## updateGCPIntegration
 
-> Object updateGCPIntegration().body(body).execute();
+> any updateGCPIntegration().body(body).execute();
 
 Update a GCP integration
 
@@ -294,7 +294,7 @@ public class Example {
         GcpIntegrationApi apiInstance = new GcpIntegrationApi(defaultClient);
         GCPAccount body = new GCPAccount(); // GCPAccount | Update a Datadog-GCP integration.
         try {
-            Object result = apiInstance.updateGCPIntegration()
+            any result = apiInstance.updateGCPIntegration()
                 .body(body)
                 .execute();
             System.out.println(result);
@@ -318,7 +318,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**any**](any.md)
 
 ### Authorization
 

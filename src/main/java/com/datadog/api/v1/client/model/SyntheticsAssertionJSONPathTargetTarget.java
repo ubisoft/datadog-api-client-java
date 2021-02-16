@@ -15,6 +15,7 @@ import java.util.Objects;
 import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
+import com.datadog.api.v1.client.model.any;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -44,7 +45,7 @@ public class SyntheticsAssertionJSONPathTargetTarget {
   private String operator;
 
   public static final String JSON_PROPERTY_TARGET_VALUE = "targetValue";
-  private Object targetValue;
+  private any targetValue;
 
 
   public SyntheticsAssertionJSONPathTargetTarget jsonPath(String jsonPath) {
@@ -95,7 +96,7 @@ public class SyntheticsAssertionJSONPathTargetTarget {
   }
 
 
-  public SyntheticsAssertionJSONPathTargetTarget targetValue(Object targetValue) {
+  public SyntheticsAssertionJSONPathTargetTarget targetValue(any targetValue) {
     this.targetValue = targetValue;
     return this;
   }
@@ -109,12 +110,12 @@ public class SyntheticsAssertionJSONPathTargetTarget {
   @JsonProperty(JSON_PROPERTY_TARGET_VALUE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public Object getTargetValue() {
+  public any getTargetValue() {
     return targetValue;
   }
 
 
-  public void setTargetValue(Object targetValue) {
+  public void setTargetValue(any targetValue) {
     this.targetValue = targetValue;
   }
 

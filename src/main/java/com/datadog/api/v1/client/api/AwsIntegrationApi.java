@@ -15,6 +15,7 @@ import com.datadog.api.v1.client.model.AWSAccountListResponse;
 import com.datadog.api.v1.client.model.AWSTagFilterCreateRequest;
 import com.datadog.api.v1.client.model.AWSTagFilterDeleteRequest;
 import com.datadog.api.v1.client.model.AWSTagFilterListResponse;
+import com.datadog.api.v1.client.model.any;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -161,7 +162,7 @@ private ApiResponse<AWSAccountCreateResponse> createAWSAccountWithHttpInfo(AWSAc
     return new APIcreateAWSAccountRequest();
   }
 
-private ApiResponse<Object> createAWSTagFilterWithHttpInfo(AWSTagFilterCreateRequest body) throws ApiException {
+private ApiResponse<any> createAWSTagFilterWithHttpInfo(AWSTagFilterCreateRequest body) throws ApiException {
     Object localVarPostBody = body;
     
     // verify the required parameter 'body' is set
@@ -197,7 +198,7 @@ private ApiResponse<Object> createAWSTagFilterWithHttpInfo(AWSTagFilterCreateReq
 
     String[] localVarAuthNames = new String[] { "apiKeyAuth", "appKeyAuth" };
 
-    GenericType<Object> localVarReturnType = new GenericType<Object>() {};
+    GenericType<any> localVarReturnType = new GenericType<any>() {};
 
     return apiClient.invokeAPI("AwsIntegrationApi.createAWSTagFilter", localVarPath, "POST", localVarQueryParams, localVarPostBody,
                                localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType,
@@ -222,7 +223,7 @@ private ApiResponse<Object> createAWSTagFilterWithHttpInfo(AWSTagFilterCreateReq
 
     /**
      * Execute createAWSTagFilter request
-     * @return Object
+     * @return any
      * @throws ApiException if fails to make API call
      * @http.response.details
        <table summary="Response Details" border="1">
@@ -234,13 +235,13 @@ private ApiResponse<Object> createAWSTagFilterWithHttpInfo(AWSTagFilterCreateReq
      
      */
     
-    public Object execute() throws ApiException {
+    public any execute() throws ApiException {
       return this.executeWithHttpInfo().getData();
     }
 
     /**
      * Execute createAWSTagFilter request with HTTP info returned
-     * @return ApiResponse&lt;Object&gt;
+     * @return ApiResponse&lt;any&gt;
      * @throws ApiException if fails to make API call
      * @http.response.details
        <table summary="Response Details" border="1">
@@ -251,7 +252,7 @@ private ApiResponse<Object> createAWSTagFilterWithHttpInfo(AWSTagFilterCreateReq
        </table>
 
      */
-    public ApiResponse<Object> executeWithHttpInfo() throws ApiException {
+    public ApiResponse<any> executeWithHttpInfo() throws ApiException {
       return createAWSTagFilterWithHttpInfo(body);
     }
   }
@@ -375,7 +376,7 @@ private ApiResponse<AWSAccountCreateResponse> createNewAWSExternalIDWithHttpInfo
     return new APIcreateNewAWSExternalIDRequest();
   }
 
-private ApiResponse<Object> deleteAWSAccountWithHttpInfo(AWSAccount body) throws ApiException {
+private ApiResponse<any> deleteAWSAccountWithHttpInfo(AWSAccount body) throws ApiException {
     Object localVarPostBody = body;
     
     // verify the required parameter 'body' is set
@@ -411,7 +412,7 @@ private ApiResponse<Object> deleteAWSAccountWithHttpInfo(AWSAccount body) throws
 
     String[] localVarAuthNames = new String[] { "apiKeyAuth", "appKeyAuth" };
 
-    GenericType<Object> localVarReturnType = new GenericType<Object>() {};
+    GenericType<any> localVarReturnType = new GenericType<any>() {};
 
     return apiClient.invokeAPI("AwsIntegrationApi.deleteAWSAccount", localVarPath, "DELETE", localVarQueryParams, localVarPostBody,
                                localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType,
@@ -436,7 +437,7 @@ private ApiResponse<Object> deleteAWSAccountWithHttpInfo(AWSAccount body) throws
 
     /**
      * Execute deleteAWSAccount request
-     * @return Object
+     * @return any
      * @throws ApiException if fails to make API call
      * @http.response.details
        <table summary="Response Details" border="1">
@@ -449,13 +450,13 @@ private ApiResponse<Object> deleteAWSAccountWithHttpInfo(AWSAccount body) throws
      
      */
     
-    public Object execute() throws ApiException {
+    public any execute() throws ApiException {
       return this.executeWithHttpInfo().getData();
     }
 
     /**
      * Execute deleteAWSAccount request with HTTP info returned
-     * @return ApiResponse&lt;Object&gt;
+     * @return ApiResponse&lt;any&gt;
      * @throws ApiException if fails to make API call
      * @http.response.details
        <table summary="Response Details" border="1">
@@ -467,7 +468,7 @@ private ApiResponse<Object> deleteAWSAccountWithHttpInfo(AWSAccount body) throws
        </table>
 
      */
-    public ApiResponse<Object> executeWithHttpInfo() throws ApiException {
+    public ApiResponse<any> executeWithHttpInfo() throws ApiException {
       return deleteAWSAccountWithHttpInfo(body);
     }
   }
@@ -484,7 +485,7 @@ private ApiResponse<Object> deleteAWSAccountWithHttpInfo(AWSAccount body) throws
     return new APIdeleteAWSAccountRequest();
   }
 
-private ApiResponse<Object> deleteAWSTagFilterWithHttpInfo(AWSTagFilterDeleteRequest body) throws ApiException {
+private ApiResponse<any> deleteAWSTagFilterWithHttpInfo(AWSTagFilterDeleteRequest body) throws ApiException {
     Object localVarPostBody = body;
     
     // verify the required parameter 'body' is set
@@ -520,7 +521,7 @@ private ApiResponse<Object> deleteAWSTagFilterWithHttpInfo(AWSTagFilterDeleteReq
 
     String[] localVarAuthNames = new String[] { "apiKeyAuth", "appKeyAuth" };
 
-    GenericType<Object> localVarReturnType = new GenericType<Object>() {};
+    GenericType<any> localVarReturnType = new GenericType<any>() {};
 
     return apiClient.invokeAPI("AwsIntegrationApi.deleteAWSTagFilter", localVarPath, "DELETE", localVarQueryParams, localVarPostBody,
                                localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType,
@@ -545,7 +546,7 @@ private ApiResponse<Object> deleteAWSTagFilterWithHttpInfo(AWSTagFilterDeleteReq
 
     /**
      * Execute deleteAWSTagFilter request
-     * @return Object
+     * @return any
      * @throws ApiException if fails to make API call
      * @http.response.details
        <table summary="Response Details" border="1">
@@ -557,13 +558,13 @@ private ApiResponse<Object> deleteAWSTagFilterWithHttpInfo(AWSTagFilterDeleteReq
      
      */
     
-    public Object execute() throws ApiException {
+    public any execute() throws ApiException {
       return this.executeWithHttpInfo().getData();
     }
 
     /**
      * Execute deleteAWSTagFilter request with HTTP info returned
-     * @return ApiResponse&lt;Object&gt;
+     * @return ApiResponse&lt;any&gt;
      * @throws ApiException if fails to make API call
      * @http.response.details
        <table summary="Response Details" border="1">
@@ -574,7 +575,7 @@ private ApiResponse<Object> deleteAWSTagFilterWithHttpInfo(AWSTagFilterDeleteReq
        </table>
 
      */
-    public ApiResponse<Object> executeWithHttpInfo() throws ApiException {
+    public ApiResponse<any> executeWithHttpInfo() throws ApiException {
       return deleteAWSTagFilterWithHttpInfo(body);
     }
   }
@@ -915,7 +916,7 @@ private ApiResponse<List<String>> listAvailableAWSNamespacesWithHttpInfo() throw
     return new APIlistAvailableAWSNamespacesRequest();
   }
 
-private ApiResponse<Object> updateAWSAccountWithHttpInfo(AWSAccount body, String accountId, String roleName, String accessKeyId) throws ApiException {
+private ApiResponse<any> updateAWSAccountWithHttpInfo(AWSAccount body, String accountId, String roleName, String accessKeyId) throws ApiException {
     Object localVarPostBody = body;
     
     // verify the required parameter 'body' is set
@@ -954,7 +955,7 @@ private ApiResponse<Object> updateAWSAccountWithHttpInfo(AWSAccount body, String
 
     String[] localVarAuthNames = new String[] { "apiKeyAuth", "appKeyAuth" };
 
-    GenericType<Object> localVarReturnType = new GenericType<Object>() {};
+    GenericType<any> localVarReturnType = new GenericType<any>() {};
 
     return apiClient.invokeAPI("AwsIntegrationApi.updateAWSAccount", localVarPath, "PUT", localVarQueryParams, localVarPostBody,
                                localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType,
@@ -1012,7 +1013,7 @@ private ApiResponse<Object> updateAWSAccountWithHttpInfo(AWSAccount body, String
 
     /**
      * Execute updateAWSAccount request
-     * @return Object
+     * @return any
      * @throws ApiException if fails to make API call
      * @http.response.details
        <table summary="Response Details" border="1">
@@ -1025,13 +1026,13 @@ private ApiResponse<Object> updateAWSAccountWithHttpInfo(AWSAccount body, String
      
      */
     
-    public Object execute() throws ApiException {
+    public any execute() throws ApiException {
       return this.executeWithHttpInfo().getData();
     }
 
     /**
      * Execute updateAWSAccount request with HTTP info returned
-     * @return ApiResponse&lt;Object&gt;
+     * @return ApiResponse&lt;any&gt;
      * @throws ApiException if fails to make API call
      * @http.response.details
        <table summary="Response Details" border="1">
@@ -1043,7 +1044,7 @@ private ApiResponse<Object> updateAWSAccountWithHttpInfo(AWSAccount body, String
        </table>
 
      */
-    public ApiResponse<Object> executeWithHttpInfo() throws ApiException {
+    public ApiResponse<any> executeWithHttpInfo() throws ApiException {
       return updateAWSAccountWithHttpInfo(body, accountId, roleName, accessKeyId);
     }
   }

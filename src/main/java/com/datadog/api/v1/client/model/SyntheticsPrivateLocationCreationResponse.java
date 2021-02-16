@@ -17,6 +17,7 @@ import java.util.Map;
 import java.util.HashMap;
 import com.datadog.api.v1.client.model.SyntheticsPrivateLocation;
 import com.datadog.api.v1.client.model.SyntheticsPrivateLocationCreationResponseResultEncryption;
+import com.datadog.api.v1.client.model.any;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -40,7 +41,7 @@ import com.datadog.api.v1.client.JSON;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class SyntheticsPrivateLocationCreationResponse {
   public static final String JSON_PROPERTY_CONFIG = "config";
-  private Object config;
+  private any config;
 
   public static final String JSON_PROPERTY_PRIVATE_LOCATION = "private_location";
   private SyntheticsPrivateLocation privateLocation;
@@ -49,7 +50,7 @@ public class SyntheticsPrivateLocationCreationResponse {
   private SyntheticsPrivateLocationCreationResponseResultEncryption resultEncryption;
 
 
-  public SyntheticsPrivateLocationCreationResponse config(Object config) {
+  public SyntheticsPrivateLocationCreationResponse config(any config) {
     this.config = config;
     return this;
   }
@@ -63,12 +64,12 @@ public class SyntheticsPrivateLocationCreationResponse {
   @JsonProperty(JSON_PROPERTY_CONFIG)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public Object getConfig() {
+  public any getConfig() {
     return config;
   }
 
 
-  public void setConfig(Object config) {
+  public void setConfig(any config) {
     this.config = config;
   }
 

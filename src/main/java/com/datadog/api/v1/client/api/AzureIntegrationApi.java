@@ -10,6 +10,7 @@ import javax.ws.rs.core.GenericType;
 
 import com.datadog.api.v1.client.model.APIErrorResponse;
 import com.datadog.api.v1.client.model.AzureAccount;
+import com.datadog.api.v1.client.model.any;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -47,7 +48,7 @@ public class AzureIntegrationApi {
   }
 
 
-private ApiResponse<Object> createAzureIntegrationWithHttpInfo(AzureAccount body) throws ApiException {
+private ApiResponse<any> createAzureIntegrationWithHttpInfo(AzureAccount body) throws ApiException {
     Object localVarPostBody = body;
     
     // verify the required parameter 'body' is set
@@ -83,7 +84,7 @@ private ApiResponse<Object> createAzureIntegrationWithHttpInfo(AzureAccount body
 
     String[] localVarAuthNames = new String[] { "apiKeyAuth", "appKeyAuth" };
 
-    GenericType<Object> localVarReturnType = new GenericType<Object>() {};
+    GenericType<any> localVarReturnType = new GenericType<any>() {};
 
     return apiClient.invokeAPI("AzureIntegrationApi.createAzureIntegration", localVarPath, "POST", localVarQueryParams, localVarPostBody,
                                localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType,
@@ -108,7 +109,7 @@ private ApiResponse<Object> createAzureIntegrationWithHttpInfo(AzureAccount body
 
     /**
      * Execute createAzureIntegration request
-     * @return Object
+     * @return any
      * @throws ApiException if fails to make API call
      * @http.response.details
        <table summary="Response Details" border="1">
@@ -120,13 +121,13 @@ private ApiResponse<Object> createAzureIntegrationWithHttpInfo(AzureAccount body
      
      */
     
-    public Object execute() throws ApiException {
+    public any execute() throws ApiException {
       return this.executeWithHttpInfo().getData();
     }
 
     /**
      * Execute createAzureIntegration request with HTTP info returned
-     * @return ApiResponse&lt;Object&gt;
+     * @return ApiResponse&lt;any&gt;
      * @throws ApiException if fails to make API call
      * @http.response.details
        <table summary="Response Details" border="1">
@@ -137,7 +138,7 @@ private ApiResponse<Object> createAzureIntegrationWithHttpInfo(AzureAccount body
        </table>
 
      */
-    public ApiResponse<Object> executeWithHttpInfo() throws ApiException {
+    public ApiResponse<any> executeWithHttpInfo() throws ApiException {
       return createAzureIntegrationWithHttpInfo(body);
     }
   }
@@ -154,7 +155,7 @@ private ApiResponse<Object> createAzureIntegrationWithHttpInfo(AzureAccount body
     return new APIcreateAzureIntegrationRequest();
   }
 
-private ApiResponse<Object> deleteAzureIntegrationWithHttpInfo(AzureAccount body) throws ApiException {
+private ApiResponse<any> deleteAzureIntegrationWithHttpInfo(AzureAccount body) throws ApiException {
     Object localVarPostBody = body;
     
     // verify the required parameter 'body' is set
@@ -190,7 +191,7 @@ private ApiResponse<Object> deleteAzureIntegrationWithHttpInfo(AzureAccount body
 
     String[] localVarAuthNames = new String[] { "apiKeyAuth", "appKeyAuth" };
 
-    GenericType<Object> localVarReturnType = new GenericType<Object>() {};
+    GenericType<any> localVarReturnType = new GenericType<any>() {};
 
     return apiClient.invokeAPI("AzureIntegrationApi.deleteAzureIntegration", localVarPath, "DELETE", localVarQueryParams, localVarPostBody,
                                localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType,
@@ -215,7 +216,7 @@ private ApiResponse<Object> deleteAzureIntegrationWithHttpInfo(AzureAccount body
 
     /**
      * Execute deleteAzureIntegration request
-     * @return Object
+     * @return any
      * @throws ApiException if fails to make API call
      * @http.response.details
        <table summary="Response Details" border="1">
@@ -227,13 +228,13 @@ private ApiResponse<Object> deleteAzureIntegrationWithHttpInfo(AzureAccount body
      
      */
     
-    public Object execute() throws ApiException {
+    public any execute() throws ApiException {
       return this.executeWithHttpInfo().getData();
     }
 
     /**
      * Execute deleteAzureIntegration request with HTTP info returned
-     * @return ApiResponse&lt;Object&gt;
+     * @return ApiResponse&lt;any&gt;
      * @throws ApiException if fails to make API call
      * @http.response.details
        <table summary="Response Details" border="1">
@@ -244,7 +245,7 @@ private ApiResponse<Object> deleteAzureIntegrationWithHttpInfo(AzureAccount body
        </table>
 
      */
-    public ApiResponse<Object> executeWithHttpInfo() throws ApiException {
+    public ApiResponse<any> executeWithHttpInfo() throws ApiException {
       return deleteAzureIntegrationWithHttpInfo(body);
     }
   }
@@ -352,7 +353,7 @@ private ApiResponse<List<AzureAccount>> listAzureIntegrationWithHttpInfo() throw
     return new APIlistAzureIntegrationRequest();
   }
 
-private ApiResponse<Object> updateAzureHostFiltersWithHttpInfo(AzureAccount body) throws ApiException {
+private ApiResponse<any> updateAzureHostFiltersWithHttpInfo(AzureAccount body) throws ApiException {
     Object localVarPostBody = body;
     
     // verify the required parameter 'body' is set
@@ -388,7 +389,7 @@ private ApiResponse<Object> updateAzureHostFiltersWithHttpInfo(AzureAccount body
 
     String[] localVarAuthNames = new String[] { "apiKeyAuth", "appKeyAuth" };
 
-    GenericType<Object> localVarReturnType = new GenericType<Object>() {};
+    GenericType<any> localVarReturnType = new GenericType<any>() {};
 
     return apiClient.invokeAPI("AzureIntegrationApi.updateAzureHostFilters", localVarPath, "POST", localVarQueryParams, localVarPostBody,
                                localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType,
@@ -413,7 +414,7 @@ private ApiResponse<Object> updateAzureHostFiltersWithHttpInfo(AzureAccount body
 
     /**
      * Execute updateAzureHostFilters request
-     * @return Object
+     * @return any
      * @throws ApiException if fails to make API call
      * @http.response.details
        <table summary="Response Details" border="1">
@@ -425,13 +426,13 @@ private ApiResponse<Object> updateAzureHostFiltersWithHttpInfo(AzureAccount body
      
      */
     
-    public Object execute() throws ApiException {
+    public any execute() throws ApiException {
       return this.executeWithHttpInfo().getData();
     }
 
     /**
      * Execute updateAzureHostFilters request with HTTP info returned
-     * @return ApiResponse&lt;Object&gt;
+     * @return ApiResponse&lt;any&gt;
      * @throws ApiException if fails to make API call
      * @http.response.details
        <table summary="Response Details" border="1">
@@ -442,7 +443,7 @@ private ApiResponse<Object> updateAzureHostFiltersWithHttpInfo(AzureAccount body
        </table>
 
      */
-    public ApiResponse<Object> executeWithHttpInfo() throws ApiException {
+    public ApiResponse<any> executeWithHttpInfo() throws ApiException {
       return updateAzureHostFiltersWithHttpInfo(body);
     }
   }
@@ -459,7 +460,7 @@ private ApiResponse<Object> updateAzureHostFiltersWithHttpInfo(AzureAccount body
     return new APIupdateAzureHostFiltersRequest();
   }
 
-private ApiResponse<Object> updateAzureIntegrationWithHttpInfo(AzureAccount body) throws ApiException {
+private ApiResponse<any> updateAzureIntegrationWithHttpInfo(AzureAccount body) throws ApiException {
     Object localVarPostBody = body;
     
     // verify the required parameter 'body' is set
@@ -495,7 +496,7 @@ private ApiResponse<Object> updateAzureIntegrationWithHttpInfo(AzureAccount body
 
     String[] localVarAuthNames = new String[] { "apiKeyAuth", "appKeyAuth" };
 
-    GenericType<Object> localVarReturnType = new GenericType<Object>() {};
+    GenericType<any> localVarReturnType = new GenericType<any>() {};
 
     return apiClient.invokeAPI("AzureIntegrationApi.updateAzureIntegration", localVarPath, "PUT", localVarQueryParams, localVarPostBody,
                                localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType,
@@ -520,7 +521,7 @@ private ApiResponse<Object> updateAzureIntegrationWithHttpInfo(AzureAccount body
 
     /**
      * Execute updateAzureIntegration request
-     * @return Object
+     * @return any
      * @throws ApiException if fails to make API call
      * @http.response.details
        <table summary="Response Details" border="1">
@@ -532,13 +533,13 @@ private ApiResponse<Object> updateAzureIntegrationWithHttpInfo(AzureAccount body
      
      */
     
-    public Object execute() throws ApiException {
+    public any execute() throws ApiException {
       return this.executeWithHttpInfo().getData();
     }
 
     /**
      * Execute updateAzureIntegration request with HTTP info returned
-     * @return ApiResponse&lt;Object&gt;
+     * @return ApiResponse&lt;any&gt;
      * @throws ApiException if fails to make API call
      * @http.response.details
        <table summary="Response Details" border="1">
@@ -549,7 +550,7 @@ private ApiResponse<Object> updateAzureIntegrationWithHttpInfo(AzureAccount body
        </table>
 
      */
-    public ApiResponse<Object> executeWithHttpInfo() throws ApiException {
+    public ApiResponse<any> executeWithHttpInfo() throws ApiException {
       return updateAzureIntegrationWithHttpInfo(body);
     }
   }

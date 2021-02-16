@@ -20,6 +20,7 @@ import com.datadog.api.v1.client.model.SyntheticsCheckType;
 import com.datadog.api.v1.client.model.SyntheticsPlayingTab;
 import com.datadog.api.v1.client.model.SyntheticsStepDetailWarning;
 import com.datadog.api.v1.client.model.SyntheticsStepType;
+import com.datadog.api.v1.client.model.any;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -100,7 +101,7 @@ public class SyntheticsStepDetail {
   private String url;
 
   public static final String JSON_PROPERTY_VALUE = "value";
-  private Object value;
+  private any value;
 
   public static final String JSON_PROPERTY_WARNINGS = "warnings";
   private List<SyntheticsStepDetailWarning> warnings = null;
@@ -458,7 +459,7 @@ public class SyntheticsStepDetail {
   }
 
 
-  public SyntheticsStepDetail value(Object value) {
+  public SyntheticsStepDetail value(any value) {
     this.value = value;
     return this;
   }
@@ -472,12 +473,12 @@ public class SyntheticsStepDetail {
   @JsonProperty(JSON_PROPERTY_VALUE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public Object getValue() {
+  public any getValue() {
     return value;
   }
 
 
-  public void setValue(Object value) {
+  public void setValue(any value) {
     this.value = value;
   }
 

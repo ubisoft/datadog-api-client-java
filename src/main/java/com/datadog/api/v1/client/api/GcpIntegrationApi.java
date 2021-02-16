@@ -10,6 +10,7 @@ import javax.ws.rs.core.GenericType;
 
 import com.datadog.api.v1.client.model.APIErrorResponse;
 import com.datadog.api.v1.client.model.GCPAccount;
+import com.datadog.api.v1.client.model.any;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -47,7 +48,7 @@ public class GcpIntegrationApi {
   }
 
 
-private ApiResponse<Object> createGCPIntegrationWithHttpInfo(GCPAccount body) throws ApiException {
+private ApiResponse<any> createGCPIntegrationWithHttpInfo(GCPAccount body) throws ApiException {
     Object localVarPostBody = body;
     
     // verify the required parameter 'body' is set
@@ -83,7 +84,7 @@ private ApiResponse<Object> createGCPIntegrationWithHttpInfo(GCPAccount body) th
 
     String[] localVarAuthNames = new String[] { "apiKeyAuth", "appKeyAuth" };
 
-    GenericType<Object> localVarReturnType = new GenericType<Object>() {};
+    GenericType<any> localVarReturnType = new GenericType<any>() {};
 
     return apiClient.invokeAPI("GcpIntegrationApi.createGCPIntegration", localVarPath, "POST", localVarQueryParams, localVarPostBody,
                                localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType,
@@ -108,7 +109,7 @@ private ApiResponse<Object> createGCPIntegrationWithHttpInfo(GCPAccount body) th
 
     /**
      * Execute createGCPIntegration request
-     * @return Object
+     * @return any
      * @throws ApiException if fails to make API call
      * @http.response.details
        <table summary="Response Details" border="1">
@@ -120,13 +121,13 @@ private ApiResponse<Object> createGCPIntegrationWithHttpInfo(GCPAccount body) th
      
      */
     
-    public Object execute() throws ApiException {
+    public any execute() throws ApiException {
       return this.executeWithHttpInfo().getData();
     }
 
     /**
      * Execute createGCPIntegration request with HTTP info returned
-     * @return ApiResponse&lt;Object&gt;
+     * @return ApiResponse&lt;any&gt;
      * @throws ApiException if fails to make API call
      * @http.response.details
        <table summary="Response Details" border="1">
@@ -137,7 +138,7 @@ private ApiResponse<Object> createGCPIntegrationWithHttpInfo(GCPAccount body) th
        </table>
 
      */
-    public ApiResponse<Object> executeWithHttpInfo() throws ApiException {
+    public ApiResponse<any> executeWithHttpInfo() throws ApiException {
       return createGCPIntegrationWithHttpInfo(body);
     }
   }
@@ -154,7 +155,7 @@ private ApiResponse<Object> createGCPIntegrationWithHttpInfo(GCPAccount body) th
     return new APIcreateGCPIntegrationRequest();
   }
 
-private ApiResponse<Object> deleteGCPIntegrationWithHttpInfo(GCPAccount body) throws ApiException {
+private ApiResponse<any> deleteGCPIntegrationWithHttpInfo(GCPAccount body) throws ApiException {
     Object localVarPostBody = body;
     
     // verify the required parameter 'body' is set
@@ -190,7 +191,7 @@ private ApiResponse<Object> deleteGCPIntegrationWithHttpInfo(GCPAccount body) th
 
     String[] localVarAuthNames = new String[] { "apiKeyAuth", "appKeyAuth" };
 
-    GenericType<Object> localVarReturnType = new GenericType<Object>() {};
+    GenericType<any> localVarReturnType = new GenericType<any>() {};
 
     return apiClient.invokeAPI("GcpIntegrationApi.deleteGCPIntegration", localVarPath, "DELETE", localVarQueryParams, localVarPostBody,
                                localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType,
@@ -215,7 +216,7 @@ private ApiResponse<Object> deleteGCPIntegrationWithHttpInfo(GCPAccount body) th
 
     /**
      * Execute deleteGCPIntegration request
-     * @return Object
+     * @return any
      * @throws ApiException if fails to make API call
      * @http.response.details
        <table summary="Response Details" border="1">
@@ -227,13 +228,13 @@ private ApiResponse<Object> deleteGCPIntegrationWithHttpInfo(GCPAccount body) th
      
      */
     
-    public Object execute() throws ApiException {
+    public any execute() throws ApiException {
       return this.executeWithHttpInfo().getData();
     }
 
     /**
      * Execute deleteGCPIntegration request with HTTP info returned
-     * @return ApiResponse&lt;Object&gt;
+     * @return ApiResponse&lt;any&gt;
      * @throws ApiException if fails to make API call
      * @http.response.details
        <table summary="Response Details" border="1">
@@ -244,7 +245,7 @@ private ApiResponse<Object> deleteGCPIntegrationWithHttpInfo(GCPAccount body) th
        </table>
 
      */
-    public ApiResponse<Object> executeWithHttpInfo() throws ApiException {
+    public ApiResponse<any> executeWithHttpInfo() throws ApiException {
       return deleteGCPIntegrationWithHttpInfo(body);
     }
   }
@@ -352,7 +353,7 @@ private ApiResponse<List<GCPAccount>> listGCPIntegrationWithHttpInfo() throws Ap
     return new APIlistGCPIntegrationRequest();
   }
 
-private ApiResponse<Object> updateGCPIntegrationWithHttpInfo(GCPAccount body) throws ApiException {
+private ApiResponse<any> updateGCPIntegrationWithHttpInfo(GCPAccount body) throws ApiException {
     Object localVarPostBody = body;
     
     // verify the required parameter 'body' is set
@@ -388,7 +389,7 @@ private ApiResponse<Object> updateGCPIntegrationWithHttpInfo(GCPAccount body) th
 
     String[] localVarAuthNames = new String[] { "apiKeyAuth", "appKeyAuth" };
 
-    GenericType<Object> localVarReturnType = new GenericType<Object>() {};
+    GenericType<any> localVarReturnType = new GenericType<any>() {};
 
     return apiClient.invokeAPI("GcpIntegrationApi.updateGCPIntegration", localVarPath, "PUT", localVarQueryParams, localVarPostBody,
                                localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType,
@@ -413,7 +414,7 @@ private ApiResponse<Object> updateGCPIntegrationWithHttpInfo(GCPAccount body) th
 
     /**
      * Execute updateGCPIntegration request
-     * @return Object
+     * @return any
      * @throws ApiException if fails to make API call
      * @http.response.details
        <table summary="Response Details" border="1">
@@ -425,13 +426,13 @@ private ApiResponse<Object> updateGCPIntegrationWithHttpInfo(GCPAccount body) th
      
      */
     
-    public Object execute() throws ApiException {
+    public any execute() throws ApiException {
       return this.executeWithHttpInfo().getData();
     }
 
     /**
      * Execute updateGCPIntegration request with HTTP info returned
-     * @return ApiResponse&lt;Object&gt;
+     * @return ApiResponse&lt;any&gt;
      * @throws ApiException if fails to make API call
      * @http.response.details
        <table summary="Response Details" border="1">
@@ -442,7 +443,7 @@ private ApiResponse<Object> updateGCPIntegrationWithHttpInfo(GCPAccount body) th
        </table>
 
      */
-    public ApiResponse<Object> executeWithHttpInfo() throws ApiException {
+    public ApiResponse<any> executeWithHttpInfo() throws ApiException {
       return updateGCPIntegrationWithHttpInfo(body);
     }
   }

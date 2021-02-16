@@ -18,6 +18,7 @@ import java.util.HashMap;
 import com.datadog.api.v1.client.model.HTTPMethod;
 import com.datadog.api.v1.client.model.SyntheticsBasicAuth;
 import com.datadog.api.v1.client.model.SyntheticsTestRequestCertificate;
+import com.datadog.api.v1.client.model.any;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -76,7 +77,7 @@ public class SyntheticsTestRequest {
   private Long port;
 
   public static final String JSON_PROPERTY_QUERY = "query";
-  private Object query;
+  private any query;
 
   public static final String JSON_PROPERTY_TIMEOUT = "timeout";
   private Double timeout;
@@ -285,7 +286,7 @@ public class SyntheticsTestRequest {
   }
 
 
-  public SyntheticsTestRequest query(Object query) {
+  public SyntheticsTestRequest query(any query) {
     this.query = query;
     return this;
   }
@@ -299,12 +300,12 @@ public class SyntheticsTestRequest {
   @JsonProperty(JSON_PROPERTY_QUERY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public Object getQuery() {
+  public any getQuery() {
     return query;
   }
 
 
-  public void setQuery(Object query) {
+  public void setQuery(any query) {
     this.query = query;
   }
 

@@ -16,6 +16,7 @@ import java.util.Arrays;
 import java.util.Map;
 import java.util.HashMap;
 import com.datadog.api.v1.client.model.SyntheticsStepType;
+import com.datadog.api.v1.client.model.any;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -47,7 +48,7 @@ public class SyntheticsStep {
   private String name;
 
   public static final String JSON_PROPERTY_PARAMS = "params";
-  private Object params;
+  private any params;
 
   public static final String JSON_PROPERTY_TIMEOUT = "timeout";
   private Long timeout;
@@ -104,7 +105,7 @@ public class SyntheticsStep {
   }
 
 
-  public SyntheticsStep params(Object params) {
+  public SyntheticsStep params(any params) {
     this.params = params;
     return this;
   }
@@ -118,12 +119,12 @@ public class SyntheticsStep {
   @JsonProperty(JSON_PROPERTY_PARAMS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public Object getParams() {
+  public any getParams() {
     return params;
   }
 
 
-  public void setParams(Object params) {
+  public void setParams(any params) {
     this.params = params;
   }
 
