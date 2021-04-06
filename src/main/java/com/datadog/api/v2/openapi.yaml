@@ -3171,6 +3171,12 @@ components:
       type: object
     MetricVolumesResponse:
       description: Response object which includes a single metric's volume.
+      example:
+        data:
+          attributes:
+            volume: 10
+          id: example.metric.1
+          type: distinct_metric_volumes
       properties:
         data:
           $ref: '#/components/schemas/MetricVolumes'
