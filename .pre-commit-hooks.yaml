@@ -1,0 +1,6 @@
+- id: format-java
+  name: Google Java Formatter
+  description: Runs Google Java Formatter over Java source files
+  language: docker
+  entry: "java -jar /app/google-java-format.jar"
+  types: [java]
