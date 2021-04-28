@@ -69,138 +69,139 @@ import org.openapitools.jackson.nullable.JsonNullable;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class UsageSummaryDate {
   public static final String JSON_PROPERTY_AGENT_HOST_TOP99P = "agent_host_top99p";
-  private Long agentHostTop99p;
+  private JsonNullable<Long> agentHostTop99p = JsonNullable.<Long>undefined();
 
   public static final String JSON_PROPERTY_APM_AZURE_APP_SERVICE_HOST_TOP99P =
       "apm_azure_app_service_host_top99p";
-  private Long apmAzureAppServiceHostTop99p;
+  private JsonNullable<Long> apmAzureAppServiceHostTop99p = JsonNullable.<Long>undefined();
 
   public static final String JSON_PROPERTY_APM_HOST_TOP99P = "apm_host_top99p";
-  private Long apmHostTop99p;
+  private JsonNullable<Long> apmHostTop99p = JsonNullable.<Long>undefined();
 
   public static final String JSON_PROPERTY_AWS_HOST_TOP99P = "aws_host_top99p";
-  private Long awsHostTop99p;
+  private JsonNullable<Long> awsHostTop99p = JsonNullable.<Long>undefined();
 
   public static final String JSON_PROPERTY_AWS_LAMBDA_FUNC_COUNT = "aws_lambda_func_count";
-  private Long awsLambdaFuncCount;
+  private JsonNullable<Long> awsLambdaFuncCount = JsonNullable.<Long>undefined();
 
   public static final String JSON_PROPERTY_AWS_LAMBDA_INVOCATIONS_SUM =
       "aws_lambda_invocations_sum";
-  private Long awsLambdaInvocationsSum;
+  private JsonNullable<Long> awsLambdaInvocationsSum = JsonNullable.<Long>undefined();
 
   public static final String JSON_PROPERTY_AZURE_APP_SERVICE_TOP99P = "azure_app_service_top99p";
-  private Long azureAppServiceTop99p;
+  private JsonNullable<Long> azureAppServiceTop99p = JsonNullable.<Long>undefined();
 
   public static final String JSON_PROPERTY_BILLABLE_INGESTED_BYTES_SUM =
       "billable_ingested_bytes_sum";
-  private Long billableIngestedBytesSum;
+  private JsonNullable<Long> billableIngestedBytesSum = JsonNullable.<Long>undefined();
 
   public static final String JSON_PROPERTY_COMPLIANCE_CONTAINER_COUNT_SUM =
       "compliance_container_count_sum";
-  private JsonNullable<Object> complianceContainerCountSum = JsonNullable.<Object>of(null);
+  private JsonNullable<Long> complianceContainerCountSum = JsonNullable.<Long>undefined();
 
   public static final String JSON_PROPERTY_COMPLIANCE_HOST_COUNT_SUM = "compliance_host_count_sum";
-  private Long complianceHostCountSum;
+  private JsonNullable<Long> complianceHostCountSum = JsonNullable.<Long>undefined();
 
   public static final String JSON_PROPERTY_CONTAINER_AVG = "container_avg";
-  private Long containerAvg;
+  private JsonNullable<Long> containerAvg = JsonNullable.<Long>undefined();
 
   public static final String JSON_PROPERTY_CONTAINER_HWM = "container_hwm";
-  private Long containerHwm;
+  private JsonNullable<Long> containerHwm = JsonNullable.<Long>undefined();
 
   public static final String JSON_PROPERTY_CUSTOM_TS_AVG = "custom_ts_avg";
-  private Long customTsAvg;
+  private JsonNullable<Long> customTsAvg = JsonNullable.<Long>undefined();
 
   public static final String JSON_PROPERTY_DATE = "date";
   private OffsetDateTime date;
 
   public static final String JSON_PROPERTY_FARGATE_TASKS_COUNT_AVG = "fargate_tasks_count_avg";
-  private Long fargateTasksCountAvg;
+  private JsonNullable<Long> fargateTasksCountAvg = JsonNullable.<Long>undefined();
 
   public static final String JSON_PROPERTY_FARGATE_TASKS_COUNT_HWM = "fargate_tasks_count_hwm";
-  private Long fargateTasksCountHwm;
+  private JsonNullable<Long> fargateTasksCountHwm = JsonNullable.<Long>undefined();
 
   public static final String JSON_PROPERTY_GCP_HOST_TOP99P = "gcp_host_top99p";
-  private Long gcpHostTop99p;
+  private JsonNullable<Long> gcpHostTop99p = JsonNullable.<Long>undefined();
 
   public static final String JSON_PROPERTY_HEROKU_HOST_TOP99P = "heroku_host_top99p";
-  private Long herokuHostTop99p;
+  private JsonNullable<Long> herokuHostTop99p = JsonNullable.<Long>undefined();
 
   public static final String JSON_PROPERTY_INCIDENT_MANAGEMENT_MONTHLY_ACTIVE_USERS_HWM =
       "incident_management_monthly_active_users_hwm";
-  private Long incidentManagementMonthlyActiveUsersHwm;
+  private JsonNullable<Long> incidentManagementMonthlyActiveUsersHwm =
+      JsonNullable.<Long>undefined();
 
   public static final String JSON_PROPERTY_INDEXED_EVENTS_COUNT_SUM = "indexed_events_count_sum";
-  private Long indexedEventsCountSum;
+  private JsonNullable<Long> indexedEventsCountSum = JsonNullable.<Long>undefined();
 
   public static final String JSON_PROPERTY_INFRA_HOST_TOP99P = "infra_host_top99p";
-  private Long infraHostTop99p;
+  private JsonNullable<Long> infraHostTop99p = JsonNullable.<Long>undefined();
 
   public static final String JSON_PROPERTY_INGESTED_EVENTS_BYTES_SUM = "ingested_events_bytes_sum";
-  private Long ingestedEventsBytesSum;
+  private JsonNullable<Long> ingestedEventsBytesSum = JsonNullable.<Long>undefined();
 
   public static final String JSON_PROPERTY_IOT_DEVICE_SUM = "iot_device_sum";
-  private Long iotDeviceSum;
+  private JsonNullable<Long> iotDeviceSum = JsonNullable.<Long>undefined();
 
   public static final String JSON_PROPERTY_IOT_DEVICE_TOP99P = "iot_device_top99p";
-  private Long iotDeviceTop99p;
+  private JsonNullable<Long> iotDeviceTop99p = JsonNullable.<Long>undefined();
 
   public static final String JSON_PROPERTY_MOBILE_RUM_SESSION_COUNT_ANDROID_SUM =
       "mobile_rum_session_count_android_sum";
-  private Long mobileRumSessionCountAndroidSum;
+  private JsonNullable<Long> mobileRumSessionCountAndroidSum = JsonNullable.<Long>undefined();
 
   public static final String JSON_PROPERTY_MOBILE_RUM_SESSION_COUNT_IOS_SUM =
       "mobile_rum_session_count_ios_sum";
-  private Long mobileRumSessionCountIosSum;
+  private JsonNullable<Long> mobileRumSessionCountIosSum = JsonNullable.<Long>undefined();
 
   public static final String JSON_PROPERTY_MOBILE_RUM_SESSION_COUNT_SUM =
       "mobile_rum_session_count_sum";
-  private Long mobileRumSessionCountSum;
+  private JsonNullable<Long> mobileRumSessionCountSum = JsonNullable.<Long>undefined();
 
   public static final String JSON_PROPERTY_NETFLOW_INDEXED_EVENTS_COUNT_SUM =
       "netflow_indexed_events_count_sum";
-  private Long netflowIndexedEventsCountSum;
+  private JsonNullable<Long> netflowIndexedEventsCountSum = JsonNullable.<Long>undefined();
 
   public static final String JSON_PROPERTY_NPM_HOST_TOP99P = "npm_host_top99p";
-  private Long npmHostTop99p;
+  private JsonNullable<Long> npmHostTop99p = JsonNullable.<Long>undefined();
 
   public static final String JSON_PROPERTY_OPENTELEMETRY_HOST_TOP99P = "opentelemetry_host_top99p";
-  private Long opentelemetryHostTop99p;
+  private JsonNullable<Long> opentelemetryHostTop99p = JsonNullable.<Long>undefined();
 
   public static final String JSON_PROPERTY_ORGS = "orgs";
   private List<UsageSummaryDateOrg> orgs = null;
 
   public static final String JSON_PROPERTY_PROFILING_HOST_TOP99P = "profiling_host_top99p";
-  private Long profilingHostTop99p;
+  private JsonNullable<Long> profilingHostTop99p = JsonNullable.<Long>undefined();
 
   public static final String JSON_PROPERTY_RUM_SESSION_COUNT_SUM = "rum_session_count_sum";
-  private Long rumSessionCountSum;
+  private JsonNullable<Long> rumSessionCountSum = JsonNullable.<Long>undefined();
 
   public static final String JSON_PROPERTY_RUM_TOTAL_SESSION_COUNT_SUM =
       "rum_total_session_count_sum";
-  private Long rumTotalSessionCountSum;
+  private JsonNullable<Long> rumTotalSessionCountSum = JsonNullable.<Long>undefined();
 
   public static final String JSON_PROPERTY_SYNTHETICS_BROWSER_CHECK_CALLS_COUNT_SUM =
       "synthetics_browser_check_calls_count_sum";
-  private Long syntheticsBrowserCheckCallsCountSum;
+  private JsonNullable<Long> syntheticsBrowserCheckCallsCountSum = JsonNullable.<Long>undefined();
 
   public static final String JSON_PROPERTY_SYNTHETICS_CHECK_CALLS_COUNT_SUM =
       "synthetics_check_calls_count_sum";
-  private Long syntheticsCheckCallsCountSum;
+  private JsonNullable<Long> syntheticsCheckCallsCountSum = JsonNullable.<Long>undefined();
 
   public static final String JSON_PROPERTY_TRACE_SEARCH_INDEXED_EVENTS_COUNT_SUM =
       "trace_search_indexed_events_count_sum";
-  private Long traceSearchIndexedEventsCountSum;
+  private JsonNullable<Long> traceSearchIndexedEventsCountSum = JsonNullable.<Long>undefined();
 
   public static final String JSON_PROPERTY_TWOL_INGESTED_EVENTS_BYTES_SUM =
       "twol_ingested_events_bytes_sum";
-  private Long twolIngestedEventsBytesSum;
+  private JsonNullable<Long> twolIngestedEventsBytesSum = JsonNullable.<Long>undefined();
 
   public static final String JSON_PROPERTY_VSPHERE_HOST_TOP99P = "vsphere_host_top99p";
   private Long vsphereHostTop99p;
 
   public UsageSummaryDate agentHostTop99p(Long agentHostTop99p) {
-    this.agentHostTop99p = agentHostTop99p;
+    this.agentHostTop99p = JsonNullable.<Long>of(agentHostTop99p);
     return this;
   }
 
@@ -215,18 +216,28 @@ public class UsageSummaryDate {
       value =
           "Shows the 99th percentile of all agent hosts over all hours in the current date for all"
               + " organizations.")
+  @JsonIgnore
+  public Long getAgentHostTop99p() {
+    return agentHostTop99p.orElse(null);
+  }
+
   @JsonProperty(JSON_PROPERTY_AGENT_HOST_TOP99P)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public Long getAgentHostTop99p() {
+  public JsonNullable<Long> getAgentHostTop99p_JsonNullable() {
     return agentHostTop99p;
   }
 
-  public void setAgentHostTop99p(Long agentHostTop99p) {
+  @JsonProperty(JSON_PROPERTY_AGENT_HOST_TOP99P)
+  public void setAgentHostTop99p_JsonNullable(JsonNullable<Long> agentHostTop99p) {
     this.agentHostTop99p = agentHostTop99p;
   }
 
+  public void setAgentHostTop99p(Long agentHostTop99p) {
+    this.agentHostTop99p = JsonNullable.<Long>of(agentHostTop99p);
+  }
+
   public UsageSummaryDate apmAzureAppServiceHostTop99p(Long apmAzureAppServiceHostTop99p) {
-    this.apmAzureAppServiceHostTop99p = apmAzureAppServiceHostTop99p;
+    this.apmAzureAppServiceHostTop99p = JsonNullable.<Long>of(apmAzureAppServiceHostTop99p);
     return this;
   }
 
@@ -241,18 +252,29 @@ public class UsageSummaryDate {
       value =
           "Shows the 99th percentile of all Azure app services using APM over all hours in the"
               + " current date all organizations.")
+  @JsonIgnore
+  public Long getApmAzureAppServiceHostTop99p() {
+    return apmAzureAppServiceHostTop99p.orElse(null);
+  }
+
   @JsonProperty(JSON_PROPERTY_APM_AZURE_APP_SERVICE_HOST_TOP99P)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public Long getApmAzureAppServiceHostTop99p() {
+  public JsonNullable<Long> getApmAzureAppServiceHostTop99p_JsonNullable() {
     return apmAzureAppServiceHostTop99p;
   }
 
-  public void setApmAzureAppServiceHostTop99p(Long apmAzureAppServiceHostTop99p) {
+  @JsonProperty(JSON_PROPERTY_APM_AZURE_APP_SERVICE_HOST_TOP99P)
+  public void setApmAzureAppServiceHostTop99p_JsonNullable(
+      JsonNullable<Long> apmAzureAppServiceHostTop99p) {
     this.apmAzureAppServiceHostTop99p = apmAzureAppServiceHostTop99p;
   }
 
+  public void setApmAzureAppServiceHostTop99p(Long apmAzureAppServiceHostTop99p) {
+    this.apmAzureAppServiceHostTop99p = JsonNullable.<Long>of(apmAzureAppServiceHostTop99p);
+  }
+
   public UsageSummaryDate apmHostTop99p(Long apmHostTop99p) {
-    this.apmHostTop99p = apmHostTop99p;
+    this.apmHostTop99p = JsonNullable.<Long>of(apmHostTop99p);
     return this;
   }
 
@@ -267,18 +289,28 @@ public class UsageSummaryDate {
       value =
           "Shows the 99th percentile of all distinct APM hosts over all hours in the current date"
               + " for all organizations.")
+  @JsonIgnore
+  public Long getApmHostTop99p() {
+    return apmHostTop99p.orElse(null);
+  }
+
   @JsonProperty(JSON_PROPERTY_APM_HOST_TOP99P)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public Long getApmHostTop99p() {
+  public JsonNullable<Long> getApmHostTop99p_JsonNullable() {
     return apmHostTop99p;
   }
 
-  public void setApmHostTop99p(Long apmHostTop99p) {
+  @JsonProperty(JSON_PROPERTY_APM_HOST_TOP99P)
+  public void setApmHostTop99p_JsonNullable(JsonNullable<Long> apmHostTop99p) {
     this.apmHostTop99p = apmHostTop99p;
   }
 
+  public void setApmHostTop99p(Long apmHostTop99p) {
+    this.apmHostTop99p = JsonNullable.<Long>of(apmHostTop99p);
+  }
+
   public UsageSummaryDate awsHostTop99p(Long awsHostTop99p) {
-    this.awsHostTop99p = awsHostTop99p;
+    this.awsHostTop99p = JsonNullable.<Long>of(awsHostTop99p);
     return this;
   }
 
@@ -293,18 +325,28 @@ public class UsageSummaryDate {
       value =
           "Shows the 99th percentile of all AWS hosts over all hours in the current date for all"
               + " organizations.")
+  @JsonIgnore
+  public Long getAwsHostTop99p() {
+    return awsHostTop99p.orElse(null);
+  }
+
   @JsonProperty(JSON_PROPERTY_AWS_HOST_TOP99P)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public Long getAwsHostTop99p() {
+  public JsonNullable<Long> getAwsHostTop99p_JsonNullable() {
     return awsHostTop99p;
   }
 
-  public void setAwsHostTop99p(Long awsHostTop99p) {
+  @JsonProperty(JSON_PROPERTY_AWS_HOST_TOP99P)
+  public void setAwsHostTop99p_JsonNullable(JsonNullable<Long> awsHostTop99p) {
     this.awsHostTop99p = awsHostTop99p;
   }
 
+  public void setAwsHostTop99p(Long awsHostTop99p) {
+    this.awsHostTop99p = JsonNullable.<Long>of(awsHostTop99p);
+  }
+
   public UsageSummaryDate awsLambdaFuncCount(Long awsLambdaFuncCount) {
-    this.awsLambdaFuncCount = awsLambdaFuncCount;
+    this.awsLambdaFuncCount = JsonNullable.<Long>of(awsLambdaFuncCount);
     return this;
   }
 
@@ -319,18 +361,28 @@ public class UsageSummaryDate {
       value =
           "Shows the average of the number of functions that executed 1 or more times each hour in"
               + " the current date for all organizations.")
+  @JsonIgnore
+  public Long getAwsLambdaFuncCount() {
+    return awsLambdaFuncCount.orElse(null);
+  }
+
   @JsonProperty(JSON_PROPERTY_AWS_LAMBDA_FUNC_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public Long getAwsLambdaFuncCount() {
+  public JsonNullable<Long> getAwsLambdaFuncCount_JsonNullable() {
     return awsLambdaFuncCount;
   }
 
-  public void setAwsLambdaFuncCount(Long awsLambdaFuncCount) {
+  @JsonProperty(JSON_PROPERTY_AWS_LAMBDA_FUNC_COUNT)
+  public void setAwsLambdaFuncCount_JsonNullable(JsonNullable<Long> awsLambdaFuncCount) {
     this.awsLambdaFuncCount = awsLambdaFuncCount;
   }
 
+  public void setAwsLambdaFuncCount(Long awsLambdaFuncCount) {
+    this.awsLambdaFuncCount = JsonNullable.<Long>of(awsLambdaFuncCount);
+  }
+
   public UsageSummaryDate awsLambdaInvocationsSum(Long awsLambdaInvocationsSum) {
-    this.awsLambdaInvocationsSum = awsLambdaInvocationsSum;
+    this.awsLambdaInvocationsSum = JsonNullable.<Long>of(awsLambdaInvocationsSum);
     return this;
   }
 
@@ -345,18 +397,28 @@ public class UsageSummaryDate {
       value =
           "Shows the sum of all AWS Lambda invocations over all hours in the current date for all"
               + " organizations.")
+  @JsonIgnore
+  public Long getAwsLambdaInvocationsSum() {
+    return awsLambdaInvocationsSum.orElse(null);
+  }
+
   @JsonProperty(JSON_PROPERTY_AWS_LAMBDA_INVOCATIONS_SUM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public Long getAwsLambdaInvocationsSum() {
+  public JsonNullable<Long> getAwsLambdaInvocationsSum_JsonNullable() {
     return awsLambdaInvocationsSum;
   }
 
-  public void setAwsLambdaInvocationsSum(Long awsLambdaInvocationsSum) {
+  @JsonProperty(JSON_PROPERTY_AWS_LAMBDA_INVOCATIONS_SUM)
+  public void setAwsLambdaInvocationsSum_JsonNullable(JsonNullable<Long> awsLambdaInvocationsSum) {
     this.awsLambdaInvocationsSum = awsLambdaInvocationsSum;
   }
 
+  public void setAwsLambdaInvocationsSum(Long awsLambdaInvocationsSum) {
+    this.awsLambdaInvocationsSum = JsonNullable.<Long>of(awsLambdaInvocationsSum);
+  }
+
   public UsageSummaryDate azureAppServiceTop99p(Long azureAppServiceTop99p) {
-    this.azureAppServiceTop99p = azureAppServiceTop99p;
+    this.azureAppServiceTop99p = JsonNullable.<Long>of(azureAppServiceTop99p);
     return this;
   }
 
@@ -371,18 +433,28 @@ public class UsageSummaryDate {
       value =
           "Shows the 99th percentile of all Azure app services over all hours in the current date"
               + " for all organizations.")
+  @JsonIgnore
+  public Long getAzureAppServiceTop99p() {
+    return azureAppServiceTop99p.orElse(null);
+  }
+
   @JsonProperty(JSON_PROPERTY_AZURE_APP_SERVICE_TOP99P)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public Long getAzureAppServiceTop99p() {
+  public JsonNullable<Long> getAzureAppServiceTop99p_JsonNullable() {
     return azureAppServiceTop99p;
   }
 
-  public void setAzureAppServiceTop99p(Long azureAppServiceTop99p) {
+  @JsonProperty(JSON_PROPERTY_AZURE_APP_SERVICE_TOP99P)
+  public void setAzureAppServiceTop99p_JsonNullable(JsonNullable<Long> azureAppServiceTop99p) {
     this.azureAppServiceTop99p = azureAppServiceTop99p;
   }
 
+  public void setAzureAppServiceTop99p(Long azureAppServiceTop99p) {
+    this.azureAppServiceTop99p = JsonNullable.<Long>of(azureAppServiceTop99p);
+  }
+
   public UsageSummaryDate billableIngestedBytesSum(Long billableIngestedBytesSum) {
-    this.billableIngestedBytesSum = billableIngestedBytesSum;
+    this.billableIngestedBytesSum = JsonNullable.<Long>of(billableIngestedBytesSum);
     return this;
   }
 
@@ -397,18 +469,29 @@ public class UsageSummaryDate {
       value =
           "Shows the sum of all log bytes ingested over all hours in the current date for all"
               + " organizations.")
+  @JsonIgnore
+  public Long getBillableIngestedBytesSum() {
+    return billableIngestedBytesSum.orElse(null);
+  }
+
   @JsonProperty(JSON_PROPERTY_BILLABLE_INGESTED_BYTES_SUM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public Long getBillableIngestedBytesSum() {
+  public JsonNullable<Long> getBillableIngestedBytesSum_JsonNullable() {
     return billableIngestedBytesSum;
   }
 
-  public void setBillableIngestedBytesSum(Long billableIngestedBytesSum) {
+  @JsonProperty(JSON_PROPERTY_BILLABLE_INGESTED_BYTES_SUM)
+  public void setBillableIngestedBytesSum_JsonNullable(
+      JsonNullable<Long> billableIngestedBytesSum) {
     this.billableIngestedBytesSum = billableIngestedBytesSum;
   }
 
-  public UsageSummaryDate complianceContainerCountSum(Object complianceContainerCountSum) {
-    this.complianceContainerCountSum = JsonNullable.<Object>of(complianceContainerCountSum);
+  public void setBillableIngestedBytesSum(Long billableIngestedBytesSum) {
+    this.billableIngestedBytesSum = JsonNullable.<Long>of(billableIngestedBytesSum);
+  }
+
+  public UsageSummaryDate complianceContainerCountSum(Long complianceContainerCountSum) {
+    this.complianceContainerCountSum = JsonNullable.<Long>of(complianceContainerCountSum);
     return this;
   }
 
@@ -424,28 +507,28 @@ public class UsageSummaryDate {
           "Shows the sum of compliance containers over all hours in the current date for all"
               + " organizations.")
   @JsonIgnore
-  public Object getComplianceContainerCountSum() {
+  public Long getComplianceContainerCountSum() {
     return complianceContainerCountSum.orElse(null);
   }
 
   @JsonProperty(JSON_PROPERTY_COMPLIANCE_CONTAINER_COUNT_SUM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public JsonNullable<Object> getComplianceContainerCountSum_JsonNullable() {
+  public JsonNullable<Long> getComplianceContainerCountSum_JsonNullable() {
     return complianceContainerCountSum;
   }
 
   @JsonProperty(JSON_PROPERTY_COMPLIANCE_CONTAINER_COUNT_SUM)
   public void setComplianceContainerCountSum_JsonNullable(
-      JsonNullable<Object> complianceContainerCountSum) {
+      JsonNullable<Long> complianceContainerCountSum) {
     this.complianceContainerCountSum = complianceContainerCountSum;
   }
 
-  public void setComplianceContainerCountSum(Object complianceContainerCountSum) {
-    this.complianceContainerCountSum = JsonNullable.<Object>of(complianceContainerCountSum);
+  public void setComplianceContainerCountSum(Long complianceContainerCountSum) {
+    this.complianceContainerCountSum = JsonNullable.<Long>of(complianceContainerCountSum);
   }
 
   public UsageSummaryDate complianceHostCountSum(Long complianceHostCountSum) {
-    this.complianceHostCountSum = complianceHostCountSum;
+    this.complianceHostCountSum = JsonNullable.<Long>of(complianceHostCountSum);
     return this;
   }
 
@@ -459,18 +542,28 @@ public class UsageSummaryDate {
       value =
           "Shows the sum of compliance hosts over all hours in the current date for all"
               + " organizations.")
+  @JsonIgnore
+  public Long getComplianceHostCountSum() {
+    return complianceHostCountSum.orElse(null);
+  }
+
   @JsonProperty(JSON_PROPERTY_COMPLIANCE_HOST_COUNT_SUM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public Long getComplianceHostCountSum() {
+  public JsonNullable<Long> getComplianceHostCountSum_JsonNullable() {
     return complianceHostCountSum;
   }
 
-  public void setComplianceHostCountSum(Long complianceHostCountSum) {
+  @JsonProperty(JSON_PROPERTY_COMPLIANCE_HOST_COUNT_SUM)
+  public void setComplianceHostCountSum_JsonNullable(JsonNullable<Long> complianceHostCountSum) {
     this.complianceHostCountSum = complianceHostCountSum;
   }
 
+  public void setComplianceHostCountSum(Long complianceHostCountSum) {
+    this.complianceHostCountSum = JsonNullable.<Long>of(complianceHostCountSum);
+  }
+
   public UsageSummaryDate containerAvg(Long containerAvg) {
-    this.containerAvg = containerAvg;
+    this.containerAvg = JsonNullable.<Long>of(containerAvg);
     return this;
   }
 
@@ -485,18 +578,28 @@ public class UsageSummaryDate {
       value =
           "Shows the average of all distinct containers over all hours in the current date for all"
               + " organizations.")
+  @JsonIgnore
+  public Long getContainerAvg() {
+    return containerAvg.orElse(null);
+  }
+
   @JsonProperty(JSON_PROPERTY_CONTAINER_AVG)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public Long getContainerAvg() {
+  public JsonNullable<Long> getContainerAvg_JsonNullable() {
     return containerAvg;
   }
 
-  public void setContainerAvg(Long containerAvg) {
+  @JsonProperty(JSON_PROPERTY_CONTAINER_AVG)
+  public void setContainerAvg_JsonNullable(JsonNullable<Long> containerAvg) {
     this.containerAvg = containerAvg;
   }
 
+  public void setContainerAvg(Long containerAvg) {
+    this.containerAvg = JsonNullable.<Long>of(containerAvg);
+  }
+
   public UsageSummaryDate containerHwm(Long containerHwm) {
-    this.containerHwm = containerHwm;
+    this.containerHwm = JsonNullable.<Long>of(containerHwm);
     return this;
   }
 
@@ -511,18 +614,28 @@ public class UsageSummaryDate {
       value =
           "Shows the high-water mark of all distinct containers over all hours in the current date"
               + " for all organizations.")
+  @JsonIgnore
+  public Long getContainerHwm() {
+    return containerHwm.orElse(null);
+  }
+
   @JsonProperty(JSON_PROPERTY_CONTAINER_HWM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public Long getContainerHwm() {
+  public JsonNullable<Long> getContainerHwm_JsonNullable() {
     return containerHwm;
   }
 
-  public void setContainerHwm(Long containerHwm) {
+  @JsonProperty(JSON_PROPERTY_CONTAINER_HWM)
+  public void setContainerHwm_JsonNullable(JsonNullable<Long> containerHwm) {
     this.containerHwm = containerHwm;
   }
 
+  public void setContainerHwm(Long containerHwm) {
+    this.containerHwm = JsonNullable.<Long>of(containerHwm);
+  }
+
   public UsageSummaryDate customTsAvg(Long customTsAvg) {
-    this.customTsAvg = customTsAvg;
+    this.customTsAvg = JsonNullable.<Long>of(customTsAvg);
     return this;
   }
 
@@ -537,14 +650,24 @@ public class UsageSummaryDate {
       value =
           "Shows the average number of distinct custom metrics over all hours in the current date"
               + " for all organizations.")
+  @JsonIgnore
+  public Long getCustomTsAvg() {
+    return customTsAvg.orElse(null);
+  }
+
   @JsonProperty(JSON_PROPERTY_CUSTOM_TS_AVG)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public Long getCustomTsAvg() {
+  public JsonNullable<Long> getCustomTsAvg_JsonNullable() {
     return customTsAvg;
   }
 
-  public void setCustomTsAvg(Long customTsAvg) {
+  @JsonProperty(JSON_PROPERTY_CUSTOM_TS_AVG)
+  public void setCustomTsAvg_JsonNullable(JsonNullable<Long> customTsAvg) {
     this.customTsAvg = customTsAvg;
+  }
+
+  public void setCustomTsAvg(Long customTsAvg) {
+    this.customTsAvg = JsonNullable.<Long>of(customTsAvg);
   }
 
   public UsageSummaryDate date(OffsetDateTime date) {
@@ -570,7 +693,7 @@ public class UsageSummaryDate {
   }
 
   public UsageSummaryDate fargateTasksCountAvg(Long fargateTasksCountAvg) {
-    this.fargateTasksCountAvg = fargateTasksCountAvg;
+    this.fargateTasksCountAvg = JsonNullable.<Long>of(fargateTasksCountAvg);
     return this;
   }
 
@@ -585,18 +708,28 @@ public class UsageSummaryDate {
       value =
           "Shows the high-watermark of all Fargate tasks over all hours in the current date for"
               + " all organizations.")
+  @JsonIgnore
+  public Long getFargateTasksCountAvg() {
+    return fargateTasksCountAvg.orElse(null);
+  }
+
   @JsonProperty(JSON_PROPERTY_FARGATE_TASKS_COUNT_AVG)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public Long getFargateTasksCountAvg() {
+  public JsonNullable<Long> getFargateTasksCountAvg_JsonNullable() {
     return fargateTasksCountAvg;
   }
 
-  public void setFargateTasksCountAvg(Long fargateTasksCountAvg) {
+  @JsonProperty(JSON_PROPERTY_FARGATE_TASKS_COUNT_AVG)
+  public void setFargateTasksCountAvg_JsonNullable(JsonNullable<Long> fargateTasksCountAvg) {
     this.fargateTasksCountAvg = fargateTasksCountAvg;
   }
 
+  public void setFargateTasksCountAvg(Long fargateTasksCountAvg) {
+    this.fargateTasksCountAvg = JsonNullable.<Long>of(fargateTasksCountAvg);
+  }
+
   public UsageSummaryDate fargateTasksCountHwm(Long fargateTasksCountHwm) {
-    this.fargateTasksCountHwm = fargateTasksCountHwm;
+    this.fargateTasksCountHwm = JsonNullable.<Long>of(fargateTasksCountHwm);
     return this;
   }
 
@@ -611,18 +744,28 @@ public class UsageSummaryDate {
       value =
           "Shows the average of all Fargate tasks over all hours in the current date for all"
               + " organizations.")
+  @JsonIgnore
+  public Long getFargateTasksCountHwm() {
+    return fargateTasksCountHwm.orElse(null);
+  }
+
   @JsonProperty(JSON_PROPERTY_FARGATE_TASKS_COUNT_HWM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public Long getFargateTasksCountHwm() {
+  public JsonNullable<Long> getFargateTasksCountHwm_JsonNullable() {
     return fargateTasksCountHwm;
   }
 
-  public void setFargateTasksCountHwm(Long fargateTasksCountHwm) {
+  @JsonProperty(JSON_PROPERTY_FARGATE_TASKS_COUNT_HWM)
+  public void setFargateTasksCountHwm_JsonNullable(JsonNullable<Long> fargateTasksCountHwm) {
     this.fargateTasksCountHwm = fargateTasksCountHwm;
   }
 
+  public void setFargateTasksCountHwm(Long fargateTasksCountHwm) {
+    this.fargateTasksCountHwm = JsonNullable.<Long>of(fargateTasksCountHwm);
+  }
+
   public UsageSummaryDate gcpHostTop99p(Long gcpHostTop99p) {
-    this.gcpHostTop99p = gcpHostTop99p;
+    this.gcpHostTop99p = JsonNullable.<Long>of(gcpHostTop99p);
     return this;
   }
 
@@ -637,18 +780,28 @@ public class UsageSummaryDate {
       value =
           "Shows the 99th percentile of all GCP hosts over all hours in the current date for all"
               + " organizations.")
+  @JsonIgnore
+  public Long getGcpHostTop99p() {
+    return gcpHostTop99p.orElse(null);
+  }
+
   @JsonProperty(JSON_PROPERTY_GCP_HOST_TOP99P)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public Long getGcpHostTop99p() {
+  public JsonNullable<Long> getGcpHostTop99p_JsonNullable() {
     return gcpHostTop99p;
   }
 
-  public void setGcpHostTop99p(Long gcpHostTop99p) {
+  @JsonProperty(JSON_PROPERTY_GCP_HOST_TOP99P)
+  public void setGcpHostTop99p_JsonNullable(JsonNullable<Long> gcpHostTop99p) {
     this.gcpHostTop99p = gcpHostTop99p;
   }
 
+  public void setGcpHostTop99p(Long gcpHostTop99p) {
+    this.gcpHostTop99p = JsonNullable.<Long>of(gcpHostTop99p);
+  }
+
   public UsageSummaryDate herokuHostTop99p(Long herokuHostTop99p) {
-    this.herokuHostTop99p = herokuHostTop99p;
+    this.herokuHostTop99p = JsonNullable.<Long>of(herokuHostTop99p);
     return this;
   }
 
@@ -663,19 +816,30 @@ public class UsageSummaryDate {
       value =
           "Shows the 99th percentile of all Heroku dynos over all hours in the current date for"
               + " all organizations.")
+  @JsonIgnore
+  public Long getHerokuHostTop99p() {
+    return herokuHostTop99p.orElse(null);
+  }
+
   @JsonProperty(JSON_PROPERTY_HEROKU_HOST_TOP99P)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public Long getHerokuHostTop99p() {
+  public JsonNullable<Long> getHerokuHostTop99p_JsonNullable() {
     return herokuHostTop99p;
   }
 
-  public void setHerokuHostTop99p(Long herokuHostTop99p) {
+  @JsonProperty(JSON_PROPERTY_HEROKU_HOST_TOP99P)
+  public void setHerokuHostTop99p_JsonNullable(JsonNullable<Long> herokuHostTop99p) {
     this.herokuHostTop99p = herokuHostTop99p;
+  }
+
+  public void setHerokuHostTop99p(Long herokuHostTop99p) {
+    this.herokuHostTop99p = JsonNullable.<Long>of(herokuHostTop99p);
   }
 
   public UsageSummaryDate incidentManagementMonthlyActiveUsersHwm(
       Long incidentManagementMonthlyActiveUsersHwm) {
-    this.incidentManagementMonthlyActiveUsersHwm = incidentManagementMonthlyActiveUsersHwm;
+    this.incidentManagementMonthlyActiveUsersHwm =
+        JsonNullable.<Long>of(incidentManagementMonthlyActiveUsersHwm);
     return this;
   }
 
@@ -690,19 +854,31 @@ public class UsageSummaryDate {
       value =
           "Shows the high-water mark of incident management monthly active users over all hours in"
               + " the current date for all organizations.")
+  @JsonIgnore
+  public Long getIncidentManagementMonthlyActiveUsersHwm() {
+    return incidentManagementMonthlyActiveUsersHwm.orElse(null);
+  }
+
   @JsonProperty(JSON_PROPERTY_INCIDENT_MANAGEMENT_MONTHLY_ACTIVE_USERS_HWM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public Long getIncidentManagementMonthlyActiveUsersHwm() {
+  public JsonNullable<Long> getIncidentManagementMonthlyActiveUsersHwm_JsonNullable() {
     return incidentManagementMonthlyActiveUsersHwm;
+  }
+
+  @JsonProperty(JSON_PROPERTY_INCIDENT_MANAGEMENT_MONTHLY_ACTIVE_USERS_HWM)
+  public void setIncidentManagementMonthlyActiveUsersHwm_JsonNullable(
+      JsonNullable<Long> incidentManagementMonthlyActiveUsersHwm) {
+    this.incidentManagementMonthlyActiveUsersHwm = incidentManagementMonthlyActiveUsersHwm;
   }
 
   public void setIncidentManagementMonthlyActiveUsersHwm(
       Long incidentManagementMonthlyActiveUsersHwm) {
-    this.incidentManagementMonthlyActiveUsersHwm = incidentManagementMonthlyActiveUsersHwm;
+    this.incidentManagementMonthlyActiveUsersHwm =
+        JsonNullable.<Long>of(incidentManagementMonthlyActiveUsersHwm);
   }
 
   public UsageSummaryDate indexedEventsCountSum(Long indexedEventsCountSum) {
-    this.indexedEventsCountSum = indexedEventsCountSum;
+    this.indexedEventsCountSum = JsonNullable.<Long>of(indexedEventsCountSum);
     return this;
   }
 
@@ -717,18 +893,28 @@ public class UsageSummaryDate {
       value =
           "Shows the sum of all log events indexed over all hours in the current date for all"
               + " organizations.")
+  @JsonIgnore
+  public Long getIndexedEventsCountSum() {
+    return indexedEventsCountSum.orElse(null);
+  }
+
   @JsonProperty(JSON_PROPERTY_INDEXED_EVENTS_COUNT_SUM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public Long getIndexedEventsCountSum() {
+  public JsonNullable<Long> getIndexedEventsCountSum_JsonNullable() {
     return indexedEventsCountSum;
   }
 
-  public void setIndexedEventsCountSum(Long indexedEventsCountSum) {
+  @JsonProperty(JSON_PROPERTY_INDEXED_EVENTS_COUNT_SUM)
+  public void setIndexedEventsCountSum_JsonNullable(JsonNullable<Long> indexedEventsCountSum) {
     this.indexedEventsCountSum = indexedEventsCountSum;
   }
 
+  public void setIndexedEventsCountSum(Long indexedEventsCountSum) {
+    this.indexedEventsCountSum = JsonNullable.<Long>of(indexedEventsCountSum);
+  }
+
   public UsageSummaryDate infraHostTop99p(Long infraHostTop99p) {
-    this.infraHostTop99p = infraHostTop99p;
+    this.infraHostTop99p = JsonNullable.<Long>of(infraHostTop99p);
     return this;
   }
 
@@ -743,18 +929,28 @@ public class UsageSummaryDate {
       value =
           "Shows the 99th percentile of all distinct infrastructure hosts over all hours in the"
               + " current date for all organizations.")
+  @JsonIgnore
+  public Long getInfraHostTop99p() {
+    return infraHostTop99p.orElse(null);
+  }
+
   @JsonProperty(JSON_PROPERTY_INFRA_HOST_TOP99P)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public Long getInfraHostTop99p() {
+  public JsonNullable<Long> getInfraHostTop99p_JsonNullable() {
     return infraHostTop99p;
   }
 
-  public void setInfraHostTop99p(Long infraHostTop99p) {
+  @JsonProperty(JSON_PROPERTY_INFRA_HOST_TOP99P)
+  public void setInfraHostTop99p_JsonNullable(JsonNullable<Long> infraHostTop99p) {
     this.infraHostTop99p = infraHostTop99p;
   }
 
+  public void setInfraHostTop99p(Long infraHostTop99p) {
+    this.infraHostTop99p = JsonNullable.<Long>of(infraHostTop99p);
+  }
+
   public UsageSummaryDate ingestedEventsBytesSum(Long ingestedEventsBytesSum) {
-    this.ingestedEventsBytesSum = ingestedEventsBytesSum;
+    this.ingestedEventsBytesSum = JsonNullable.<Long>of(ingestedEventsBytesSum);
     return this;
   }
 
@@ -769,18 +965,28 @@ public class UsageSummaryDate {
       value =
           "Shows the sum of all log bytes ingested over all hours in the current date for all"
               + " organizations.")
+  @JsonIgnore
+  public Long getIngestedEventsBytesSum() {
+    return ingestedEventsBytesSum.orElse(null);
+  }
+
   @JsonProperty(JSON_PROPERTY_INGESTED_EVENTS_BYTES_SUM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public Long getIngestedEventsBytesSum() {
+  public JsonNullable<Long> getIngestedEventsBytesSum_JsonNullable() {
     return ingestedEventsBytesSum;
   }
 
-  public void setIngestedEventsBytesSum(Long ingestedEventsBytesSum) {
+  @JsonProperty(JSON_PROPERTY_INGESTED_EVENTS_BYTES_SUM)
+  public void setIngestedEventsBytesSum_JsonNullable(JsonNullable<Long> ingestedEventsBytesSum) {
     this.ingestedEventsBytesSum = ingestedEventsBytesSum;
   }
 
+  public void setIngestedEventsBytesSum(Long ingestedEventsBytesSum) {
+    this.ingestedEventsBytesSum = JsonNullable.<Long>of(ingestedEventsBytesSum);
+  }
+
   public UsageSummaryDate iotDeviceSum(Long iotDeviceSum) {
-    this.iotDeviceSum = iotDeviceSum;
+    this.iotDeviceSum = JsonNullable.<Long>of(iotDeviceSum);
     return this;
   }
 
@@ -794,18 +1000,28 @@ public class UsageSummaryDate {
       value =
           "Shows the sum of all IoT devices over all hours in the current date for all"
               + " organizations.")
+  @JsonIgnore
+  public Long getIotDeviceSum() {
+    return iotDeviceSum.orElse(null);
+  }
+
   @JsonProperty(JSON_PROPERTY_IOT_DEVICE_SUM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public Long getIotDeviceSum() {
+  public JsonNullable<Long> getIotDeviceSum_JsonNullable() {
     return iotDeviceSum;
   }
 
-  public void setIotDeviceSum(Long iotDeviceSum) {
+  @JsonProperty(JSON_PROPERTY_IOT_DEVICE_SUM)
+  public void setIotDeviceSum_JsonNullable(JsonNullable<Long> iotDeviceSum) {
     this.iotDeviceSum = iotDeviceSum;
   }
 
+  public void setIotDeviceSum(Long iotDeviceSum) {
+    this.iotDeviceSum = JsonNullable.<Long>of(iotDeviceSum);
+  }
+
   public UsageSummaryDate iotDeviceTop99p(Long iotDeviceTop99p) {
-    this.iotDeviceTop99p = iotDeviceTop99p;
+    this.iotDeviceTop99p = JsonNullable.<Long>of(iotDeviceTop99p);
     return this;
   }
 
@@ -820,18 +1036,28 @@ public class UsageSummaryDate {
       value =
           "Shows the 99th percentile of all IoT devices over all hours in the current date all"
               + " organizations.")
+  @JsonIgnore
+  public Long getIotDeviceTop99p() {
+    return iotDeviceTop99p.orElse(null);
+  }
+
   @JsonProperty(JSON_PROPERTY_IOT_DEVICE_TOP99P)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public Long getIotDeviceTop99p() {
+  public JsonNullable<Long> getIotDeviceTop99p_JsonNullable() {
     return iotDeviceTop99p;
   }
 
-  public void setIotDeviceTop99p(Long iotDeviceTop99p) {
+  @JsonProperty(JSON_PROPERTY_IOT_DEVICE_TOP99P)
+  public void setIotDeviceTop99p_JsonNullable(JsonNullable<Long> iotDeviceTop99p) {
     this.iotDeviceTop99p = iotDeviceTop99p;
   }
 
+  public void setIotDeviceTop99p(Long iotDeviceTop99p) {
+    this.iotDeviceTop99p = JsonNullable.<Long>of(iotDeviceTop99p);
+  }
+
   public UsageSummaryDate mobileRumSessionCountAndroidSum(Long mobileRumSessionCountAndroidSum) {
-    this.mobileRumSessionCountAndroidSum = mobileRumSessionCountAndroidSum;
+    this.mobileRumSessionCountAndroidSum = JsonNullable.<Long>of(mobileRumSessionCountAndroidSum);
     return this;
   }
 
@@ -846,18 +1072,29 @@ public class UsageSummaryDate {
       value =
           "Shows the sum of all mobile RUM Sessions on Android over all hours in the current date"
               + " for all organizations.")
+  @JsonIgnore
+  public Long getMobileRumSessionCountAndroidSum() {
+    return mobileRumSessionCountAndroidSum.orElse(null);
+  }
+
   @JsonProperty(JSON_PROPERTY_MOBILE_RUM_SESSION_COUNT_ANDROID_SUM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public Long getMobileRumSessionCountAndroidSum() {
+  public JsonNullable<Long> getMobileRumSessionCountAndroidSum_JsonNullable() {
     return mobileRumSessionCountAndroidSum;
   }
 
-  public void setMobileRumSessionCountAndroidSum(Long mobileRumSessionCountAndroidSum) {
+  @JsonProperty(JSON_PROPERTY_MOBILE_RUM_SESSION_COUNT_ANDROID_SUM)
+  public void setMobileRumSessionCountAndroidSum_JsonNullable(
+      JsonNullable<Long> mobileRumSessionCountAndroidSum) {
     this.mobileRumSessionCountAndroidSum = mobileRumSessionCountAndroidSum;
   }
 
+  public void setMobileRumSessionCountAndroidSum(Long mobileRumSessionCountAndroidSum) {
+    this.mobileRumSessionCountAndroidSum = JsonNullable.<Long>of(mobileRumSessionCountAndroidSum);
+  }
+
   public UsageSummaryDate mobileRumSessionCountIosSum(Long mobileRumSessionCountIosSum) {
-    this.mobileRumSessionCountIosSum = mobileRumSessionCountIosSum;
+    this.mobileRumSessionCountIosSum = JsonNullable.<Long>of(mobileRumSessionCountIosSum);
     return this;
   }
 
@@ -872,18 +1109,29 @@ public class UsageSummaryDate {
       value =
           "Shows the sum of all mobile RUM Sessions on iOS over all hours in the current date for"
               + " all organizations.")
+  @JsonIgnore
+  public Long getMobileRumSessionCountIosSum() {
+    return mobileRumSessionCountIosSum.orElse(null);
+  }
+
   @JsonProperty(JSON_PROPERTY_MOBILE_RUM_SESSION_COUNT_IOS_SUM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public Long getMobileRumSessionCountIosSum() {
+  public JsonNullable<Long> getMobileRumSessionCountIosSum_JsonNullable() {
     return mobileRumSessionCountIosSum;
   }
 
-  public void setMobileRumSessionCountIosSum(Long mobileRumSessionCountIosSum) {
+  @JsonProperty(JSON_PROPERTY_MOBILE_RUM_SESSION_COUNT_IOS_SUM)
+  public void setMobileRumSessionCountIosSum_JsonNullable(
+      JsonNullable<Long> mobileRumSessionCountIosSum) {
     this.mobileRumSessionCountIosSum = mobileRumSessionCountIosSum;
   }
 
+  public void setMobileRumSessionCountIosSum(Long mobileRumSessionCountIosSum) {
+    this.mobileRumSessionCountIosSum = JsonNullable.<Long>of(mobileRumSessionCountIosSum);
+  }
+
   public UsageSummaryDate mobileRumSessionCountSum(Long mobileRumSessionCountSum) {
-    this.mobileRumSessionCountSum = mobileRumSessionCountSum;
+    this.mobileRumSessionCountSum = JsonNullable.<Long>of(mobileRumSessionCountSum);
     return this;
   }
 
@@ -898,18 +1146,29 @@ public class UsageSummaryDate {
       value =
           "Shows the sum of all mobile RUM Sessions over all hours in the current date for all"
               + " organizations")
+  @JsonIgnore
+  public Long getMobileRumSessionCountSum() {
+    return mobileRumSessionCountSum.orElse(null);
+  }
+
   @JsonProperty(JSON_PROPERTY_MOBILE_RUM_SESSION_COUNT_SUM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public Long getMobileRumSessionCountSum() {
+  public JsonNullable<Long> getMobileRumSessionCountSum_JsonNullable() {
     return mobileRumSessionCountSum;
   }
 
-  public void setMobileRumSessionCountSum(Long mobileRumSessionCountSum) {
+  @JsonProperty(JSON_PROPERTY_MOBILE_RUM_SESSION_COUNT_SUM)
+  public void setMobileRumSessionCountSum_JsonNullable(
+      JsonNullable<Long> mobileRumSessionCountSum) {
     this.mobileRumSessionCountSum = mobileRumSessionCountSum;
   }
 
+  public void setMobileRumSessionCountSum(Long mobileRumSessionCountSum) {
+    this.mobileRumSessionCountSum = JsonNullable.<Long>of(mobileRumSessionCountSum);
+  }
+
   public UsageSummaryDate netflowIndexedEventsCountSum(Long netflowIndexedEventsCountSum) {
-    this.netflowIndexedEventsCountSum = netflowIndexedEventsCountSum;
+    this.netflowIndexedEventsCountSum = JsonNullable.<Long>of(netflowIndexedEventsCountSum);
     return this;
   }
 
@@ -924,18 +1183,29 @@ public class UsageSummaryDate {
       value =
           "Shows the sum of all Network flows indexed over all hours in the current date for all"
               + " organizations.")
+  @JsonIgnore
+  public Long getNetflowIndexedEventsCountSum() {
+    return netflowIndexedEventsCountSum.orElse(null);
+  }
+
   @JsonProperty(JSON_PROPERTY_NETFLOW_INDEXED_EVENTS_COUNT_SUM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public Long getNetflowIndexedEventsCountSum() {
+  public JsonNullable<Long> getNetflowIndexedEventsCountSum_JsonNullable() {
     return netflowIndexedEventsCountSum;
   }
 
-  public void setNetflowIndexedEventsCountSum(Long netflowIndexedEventsCountSum) {
+  @JsonProperty(JSON_PROPERTY_NETFLOW_INDEXED_EVENTS_COUNT_SUM)
+  public void setNetflowIndexedEventsCountSum_JsonNullable(
+      JsonNullable<Long> netflowIndexedEventsCountSum) {
     this.netflowIndexedEventsCountSum = netflowIndexedEventsCountSum;
   }
 
+  public void setNetflowIndexedEventsCountSum(Long netflowIndexedEventsCountSum) {
+    this.netflowIndexedEventsCountSum = JsonNullable.<Long>of(netflowIndexedEventsCountSum);
+  }
+
   public UsageSummaryDate npmHostTop99p(Long npmHostTop99p) {
-    this.npmHostTop99p = npmHostTop99p;
+    this.npmHostTop99p = JsonNullable.<Long>of(npmHostTop99p);
     return this;
   }
 
@@ -950,18 +1220,28 @@ public class UsageSummaryDate {
       value =
           "Shows the 99th percentile of all distinct Networks hosts over all hours in the current"
               + " date for all organizations.")
+  @JsonIgnore
+  public Long getNpmHostTop99p() {
+    return npmHostTop99p.orElse(null);
+  }
+
   @JsonProperty(JSON_PROPERTY_NPM_HOST_TOP99P)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public Long getNpmHostTop99p() {
+  public JsonNullable<Long> getNpmHostTop99p_JsonNullable() {
     return npmHostTop99p;
   }
 
-  public void setNpmHostTop99p(Long npmHostTop99p) {
+  @JsonProperty(JSON_PROPERTY_NPM_HOST_TOP99P)
+  public void setNpmHostTop99p_JsonNullable(JsonNullable<Long> npmHostTop99p) {
     this.npmHostTop99p = npmHostTop99p;
   }
 
+  public void setNpmHostTop99p(Long npmHostTop99p) {
+    this.npmHostTop99p = JsonNullable.<Long>of(npmHostTop99p);
+  }
+
   public UsageSummaryDate opentelemetryHostTop99p(Long opentelemetryHostTop99p) {
-    this.opentelemetryHostTop99p = opentelemetryHostTop99p;
+    this.opentelemetryHostTop99p = JsonNullable.<Long>of(opentelemetryHostTop99p);
     return this;
   }
 
@@ -977,14 +1257,24 @@ public class UsageSummaryDate {
           "Shows the 99th percentile of all hosts reported by the Datadog exporter for the"
               + " OpenTelemetry Collector over all hours in the current date for all"
               + " organizations.")
+  @JsonIgnore
+  public Long getOpentelemetryHostTop99p() {
+    return opentelemetryHostTop99p.orElse(null);
+  }
+
   @JsonProperty(JSON_PROPERTY_OPENTELEMETRY_HOST_TOP99P)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public Long getOpentelemetryHostTop99p() {
+  public JsonNullable<Long> getOpentelemetryHostTop99p_JsonNullable() {
     return opentelemetryHostTop99p;
   }
 
-  public void setOpentelemetryHostTop99p(Long opentelemetryHostTop99p) {
+  @JsonProperty(JSON_PROPERTY_OPENTELEMETRY_HOST_TOP99P)
+  public void setOpentelemetryHostTop99p_JsonNullable(JsonNullable<Long> opentelemetryHostTop99p) {
     this.opentelemetryHostTop99p = opentelemetryHostTop99p;
+  }
+
+  public void setOpentelemetryHostTop99p(Long opentelemetryHostTop99p) {
+    this.opentelemetryHostTop99p = JsonNullable.<Long>of(opentelemetryHostTop99p);
   }
 
   public UsageSummaryDate orgs(List<UsageSummaryDateOrg> orgs) {
@@ -1018,7 +1308,7 @@ public class UsageSummaryDate {
   }
 
   public UsageSummaryDate profilingHostTop99p(Long profilingHostTop99p) {
-    this.profilingHostTop99p = profilingHostTop99p;
+    this.profilingHostTop99p = JsonNullable.<Long>of(profilingHostTop99p);
     return this;
   }
 
@@ -1033,18 +1323,28 @@ public class UsageSummaryDate {
       value =
           "Shows the 99th percentile of all profiled hosts over all hours in the current date for"
               + " all organizations.")
+  @JsonIgnore
+  public Long getProfilingHostTop99p() {
+    return profilingHostTop99p.orElse(null);
+  }
+
   @JsonProperty(JSON_PROPERTY_PROFILING_HOST_TOP99P)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public Long getProfilingHostTop99p() {
+  public JsonNullable<Long> getProfilingHostTop99p_JsonNullable() {
     return profilingHostTop99p;
   }
 
-  public void setProfilingHostTop99p(Long profilingHostTop99p) {
+  @JsonProperty(JSON_PROPERTY_PROFILING_HOST_TOP99P)
+  public void setProfilingHostTop99p_JsonNullable(JsonNullable<Long> profilingHostTop99p) {
     this.profilingHostTop99p = profilingHostTop99p;
   }
 
+  public void setProfilingHostTop99p(Long profilingHostTop99p) {
+    this.profilingHostTop99p = JsonNullable.<Long>of(profilingHostTop99p);
+  }
+
   public UsageSummaryDate rumSessionCountSum(Long rumSessionCountSum) {
-    this.rumSessionCountSum = rumSessionCountSum;
+    this.rumSessionCountSum = JsonNullable.<Long>of(rumSessionCountSum);
     return this;
   }
 
@@ -1059,18 +1359,28 @@ public class UsageSummaryDate {
       value =
           "Shows the sum of all browser RUM Sessions over all hours in the current date for all"
               + " organizations")
+  @JsonIgnore
+  public Long getRumSessionCountSum() {
+    return rumSessionCountSum.orElse(null);
+  }
+
   @JsonProperty(JSON_PROPERTY_RUM_SESSION_COUNT_SUM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public Long getRumSessionCountSum() {
+  public JsonNullable<Long> getRumSessionCountSum_JsonNullable() {
     return rumSessionCountSum;
   }
 
-  public void setRumSessionCountSum(Long rumSessionCountSum) {
+  @JsonProperty(JSON_PROPERTY_RUM_SESSION_COUNT_SUM)
+  public void setRumSessionCountSum_JsonNullable(JsonNullable<Long> rumSessionCountSum) {
     this.rumSessionCountSum = rumSessionCountSum;
   }
 
+  public void setRumSessionCountSum(Long rumSessionCountSum) {
+    this.rumSessionCountSum = JsonNullable.<Long>of(rumSessionCountSum);
+  }
+
   public UsageSummaryDate rumTotalSessionCountSum(Long rumTotalSessionCountSum) {
-    this.rumTotalSessionCountSum = rumTotalSessionCountSum;
+    this.rumTotalSessionCountSum = JsonNullable.<Long>of(rumTotalSessionCountSum);
     return this;
   }
 
@@ -1085,19 +1395,30 @@ public class UsageSummaryDate {
       value =
           "Shows the sum of RUM Sessions (browser and mobile) over all hours in the current date"
               + " for all organizations.")
+  @JsonIgnore
+  public Long getRumTotalSessionCountSum() {
+    return rumTotalSessionCountSum.orElse(null);
+  }
+
   @JsonProperty(JSON_PROPERTY_RUM_TOTAL_SESSION_COUNT_SUM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public Long getRumTotalSessionCountSum() {
+  public JsonNullable<Long> getRumTotalSessionCountSum_JsonNullable() {
     return rumTotalSessionCountSum;
   }
 
-  public void setRumTotalSessionCountSum(Long rumTotalSessionCountSum) {
+  @JsonProperty(JSON_PROPERTY_RUM_TOTAL_SESSION_COUNT_SUM)
+  public void setRumTotalSessionCountSum_JsonNullable(JsonNullable<Long> rumTotalSessionCountSum) {
     this.rumTotalSessionCountSum = rumTotalSessionCountSum;
+  }
+
+  public void setRumTotalSessionCountSum(Long rumTotalSessionCountSum) {
+    this.rumTotalSessionCountSum = JsonNullable.<Long>of(rumTotalSessionCountSum);
   }
 
   public UsageSummaryDate syntheticsBrowserCheckCallsCountSum(
       Long syntheticsBrowserCheckCallsCountSum) {
-    this.syntheticsBrowserCheckCallsCountSum = syntheticsBrowserCheckCallsCountSum;
+    this.syntheticsBrowserCheckCallsCountSum =
+        JsonNullable.<Long>of(syntheticsBrowserCheckCallsCountSum);
     return this;
   }
 
@@ -1112,18 +1433,30 @@ public class UsageSummaryDate {
       value =
           "Shows the sum of all Synthetic browser tests over all hours in the current date for all"
               + " organizations.")
+  @JsonIgnore
+  public Long getSyntheticsBrowserCheckCallsCountSum() {
+    return syntheticsBrowserCheckCallsCountSum.orElse(null);
+  }
+
   @JsonProperty(JSON_PROPERTY_SYNTHETICS_BROWSER_CHECK_CALLS_COUNT_SUM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public Long getSyntheticsBrowserCheckCallsCountSum() {
+  public JsonNullable<Long> getSyntheticsBrowserCheckCallsCountSum_JsonNullable() {
     return syntheticsBrowserCheckCallsCountSum;
   }
 
-  public void setSyntheticsBrowserCheckCallsCountSum(Long syntheticsBrowserCheckCallsCountSum) {
+  @JsonProperty(JSON_PROPERTY_SYNTHETICS_BROWSER_CHECK_CALLS_COUNT_SUM)
+  public void setSyntheticsBrowserCheckCallsCountSum_JsonNullable(
+      JsonNullable<Long> syntheticsBrowserCheckCallsCountSum) {
     this.syntheticsBrowserCheckCallsCountSum = syntheticsBrowserCheckCallsCountSum;
   }
 
+  public void setSyntheticsBrowserCheckCallsCountSum(Long syntheticsBrowserCheckCallsCountSum) {
+    this.syntheticsBrowserCheckCallsCountSum =
+        JsonNullable.<Long>of(syntheticsBrowserCheckCallsCountSum);
+  }
+
   public UsageSummaryDate syntheticsCheckCallsCountSum(Long syntheticsCheckCallsCountSum) {
-    this.syntheticsCheckCallsCountSum = syntheticsCheckCallsCountSum;
+    this.syntheticsCheckCallsCountSum = JsonNullable.<Long>of(syntheticsCheckCallsCountSum);
     return this;
   }
 
@@ -1138,18 +1471,29 @@ public class UsageSummaryDate {
       value =
           "Shows the sum of all Synthetic API tests over all hours in the current date for all"
               + " organizations.")
+  @JsonIgnore
+  public Long getSyntheticsCheckCallsCountSum() {
+    return syntheticsCheckCallsCountSum.orElse(null);
+  }
+
   @JsonProperty(JSON_PROPERTY_SYNTHETICS_CHECK_CALLS_COUNT_SUM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public Long getSyntheticsCheckCallsCountSum() {
+  public JsonNullable<Long> getSyntheticsCheckCallsCountSum_JsonNullable() {
     return syntheticsCheckCallsCountSum;
   }
 
-  public void setSyntheticsCheckCallsCountSum(Long syntheticsCheckCallsCountSum) {
+  @JsonProperty(JSON_PROPERTY_SYNTHETICS_CHECK_CALLS_COUNT_SUM)
+  public void setSyntheticsCheckCallsCountSum_JsonNullable(
+      JsonNullable<Long> syntheticsCheckCallsCountSum) {
     this.syntheticsCheckCallsCountSum = syntheticsCheckCallsCountSum;
   }
 
+  public void setSyntheticsCheckCallsCountSum(Long syntheticsCheckCallsCountSum) {
+    this.syntheticsCheckCallsCountSum = JsonNullable.<Long>of(syntheticsCheckCallsCountSum);
+  }
+
   public UsageSummaryDate traceSearchIndexedEventsCountSum(Long traceSearchIndexedEventsCountSum) {
-    this.traceSearchIndexedEventsCountSum = traceSearchIndexedEventsCountSum;
+    this.traceSearchIndexedEventsCountSum = JsonNullable.<Long>of(traceSearchIndexedEventsCountSum);
     return this;
   }
 
@@ -1164,18 +1508,29 @@ public class UsageSummaryDate {
       value =
           "Shows the sum of all Indexed Spans indexed over all hours in the current date for all"
               + " organizations.")
+  @JsonIgnore
+  public Long getTraceSearchIndexedEventsCountSum() {
+    return traceSearchIndexedEventsCountSum.orElse(null);
+  }
+
   @JsonProperty(JSON_PROPERTY_TRACE_SEARCH_INDEXED_EVENTS_COUNT_SUM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public Long getTraceSearchIndexedEventsCountSum() {
+  public JsonNullable<Long> getTraceSearchIndexedEventsCountSum_JsonNullable() {
     return traceSearchIndexedEventsCountSum;
   }
 
-  public void setTraceSearchIndexedEventsCountSum(Long traceSearchIndexedEventsCountSum) {
+  @JsonProperty(JSON_PROPERTY_TRACE_SEARCH_INDEXED_EVENTS_COUNT_SUM)
+  public void setTraceSearchIndexedEventsCountSum_JsonNullable(
+      JsonNullable<Long> traceSearchIndexedEventsCountSum) {
     this.traceSearchIndexedEventsCountSum = traceSearchIndexedEventsCountSum;
   }
 
+  public void setTraceSearchIndexedEventsCountSum(Long traceSearchIndexedEventsCountSum) {
+    this.traceSearchIndexedEventsCountSum = JsonNullable.<Long>of(traceSearchIndexedEventsCountSum);
+  }
+
   public UsageSummaryDate twolIngestedEventsBytesSum(Long twolIngestedEventsBytesSum) {
-    this.twolIngestedEventsBytesSum = twolIngestedEventsBytesSum;
+    this.twolIngestedEventsBytesSum = JsonNullable.<Long>of(twolIngestedEventsBytesSum);
     return this;
   }
 
@@ -1190,14 +1545,25 @@ public class UsageSummaryDate {
       value =
           "Shows the sum of all tracing without limits bytes ingested over all hours in the"
               + " current date for all organizations.")
+  @JsonIgnore
+  public Long getTwolIngestedEventsBytesSum() {
+    return twolIngestedEventsBytesSum.orElse(null);
+  }
+
   @JsonProperty(JSON_PROPERTY_TWOL_INGESTED_EVENTS_BYTES_SUM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public Long getTwolIngestedEventsBytesSum() {
+  public JsonNullable<Long> getTwolIngestedEventsBytesSum_JsonNullable() {
     return twolIngestedEventsBytesSum;
   }
 
-  public void setTwolIngestedEventsBytesSum(Long twolIngestedEventsBytesSum) {
+  @JsonProperty(JSON_PROPERTY_TWOL_INGESTED_EVENTS_BYTES_SUM)
+  public void setTwolIngestedEventsBytesSum_JsonNullable(
+      JsonNullable<Long> twolIngestedEventsBytesSum) {
     this.twolIngestedEventsBytesSum = twolIngestedEventsBytesSum;
+  }
+
+  public void setTwolIngestedEventsBytesSum(Long twolIngestedEventsBytesSum) {
+    this.twolIngestedEventsBytesSum = JsonNullable.<Long>of(twolIngestedEventsBytesSum);
   }
 
   public UsageSummaryDate vsphereHostTop99p(Long vsphereHostTop99p) {

@@ -27,12 +27,18 @@ import java.util.Objects;
   UsageBillableSummaryKeys.JSON_PROPERTY_INFRA_CONTAINER_SUM,
   UsageBillableSummaryKeys.JSON_PROPERTY_INFRA_HOST_SUM,
   UsageBillableSummaryKeys.JSON_PROPERTY_INFRA_HOST_TOP99P,
+  UsageBillableSummaryKeys.JSON_PROPERTY_IOT_SUM,
   UsageBillableSummaryKeys.JSON_PROPERTY_IOT_TOP99P,
   UsageBillableSummaryKeys.JSON_PROPERTY_LAMBDA_FUNCTION_AVERAGE,
   UsageBillableSummaryKeys.JSON_PROPERTY_LOGS_INDEXED_SUM,
   UsageBillableSummaryKeys.JSON_PROPERTY_LOGS_INGESTED_SUM,
+  UsageBillableSummaryKeys.JSON_PROPERTY_NETWORK_DEVICE_TOP99P,
   UsageBillableSummaryKeys.JSON_PROPERTY_NPM_FLOW_SUM,
+  UsageBillableSummaryKeys.JSON_PROPERTY_NPM_HOST_SUM,
   UsageBillableSummaryKeys.JSON_PROPERTY_NPM_HOST_TOP99P,
+  UsageBillableSummaryKeys.JSON_PROPERTY_PROF_CONTAINER_SUM,
+  UsageBillableSummaryKeys.JSON_PROPERTY_PROF_HOST_SUM,
+  UsageBillableSummaryKeys.JSON_PROPERTY_PROF_HOST_TOP99P,
   UsageBillableSummaryKeys.JSON_PROPERTY_RUM_SUM,
   UsageBillableSummaryKeys.JSON_PROPERTY_SERVERLESS_INVOCATION_SUM,
   UsageBillableSummaryKeys.JSON_PROPERTY_SIEM_SUM,
@@ -63,6 +69,9 @@ public class UsageBillableSummaryKeys {
   public static final String JSON_PROPERTY_INFRA_HOST_TOP99P = "infra_host_top99p";
   private UsageBillableSummaryBody infraHostTop99p;
 
+  public static final String JSON_PROPERTY_IOT_SUM = "iot_sum";
+  private UsageBillableSummaryBody iotSum;
+
   public static final String JSON_PROPERTY_IOT_TOP99P = "iot_top99p";
   private UsageBillableSummaryBody iotTop99p;
 
@@ -75,11 +84,26 @@ public class UsageBillableSummaryKeys {
   public static final String JSON_PROPERTY_LOGS_INGESTED_SUM = "logs_ingested_sum";
   private UsageBillableSummaryBody logsIngestedSum;
 
+  public static final String JSON_PROPERTY_NETWORK_DEVICE_TOP99P = "network_device_top99p";
+  private UsageBillableSummaryBody networkDeviceTop99p;
+
   public static final String JSON_PROPERTY_NPM_FLOW_SUM = "npm_flow_sum";
   private UsageBillableSummaryBody npmFlowSum;
 
+  public static final String JSON_PROPERTY_NPM_HOST_SUM = "npm_host_sum";
+  private UsageBillableSummaryBody npmHostSum;
+
   public static final String JSON_PROPERTY_NPM_HOST_TOP99P = "npm_host_top99p";
   private UsageBillableSummaryBody npmHostTop99p;
+
+  public static final String JSON_PROPERTY_PROF_CONTAINER_SUM = "prof_container_sum";
+  private UsageBillableSummaryBody profContainerSum;
+
+  public static final String JSON_PROPERTY_PROF_HOST_SUM = "prof_host_sum";
+  private UsageBillableSummaryBody profHostSum;
+
+  public static final String JSON_PROPERTY_PROF_HOST_TOP99P = "prof_host_top99p";
+  private UsageBillableSummaryBody profHostTop99p;
 
   public static final String JSON_PROPERTY_RUM_SUM = "rum_sum";
   private UsageBillableSummaryBody rumSum;
@@ -255,6 +279,28 @@ public class UsageBillableSummaryKeys {
     this.infraHostTop99p = infraHostTop99p;
   }
 
+  public UsageBillableSummaryKeys iotSum(UsageBillableSummaryBody iotSum) {
+    this.iotSum = iotSum;
+    return this;
+  }
+
+  /**
+   * Get iotSum
+   *
+   * @return iotSum
+   */
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_IOT_SUM)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public UsageBillableSummaryBody getIotSum() {
+    return iotSum;
+  }
+
+  public void setIotSum(UsageBillableSummaryBody iotSum) {
+    this.iotSum = iotSum;
+  }
+
   public UsageBillableSummaryKeys iotTop99p(UsageBillableSummaryBody iotTop99p) {
     this.iotTop99p = iotTop99p;
     return this;
@@ -344,6 +390,29 @@ public class UsageBillableSummaryKeys {
     this.logsIngestedSum = logsIngestedSum;
   }
 
+  public UsageBillableSummaryKeys networkDeviceTop99p(
+      UsageBillableSummaryBody networkDeviceTop99p) {
+    this.networkDeviceTop99p = networkDeviceTop99p;
+    return this;
+  }
+
+  /**
+   * Get networkDeviceTop99p
+   *
+   * @return networkDeviceTop99p
+   */
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_NETWORK_DEVICE_TOP99P)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public UsageBillableSummaryBody getNetworkDeviceTop99p() {
+    return networkDeviceTop99p;
+  }
+
+  public void setNetworkDeviceTop99p(UsageBillableSummaryBody networkDeviceTop99p) {
+    this.networkDeviceTop99p = networkDeviceTop99p;
+  }
+
   public UsageBillableSummaryKeys npmFlowSum(UsageBillableSummaryBody npmFlowSum) {
     this.npmFlowSum = npmFlowSum;
     return this;
@@ -366,6 +435,28 @@ public class UsageBillableSummaryKeys {
     this.npmFlowSum = npmFlowSum;
   }
 
+  public UsageBillableSummaryKeys npmHostSum(UsageBillableSummaryBody npmHostSum) {
+    this.npmHostSum = npmHostSum;
+    return this;
+  }
+
+  /**
+   * Get npmHostSum
+   *
+   * @return npmHostSum
+   */
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_NPM_HOST_SUM)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public UsageBillableSummaryBody getNpmHostSum() {
+    return npmHostSum;
+  }
+
+  public void setNpmHostSum(UsageBillableSummaryBody npmHostSum) {
+    this.npmHostSum = npmHostSum;
+  }
+
   public UsageBillableSummaryKeys npmHostTop99p(UsageBillableSummaryBody npmHostTop99p) {
     this.npmHostTop99p = npmHostTop99p;
     return this;
@@ -386,6 +477,72 @@ public class UsageBillableSummaryKeys {
 
   public void setNpmHostTop99p(UsageBillableSummaryBody npmHostTop99p) {
     this.npmHostTop99p = npmHostTop99p;
+  }
+
+  public UsageBillableSummaryKeys profContainerSum(UsageBillableSummaryBody profContainerSum) {
+    this.profContainerSum = profContainerSum;
+    return this;
+  }
+
+  /**
+   * Get profContainerSum
+   *
+   * @return profContainerSum
+   */
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_PROF_CONTAINER_SUM)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public UsageBillableSummaryBody getProfContainerSum() {
+    return profContainerSum;
+  }
+
+  public void setProfContainerSum(UsageBillableSummaryBody profContainerSum) {
+    this.profContainerSum = profContainerSum;
+  }
+
+  public UsageBillableSummaryKeys profHostSum(UsageBillableSummaryBody profHostSum) {
+    this.profHostSum = profHostSum;
+    return this;
+  }
+
+  /**
+   * Get profHostSum
+   *
+   * @return profHostSum
+   */
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_PROF_HOST_SUM)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public UsageBillableSummaryBody getProfHostSum() {
+    return profHostSum;
+  }
+
+  public void setProfHostSum(UsageBillableSummaryBody profHostSum) {
+    this.profHostSum = profHostSum;
+  }
+
+  public UsageBillableSummaryKeys profHostTop99p(UsageBillableSummaryBody profHostTop99p) {
+    this.profHostTop99p = profHostTop99p;
+    return this;
+  }
+
+  /**
+   * Get profHostTop99p
+   *
+   * @return profHostTop99p
+   */
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_PROF_HOST_TOP99P)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public UsageBillableSummaryBody getProfHostTop99p() {
+    return profHostTop99p;
+  }
+
+  public void setProfHostTop99p(UsageBillableSummaryBody profHostTop99p) {
+    this.profHostTop99p = profHostTop99p;
   }
 
   public UsageBillableSummaryKeys rumSum(UsageBillableSummaryBody rumSum) {
@@ -541,13 +698,19 @@ public class UsageBillableSummaryKeys {
         && Objects.equals(this.infraContainerSum, usageBillableSummaryKeys.infraContainerSum)
         && Objects.equals(this.infraHostSum, usageBillableSummaryKeys.infraHostSum)
         && Objects.equals(this.infraHostTop99p, usageBillableSummaryKeys.infraHostTop99p)
+        && Objects.equals(this.iotSum, usageBillableSummaryKeys.iotSum)
         && Objects.equals(this.iotTop99p, usageBillableSummaryKeys.iotTop99p)
         && Objects.equals(
             this.lambdaFunctionAverage, usageBillableSummaryKeys.lambdaFunctionAverage)
         && Objects.equals(this.logsIndexedSum, usageBillableSummaryKeys.logsIndexedSum)
         && Objects.equals(this.logsIngestedSum, usageBillableSummaryKeys.logsIngestedSum)
+        && Objects.equals(this.networkDeviceTop99p, usageBillableSummaryKeys.networkDeviceTop99p)
         && Objects.equals(this.npmFlowSum, usageBillableSummaryKeys.npmFlowSum)
+        && Objects.equals(this.npmHostSum, usageBillableSummaryKeys.npmHostSum)
         && Objects.equals(this.npmHostTop99p, usageBillableSummaryKeys.npmHostTop99p)
+        && Objects.equals(this.profContainerSum, usageBillableSummaryKeys.profContainerSum)
+        && Objects.equals(this.profHostSum, usageBillableSummaryKeys.profHostSum)
+        && Objects.equals(this.profHostTop99p, usageBillableSummaryKeys.profHostTop99p)
         && Objects.equals(this.rumSum, usageBillableSummaryKeys.rumSum)
         && Objects.equals(
             this.serverlessInvocationSum, usageBillableSummaryKeys.serverlessInvocationSum)
@@ -569,12 +732,18 @@ public class UsageBillableSummaryKeys {
         infraContainerSum,
         infraHostSum,
         infraHostTop99p,
+        iotSum,
         iotTop99p,
         lambdaFunctionAverage,
         logsIndexedSum,
         logsIngestedSum,
+        networkDeviceTop99p,
         npmFlowSum,
+        npmHostSum,
         npmHostTop99p,
+        profContainerSum,
+        profHostSum,
+        profHostTop99p,
         rumSum,
         serverlessInvocationSum,
         siemSum,
@@ -596,14 +765,22 @@ public class UsageBillableSummaryKeys {
     sb.append("    infraContainerSum: ").append(toIndentedString(infraContainerSum)).append("\n");
     sb.append("    infraHostSum: ").append(toIndentedString(infraHostSum)).append("\n");
     sb.append("    infraHostTop99p: ").append(toIndentedString(infraHostTop99p)).append("\n");
+    sb.append("    iotSum: ").append(toIndentedString(iotSum)).append("\n");
     sb.append("    iotTop99p: ").append(toIndentedString(iotTop99p)).append("\n");
     sb.append("    lambdaFunctionAverage: ")
         .append(toIndentedString(lambdaFunctionAverage))
         .append("\n");
     sb.append("    logsIndexedSum: ").append(toIndentedString(logsIndexedSum)).append("\n");
     sb.append("    logsIngestedSum: ").append(toIndentedString(logsIngestedSum)).append("\n");
+    sb.append("    networkDeviceTop99p: ")
+        .append(toIndentedString(networkDeviceTop99p))
+        .append("\n");
     sb.append("    npmFlowSum: ").append(toIndentedString(npmFlowSum)).append("\n");
+    sb.append("    npmHostSum: ").append(toIndentedString(npmHostSum)).append("\n");
     sb.append("    npmHostTop99p: ").append(toIndentedString(npmHostTop99p)).append("\n");
+    sb.append("    profContainerSum: ").append(toIndentedString(profContainerSum)).append("\n");
+    sb.append("    profHostSum: ").append(toIndentedString(profHostSum)).append("\n");
+    sb.append("    profHostTop99p: ").append(toIndentedString(profHostTop99p)).append("\n");
     sb.append("    rumSum: ").append(toIndentedString(rumSum)).append("\n");
     sb.append("    serverlessInvocationSum: ")
         .append(toIndentedString(serverlessInvocationSum))
