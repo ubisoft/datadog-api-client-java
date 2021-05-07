@@ -27,8 +27,8 @@ import java.util.Objects;
   MetricTagConfigurationAttributes.JSON_PROPERTY_CREATED_AT,
   MetricTagConfigurationAttributes.JSON_PROPERTY_INCLUDE_PERCENTILES,
   MetricTagConfigurationAttributes.JSON_PROPERTY_METRIC_TYPE,
-  MetricTagConfigurationAttributes.JSON_PROPERTY_MODIFIED_AT,
-  MetricTagConfigurationAttributes.JSON_PROPERTY_TAGS
+  MetricTagConfigurationAttributes.JSON_PROPERTY_TAGS,
+  MetricTagConfigurationAttributes.JSON_PROPERTY_UPDATED_AT
 })
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class MetricTagConfigurationAttributes {
@@ -41,11 +41,11 @@ public class MetricTagConfigurationAttributes {
   public static final String JSON_PROPERTY_METRIC_TYPE = "metric_type";
   private MetricTagConfigurationMetricTypes metricType = MetricTagConfigurationMetricTypes.GAUGE;
 
-  public static final String JSON_PROPERTY_MODIFIED_AT = "modified_at";
-  private OffsetDateTime modifiedAt;
-
   public static final String JSON_PROPERTY_TAGS = "tags";
   private List<String> tags = null;
+
+  public static final String JSON_PROPERTY_UPDATED_AT = "updated_at";
+  private OffsetDateTime updatedAt;
 
   public MetricTagConfigurationAttributes createdAt(OffsetDateTime createdAt) {
     this.createdAt = createdAt;
@@ -120,30 +120,6 @@ public class MetricTagConfigurationAttributes {
     this.metricType = metricType;
   }
 
-  public MetricTagConfigurationAttributes modifiedAt(OffsetDateTime modifiedAt) {
-    this.modifiedAt = modifiedAt;
-    return this;
-  }
-
-  /**
-   * Timestamp when the tag configuration was last modified.
-   *
-   * @return modifiedAt
-   */
-  @javax.annotation.Nullable
-  @ApiModelProperty(
-      example = "2020-03-31T09:48:37.463835Z",
-      value = "Timestamp when the tag configuration was last modified.")
-  @JsonProperty(JSON_PROPERTY_MODIFIED_AT)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public OffsetDateTime getModifiedAt() {
-    return modifiedAt;
-  }
-
-  public void setModifiedAt(OffsetDateTime modifiedAt) {
-    this.modifiedAt = modifiedAt;
-  }
-
   public MetricTagConfigurationAttributes tags(List<String> tags) {
     this.tags = tags;
     return this;
@@ -176,6 +152,30 @@ public class MetricTagConfigurationAttributes {
     this.tags = tags;
   }
 
+  public MetricTagConfigurationAttributes updatedAt(OffsetDateTime updatedAt) {
+    this.updatedAt = updatedAt;
+    return this;
+  }
+
+  /**
+   * Timestamp when the tag configuration was last updated.
+   *
+   * @return updatedAt
+   */
+  @javax.annotation.Nullable
+  @ApiModelProperty(
+      example = "2020-03-31T09:48:37.463835Z",
+      value = "Timestamp when the tag configuration was last updated.")
+  @JsonProperty(JSON_PROPERTY_UPDATED_AT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public OffsetDateTime getUpdatedAt() {
+    return updatedAt;
+  }
+
+  public void setUpdatedAt(OffsetDateTime updatedAt) {
+    this.updatedAt = updatedAt;
+  }
+
   /** Return true if this MetricTagConfigurationAttributes object is equal to o. */
   @Override
   public boolean equals(Object o) {
@@ -191,13 +191,13 @@ public class MetricTagConfigurationAttributes {
         && Objects.equals(
             this.includePercentiles, metricTagConfigurationAttributes.includePercentiles)
         && Objects.equals(this.metricType, metricTagConfigurationAttributes.metricType)
-        && Objects.equals(this.modifiedAt, metricTagConfigurationAttributes.modifiedAt)
-        && Objects.equals(this.tags, metricTagConfigurationAttributes.tags);
+        && Objects.equals(this.tags, metricTagConfigurationAttributes.tags)
+        && Objects.equals(this.updatedAt, metricTagConfigurationAttributes.updatedAt);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(createdAt, includePercentiles, metricType, modifiedAt, tags);
+    return Objects.hash(createdAt, includePercentiles, metricType, tags, updatedAt);
   }
 
   @Override
@@ -207,8 +207,8 @@ public class MetricTagConfigurationAttributes {
     sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
     sb.append("    includePercentiles: ").append(toIndentedString(includePercentiles)).append("\n");
     sb.append("    metricType: ").append(toIndentedString(metricType)).append("\n");
-    sb.append("    modifiedAt: ").append(toIndentedString(modifiedAt)).append("\n");
     sb.append("    tags: ").append(toIndentedString(tags)).append("\n");
+    sb.append("    updatedAt: ").append(toIndentedString(updatedAt)).append("\n");
     sb.append("}");
     return sb.toString();
   }
