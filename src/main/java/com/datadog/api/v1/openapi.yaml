@@ -19587,8 +19587,6 @@ components:
           items:
             $ref: '#/components/schemas/SyntheticsAPIStep'
           type: array
-      required:
-      - assertions
       type: object
     SyntheticsAPITestResultData:
       description: Object containing results for your Synthetic API test.
